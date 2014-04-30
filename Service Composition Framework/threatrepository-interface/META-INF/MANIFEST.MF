@@ -1,0 +1,28 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Aniketos Threat Repository Interface Bundle
+Bundle-SymbolicName: threatrepository-interface
+Bundle-Version: 0.1.0.SNAPSHOT
+Bundle-ClassPath: threatrepository-interface-0.1-SNAPSHOT.jar
+Export-Package: eu.aniketos.threatrepository;version="0.1.0.SNAPSHOT";uses:="eu.aniketos.threatrepository.schema.download,eu.aniketos.threatrepository.schema.upload",
+ eu.aniketos.threatrepository.schema.download;version="0.1.0.SNAPSHOT";uses:="javax.xml.bind.annotation,javax.xml.datatype",
+ eu.aniketos.threatrepository.schema.upload;version="0.1.0.SNAPSHOT";uses:="javax.xml.bind.annotation,javax.xml.datatype",
+ svrs.schema.download;version="0.1.0.SNAPSHOT";uses:="javax.xml.bind.annotation,javax.xml.datatype",
+ svrs.schema.search;version="0.1.0.SNAPSHOT";uses:="javax.xml.bind.annotation,javax.xml.datatype",
+ svrs.schema.searchres;version="0.1.0.SNAPSHOT";uses:="javax.xml.bind.annotation,javax.xml.datatype",
+ svrs.schema.taglist;version="0.1.0.SNAPSHOT";uses:="javax.xml.bind.annotation",
+ svrs.schema.upload;version="0.1.0.SNAPSHOT";
+  uses:="javax.xml.bind.annotation,
+   javax.xml.bind,
+   javax.xml.namespace,
+   javax.xml.datatype"
+Import-Package: javax.xml.bind,
+ javax.xml.bind.annotation,
+ javax.xml.datatype,
+ javax.xml.namespace
+Created-By: Apache Maven Bundle Plugin
+Tool: Bnd-1.50.0
+Built-By: erlendg
+Build-Jdk: 1.7.0_10
+Bundle-Description: This bundle contains the implementation of the Aniketos Threat Repository Interface
+Bnd-LastModified: 1387191972751

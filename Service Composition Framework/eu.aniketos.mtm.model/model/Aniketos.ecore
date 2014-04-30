@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="mtm_aniketos" nsURI="http://aniketos.eu_mtm" nsPrefix="mtm_aniketos">
+  <eClassifiers xsi:type="ecore:EClass" name="SecurityExtension" eSuperTypes="BPMN20.ecore#//BaseElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="integrityReq" upperBound="-1"
+        eType="#//Integrity" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="trustworthinessValue" eType="#//Trustworthiness"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="confidentialityReq" upperBound="2"
+        eType="#//Confidentiality" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Integrity" eSuperTypes="BPMN20.ecore#//BaseElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="securityRef" upperBound="-1"
+        eType="#//SecurityExtension"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="with" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="algorithm" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Trustworthiness" eSuperTypes="BPMN20.ecore#//BaseElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="securityRef" eType="#//SecurityExtension"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Confidentiality" eSuperTypes="BPMN20.ecore#//BaseElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="securityRef" upperBound="-1"
+        eType="#//SecurityExtension"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="algorithm" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+  </eClassifiers>
+</ecore:EPackage>

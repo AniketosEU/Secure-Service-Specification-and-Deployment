@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="XSD_mapping_V0.14"
+            class="eu.aniketos.mtm.mapping.MappingPackage"
+            genModel="model/mapping.genmodel"/>
+   </extension>
+   
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            type="mapping"
+            class="eu.aniketos.mtm.mapping.util.MappingResourceFactoryImpl"/>
+   </extension>
+
+</plugin>

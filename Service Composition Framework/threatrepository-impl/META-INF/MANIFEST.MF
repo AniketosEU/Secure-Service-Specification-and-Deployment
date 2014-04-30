@@ -1,0 +1,40 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Aniketos Threat Repository Implementation
+Bundle-SymbolicName: threatrepository-impl
+Bundle-Version: 1.0.0.SNAPSHOT
+Bundle-ClassPath: threatrepository-impl-1.0-SNAPSHOT-uber.jar
+Export-Package: eu.aniketos.threatrepository.impl;version="1.0.0.SNAPSHOT";
+  uses:="javax.net.ssl,
+   svrs.schema.search,
+   eu.aniketos.threatrepository.schema.download,
+   eu.aniketos.threatrepository.impl.util,
+   svrs.schema.download,
+   svrs.schema.searchres,
+   javax.xml.datatype,
+   javax.xml.bind,
+   svrs.schema.taglist,
+   eu.aniketos.threatrepository,
+   svrs.schema.upload,
+   eu.aniketos.threatrepository.schema.upload",
+ eu.aniketos.threatrepository.impl.util;version="1.0.0.SNAPSHOT";uses:="eu.aniketos.threatrepository"
+Import-Package: eu.aniketos.threatrepository;version="[0.1,1)",
+ eu.aniketos.threatrepository.schema.download;version="[0.1,1)",
+ eu.aniketos.threatrepository.schema.upload;version="[0.1,1)",
+ javax.net.ssl,
+ javax.xml.bind,
+ javax.xml.datatype,
+ org.osgi.framework;version="[1.4,2)",
+ svrs.schema.download;version="[0.1,1)",
+ svrs.schema.search;version="[0.1,1)",
+ svrs.schema.searchres;version="[0.1,1)",
+ svrs.schema.taglist;version="[0.1,1)",
+ svrs.schema.upload;version="[0.1,1)"
+DynamicImport-Package: org.apache.cxf.dosgi.dsw.qos,org.apache.cxf
+Created-By: Apache Maven Bundle Plugin
+Tool: Bnd-1.50.0
+Bnd-LastModified: 1390400493260
+Build-Jdk: 1.7.0_10
+Bundle-Description: This bundle contains the implementation of Aniketos Threat Repository
+Built-By: erlendg
+Service-Component: OSGI-INF/component.xml

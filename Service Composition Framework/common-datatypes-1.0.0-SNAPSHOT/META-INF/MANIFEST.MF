@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Common Datatypes Bundle
+Bundle-SymbolicName: common-datatypes
+Bundle-Version: 1.0.0.SNAPSHOT
+Bundle-ClassPath: common-datatypes-1.0.0-SNAPSHOT.jar
+Export-Package: eu.aniketos.data;version="1.0.0.SNAPSHOT";uses:="eu.aniketos.data.impl",
+ eu.aniketos.data.impl;version="1.0.0.SNAPSHOT";uses:="eu.aniketos.data"
+Created-By: Apache Maven Bundle Plugin
+Build-Jdk: 1.7.0_11
+Built-By: Francesco
+Bundle-Description: common-datatypes OSGi bundle project.
+Bnd-LastModified: 1368108581928
+Tool: Bnd-1.50.0

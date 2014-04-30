@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_zNI88GSzEeK0qeBBNZFGWw" type="EcoreTools" name="Aniketos.ecorediag" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_zNI88mSzEeK0qeBBNZFGWw" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_zNI89WSzEeK0qeBBNZFGWw" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_zNI89mSzEeK0qeBBNZFGWw" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_zNI892SzEeK0qeBBNZFGWw"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_zNI8-GSzEeK0qeBBNZFGWw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_zNI8-WSzEeK0qeBBNZFGWw"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_zNI8-mSzEeK0qeBBNZFGWw" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_zNI8-2SzEeK0qeBBNZFGWw"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_zNI8_GSzEeK0qeBBNZFGWw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_zNI8_WSzEeK0qeBBNZFGWw"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_zNI882SzEeK0qeBBNZFGWw" fontColor="4210752" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="Aniketos.ecore#//SecurityExtension"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zNI89GSzEeK0qeBBNZFGWw" x="235" y="160"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_zNI88WSzEeK0qeBBNZFGWw"/>
+  <element xmi:type="ecore:EPackage" href="Aniketos.ecore#/"/>
+</notation:Diagram>

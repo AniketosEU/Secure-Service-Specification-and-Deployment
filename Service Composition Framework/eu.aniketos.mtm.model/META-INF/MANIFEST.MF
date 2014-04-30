@@ -1,0 +1,31 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: SCF Model (MTM)
+Bundle-SymbolicName: eu.aniketos.mtm.model;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Vendor: Tecnalia
+Bundle-Localization: plugin
+Export-Package: 
+ eu.aniketos.mtm.model.mtm_aniketos,
+ eu.aniketos.mtm.model.mtm_aniketos.impl,
+ eu.aniketos.mtm.model.mtm_aniketos.util,
+ eu.aniketos.mtm.model.mtm_bpmn2,
+ eu.aniketos.mtm.model.mtm_bpmn2.impl,
+ eu.aniketos.mtm.model.mtm_bpmn2.util,
+ eu.aniketos.mtm.model.mtm_bpmndi,
+ eu.aniketos.mtm.model.mtm_bpmndi.impl,
+ eu.aniketos.mtm.model.mtm_bpmndi.util,
+ eu.aniketos.mtm.model.mtm_dc,
+ eu.aniketos.mtm.model.mtm_dc.impl,
+ eu.aniketos.mtm.model.mtm_dc.util,
+ eu.aniketos.mtm.model.mtm_di,
+ eu.aniketos.mtm.model.mtm_di.impl,
+ eu.aniketos.mtm.model.mtm_di.util,
+ eu.aniketos.mtm.model.mtm_securebpmn2,
+ eu.aniketos.mtm.model.mtm_securebpmn2.impl,
+ eu.aniketos.mtm.model.mtm_securebpmn2.util
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.emf.ecore.xmi;visibility:=reexport
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ClassPath: .

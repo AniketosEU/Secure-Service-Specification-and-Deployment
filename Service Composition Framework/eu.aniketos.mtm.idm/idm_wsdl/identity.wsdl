@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="IdentityRepositoryService" targetNamespace="http://idm.aniketos.eu/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://idm.aniketos.eu/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+<xsd:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://idm.aniketos.eu" xmlns:tns="http://idm.aniketos.eu" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="EntityId">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="email" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="firstName" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="fullName" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="groupsName" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="homeAddress" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="lastName" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="phoneNumber" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="result" type="xsd:boolean"/>
+      <xsd:element minOccurs="0" name="tokenId" nillable="true" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>
+<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://idm.aniketos.eu/" xmlns:ns0="http://idm.aniketos.eu" xmlns:tns="http://idm.aniketos.eu/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import namespace="http://idm.aniketos.eu"/>
+  <xsd:element name="isAuthenticatedEntity" type="tns:isAuthenticatedEntity"/>
+  <xsd:complexType name="isAuthenticatedEntity">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="arg0" nillable="true" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="isAuthenticatedEntityResponse" type="tns:isAuthenticatedEntityResponse"/>
+  <xsd:complexType name="isAuthenticatedEntityResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="return" type="ns0:EntityId"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="createGroup" type="tns:createGroup"/>
+  <xsd:complexType name="createGroup">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="arg0" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="arg1" nillable="true" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="createGroupResponse" type="tns:createGroupResponse"/>
+  <xsd:complexType name="createGroupResponse">
+    <xsd:sequence>
+      <xsd:element name="return" type="xsd:boolean"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="registerEntity" type="tns:registerEntity"/>
+  <xsd:complexType name="registerEntity">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="arg0" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="arg1" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="arg2" type="ns0:EntityId"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="registerEntityResponse" type="tns:registerEntityResponse"/>
+  <xsd:complexType name="registerEntityResponse">
+    <xsd:sequence>
+      <xsd:element name="return" type="xsd:boolean"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="authenticateEntity" type="tns:authenticateEntity"/>
+  <xsd:complexType name="authenticateEntity">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="arg0" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="arg1" nillable="true" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="authenticateEntityResponse" type="tns:authenticateEntityResponse"/>
+  <xsd:complexType name="authenticateEntityResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="return" type="ns0:EntityId"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="getGroupsOfMember" type="tns:getGroupsOfMember"/>
+  <xsd:complexType name="getGroupsOfMember">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="arg0" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="arg1" nillable="true" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="getGroupsOfMemberResponse" type="tns:getGroupsOfMemberResponse"/>
+  <xsd:complexType name="getGroupsOfMemberResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="return" nillable="true" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="getGroupsList" type="tns:getGroupsList"/>
+  <xsd:complexType name="getGroupsList">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="arg0" nillable="true" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="getGroupsListResponse" type="tns:getGroupsListResponse"/>
+  <xsd:complexType name="getGroupsListResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="return" nillable="true" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="unregisterEntity" type="tns:unregisterEntity"/>
+  <xsd:complexType name="unregisterEntity">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="arg0" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="arg1" nillable="true" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="unregisterEntityResponse" type="tns:unregisterEntityResponse"/>
+  <xsd:complexType name="unregisterEntityResponse">
+    <xsd:sequence>
+      <xsd:element name="return" type="xsd:boolean"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="deleteGroup" type="tns:deleteGroup"/>
+  <xsd:complexType name="deleteGroup">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="arg0" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="arg1" nillable="true" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="deleteGroupResponse" type="tns:deleteGroupResponse"/>
+  <xsd:complexType name="deleteGroupResponse">
+    <xsd:sequence>
+      <xsd:element name="return" type="xsd:boolean"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="updateEntity" type="tns:updateEntity"/>
+  <xsd:complexType name="updateEntity">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="arg0" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="arg1" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="arg2" type="ns0:EntityId"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="updateEntityResponse" type="tns:updateEntityResponse"/>
+  <xsd:complexType name="updateEntityResponse">
+    <xsd:sequence>
+      <xsd:element name="return" type="xsd:boolean"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="getMembersOfGroup" type="tns:getMembersOfGroup"/>
+  <xsd:complexType name="getMembersOfGroup">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="arg0" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="arg1" nillable="true" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="getMembersOfGroupResponse" type="tns:getMembersOfGroupResponse"/>
+  <xsd:complexType name="getMembersOfGroupResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="return" nillable="true" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getMembersOfGroupResponse">
+    <wsdl:part element="tns:getMembersOfGroupResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteGroup">
+    <wsdl:part element="tns:deleteGroup" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getGroupsOfMemberResponse">
+    <wsdl:part element="tns:getGroupsOfMemberResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="isAuthenticatedEntity">
+    <wsdl:part element="tns:isAuthenticatedEntity" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createGroup">
+    <wsdl:part element="tns:createGroup" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getGroupsListResponse">
+    <wsdl:part element="tns:getGroupsListResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createGroupResponse">
+    <wsdl:part element="tns:createGroupResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="unregisterEntity">
+    <wsdl:part element="tns:unregisterEntity" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="registerEntityResponse">
+    <wsdl:part element="tns:registerEntityResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="authenticateEntity">
+    <wsdl:part element="tns:authenticateEntity" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getGroupsList">
+    <wsdl:part element="tns:getGroupsList" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateEntityResponse">
+    <wsdl:part element="tns:updateEntityResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteGroupResponse">
+    <wsdl:part element="tns:deleteGroupResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getMembersOfGroup">
+    <wsdl:part element="tns:getMembersOfGroup" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="isAuthenticatedEntityResponse">
+    <wsdl:part element="tns:isAuthenticatedEntityResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="registerEntity">
+    <wsdl:part element="tns:registerEntity" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="authenticateEntityResponse">
+    <wsdl:part element="tns:authenticateEntityResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="unregisterEntityResponse">
+    <wsdl:part element="tns:unregisterEntityResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateEntity">
+    <wsdl:part element="tns:updateEntity" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getGroupsOfMember">
+    <wsdl:part element="tns:getGroupsOfMember" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="IdentityRepositoryServicePortType">
+    <wsdl:operation name="isAuthenticatedEntity">
+      <wsdl:input message="tns:isAuthenticatedEntity" name="isAuthenticatedEntity">
+    </wsdl:input>
+      <wsdl:output message="tns:isAuthenticatedEntityResponse" name="isAuthenticatedEntityResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createGroup">
+      <wsdl:input message="tns:createGroup" name="createGroup">
+    </wsdl:input>
+      <wsdl:output message="tns:createGroupResponse" name="createGroupResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registerEntity">
+      <wsdl:input message="tns:registerEntity" name="registerEntity">
+    </wsdl:input>
+      <wsdl:output message="tns:registerEntityResponse" name="registerEntityResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="authenticateEntity">
+      <wsdl:input message="tns:authenticateEntity" name="authenticateEntity">
+    </wsdl:input>
+      <wsdl:output message="tns:authenticateEntityResponse" name="authenticateEntityResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getGroupsOfMember">
+      <wsdl:input message="tns:getGroupsOfMember" name="getGroupsOfMember">
+    </wsdl:input>
+      <wsdl:output message="tns:getGroupsOfMemberResponse" name="getGroupsOfMemberResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getGroupsList">
+      <wsdl:input message="tns:getGroupsList" name="getGroupsList">
+    </wsdl:input>
+      <wsdl:output message="tns:getGroupsListResponse" name="getGroupsListResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="unregisterEntity">
+      <wsdl:input message="tns:unregisterEntity" name="unregisterEntity">
+    </wsdl:input>
+      <wsdl:output message="tns:unregisterEntityResponse" name="unregisterEntityResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteGroup">
+      <wsdl:input message="tns:deleteGroup" name="deleteGroup">
+    </wsdl:input>
+      <wsdl:output message="tns:deleteGroupResponse" name="deleteGroupResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateEntity">
+      <wsdl:input message="tns:updateEntity" name="updateEntity">
+    </wsdl:input>
+      <wsdl:output message="tns:updateEntityResponse" name="updateEntityResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMembersOfGroup">
+      <wsdl:input message="tns:getMembersOfGroup" name="getMembersOfGroup">
+    </wsdl:input>
+      <wsdl:output message="tns:getMembersOfGroupResponse" name="getMembersOfGroupResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="IdentityRepositoryServiceSoapBinding" type="tns:IdentityRepositoryServicePortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="isAuthenticatedEntity">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="isAuthenticatedEntity">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="isAuthenticatedEntityResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createGroup">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="createGroup">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="createGroupResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registerEntity">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="registerEntity">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="registerEntityResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="authenticateEntity">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="authenticateEntity">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="authenticateEntityResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getGroupsOfMember">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getGroupsOfMember">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getGroupsOfMemberResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getGroupsList">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getGroupsList">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getGroupsListResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteGroup">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="deleteGroup">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="deleteGroupResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="unregisterEntity">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="unregisterEntity">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="unregisterEntityResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMembersOfGroup">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getMembersOfGroup">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getMembersOfGroupResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateEntity">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="updateEntity">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateEntityResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IdentityRepositoryService">
+    <wsdl:port binding="tns:IdentityRepositoryServiceSoapBinding" name="IdentityRepositoryServicePort">
+      <soap:address location="http://138.132.162.67:9091/identity"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/idm_v1" xmlns:tns="http://www.example.org/idm_v1" elementFormDefault="qualified">
+
+<!-- roles -->
+<complexType name="roles">
+	<sequence>
+    	<element name="value" type="string" minOccurs="1" maxOccurs="unbounded" />
+    </sequence>
+    <attribute name="type">
+    	<simpleType>
+    		<restriction base="string">
+    			<enumeration value="Human" />
+    			<enumeration value="Services" />
+    		</restriction>
+    	</simpleType>
+    </attribute>    
+</complexType>
+
+<!-- users -->
+<complexType name="users">
+	<sequence>
+    	<element name="value" type="string" minOccurs="1" maxOccurs="unbounded" />
+    </sequence>
+    <attribute name="role" type="string" />  
+</complexType>
+
+<!-- root element -->
+<element name="idm">
+	<complexType>
+		<sequence>
+			<element name="roles" type="tns:roles" minOccurs="0" maxOccurs="2" />
+			<element name="users" type="tns:users" minOccurs="0" maxOccurs="unbounded" />
+		</sequence>
+	</complexType>
+	</element>
+
+</schema>

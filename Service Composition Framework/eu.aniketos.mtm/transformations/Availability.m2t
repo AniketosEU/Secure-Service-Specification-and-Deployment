@@ -1,0 +1,15 @@
+/**
+ * transformation Trustworthiness
+ * date: 10/6/2013
+ * author: null
+ * description: 
+ */
+
+texttransformation Availability (in cp:"http://eu.aniketos.mtm/consumerpolicies") {
+
+  cp.Availability::main () {
+    file(self.ID + "_Availability.xml");
+
+     
+  }
+}

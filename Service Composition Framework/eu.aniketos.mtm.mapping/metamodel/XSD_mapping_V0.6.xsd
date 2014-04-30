@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<xs:schema xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- simple element definition -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+<!-- actor type -->
+<xs:complexType name="actorType">
+  <xs:simpleContent>
+    <xs:extension base="xs:string">
+      <xs:attribute name="id" type="xs:string" /> 
+    </xs:extension>
+  </xs:simpleContent>
+</xs:complexType>
+
+<!-- Security Requirement Role type -->
+<xs:complexType name="SRRType">
+  <xs:complexContent>
+    <xs:extension base="actorType">
+    </xs:extension>
+  </xs:complexContent>
+</xs:complexType>
+
+<!-- Security Requirement Agent type -->
+<xs:complexType name="SRAType">
+  <xs:complexContent>
+    <xs:extension base="actorType">
+    </xs:extension>
+  </xs:complexContent>
+</xs:complexType>
+
+<!-- goal type -->
+<xs:complexType name="goalType">
+  <xs:simpleContent>
+    <xs:extension base="xs:string">
+      <xs:attribute name="id" type="xs:string" use="required" />
+    </xs:extension>
+  </xs:simpleContent>
+</xs:complexType>
+
+<!-- doc type -->
+<xs:complexType name="docType">
+  <xs:simpleContent>
+    <xs:extension base="xs:string">
+      <xs:attribute name="id" type="xs:string" />
+    </xs:extension>
+  </xs:simpleContent>
+</xs:complexType>
+
+<!-- activity type -->
+<xs:complexType name="activityType" mixed="true">
+	<xs:sequence>
+		<xs:element name="value" type="xs:string" minOccurs="0" maxOccurs="1" />
+		<xs:element name="variable" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+		<xs:element name="participant" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+		<xs:element name="trustworthiness" type="xs:integer" minOccurs="0" maxOccurs="1" />
+	</xs:sequence>
+	<xs:attribute name="id" type="xs:string" />
+	<xs:attribute name="type" default="UserTask">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="UserTask" />
+				<xs:enumeration value="ServiceTask" />
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+</xs:complexType>
+
+<!-- var type -->
+<xs:complexType name="varType">
+  <xs:simpleContent>
+    <xs:extension base="xs:string">
+      <xs:attribute name="id" type="xs:string" />
+    </xs:extension>
+  </xs:simpleContent>
+</xs:complexType>
+
+<!-- Participant type -->
+<xs:complexType name="participantType">
+  <xs:simpleContent>
+    <xs:extension base="xs:string">
+      <xs:attribute name="country" type="xs:string" />
+    </xs:extension>
+  </xs:simpleContent>
+</xs:complexType>
+
+<!-- Business process Role type -->
+<xs:complexType name="BPRType">
+  <xs:complexContent>
+    <xs:extension base="participantType">
+      <xs:attribute name="id" type="xs:string" />
+    </xs:extension>
+  </xs:complexContent>
+</xs:complexType>
+
+<!-- Business process Participant type -->
+<xs:complexType name="BPPType">
+  <xs:complexContent>
+    <xs:extension base="participantType">
+      <xs:attribute name="id" type="xs:string" />
+    </xs:extension>
+  </xs:complexContent>
+</xs:complexType>
+
+<!-- %%%%%%%%%%%% -->
+<!-- root element -->
+<!-- %%%%%%%%%%%% -->
+
+ <xs:element name="mapping">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="relatesTo" type="relatesToType" minOccurs="0" maxOccurs="unbounded"/>
+	  <xs:element name="represents" type="representsType" minOccurs="0" maxOccurs="unbounded"/>
+	  <xs:element name="is-a" type="isaType" minOccurs="0" maxOccurs="unbounded"/>
+	  <xs:element name="plays" type="playsType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+ 
+ <!--mapping Goal Act -->
+ <xs:complexType name="relatesToType">
+  <xs:sequence>
+    <xs:element name="activity" type="activityType" minOccurs="1" maxOccurs="1" />
+	<xs:element name="goal" type="goalType" minOccurs="1" maxOccurs="1" />
+  </xs:sequence>
+ </xs:complexType> 
+ 
+  <!--mapping document Variable -->
+ <xs:complexType name="representsType">
+  <xs:sequence>
+    <xs:element name="variable" type="varType" minOccurs="1" maxOccurs="1" />
+    <xs:element name="document" type="docType" minOccurs="1" maxOccurs="1" />
+  </xs:sequence>
+ </xs:complexType> 
+ 
+ <!--mapping Actor participant -->
+ <xs:complexType name="isaType">
+  <xs:sequence>
+    <xs:element name="BPRole" type="BPRType" minOccurs="0" maxOccurs="unbounded" />
+    <xs:element name="BPPart" type="BPPType" minOccurs="0" maxOccurs="unbounded" />
+    <xs:element name="SRRole" type="SRRType" minOccurs="0" maxOccurs="unbounded" />
+    <xs:element name="SRAgent" type="SRAType" minOccurs="0" maxOccurs="unbounded" />
+  </xs:sequence>
+ </xs:complexType> 
+
+<!--mapping Role participant -->
+ <xs:complexType name="playsType">
+  <xs:sequence>
+    <xs:element name="BPPart" type="BPPType" minOccurs="1" maxOccurs="1" />
+    <xs:element name="SRRole" type="SRRType" minOccurs="1" maxOccurs="1" />
+  </xs:sequence>
+ </xs:complexType>  
+</xs:schema>

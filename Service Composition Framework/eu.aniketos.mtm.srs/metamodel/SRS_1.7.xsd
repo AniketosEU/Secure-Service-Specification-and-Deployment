@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!-- SRS XML Schema Definition V1.6        -->
+<!-- Authtor: Mattia Salnitri              -->
+<!-- E-mail: mattia.salnitri@disi.unitn.it -->
+<!-- DISI - University of Trento           -->
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- simple element definition -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+<!-- Actor type -->
+<xs:complexType name="actorType">
+  <xs:choice>
+    <xs:element name="agent" type="agentType"/>
+    <xs:element name="role" type="roleType"/>
+  </xs:choice>
+</xs:complexType>
+
+<!-- Agent type-->
+<xs:complexType name="agentType">
+  <xs:simpleContent>
+    <xs:extension base="xs:string">
+      <xs:attribute name="id" type="xs:string" use="required"/>
+    </xs:extension>
+  </xs:simpleContent>
+</xs:complexType>
+
+<!-- Role type-->
+<xs:complexType name="roleType">
+  <xs:simpleContent>
+    <xs:extension base="xs:string">
+      <xs:attribute name="id" type="xs:string" use="required"/>
+    </xs:extension>
+  </xs:simpleContent>
+</xs:complexType>
+
+<!-- Goal type -->
+<xs:complexType name="goalType">
+  <xs:simpleContent>
+    <xs:extension base="xs:string">
+      <xs:attribute name="id" type="xs:string" use="required"/>
+    </xs:extension>
+  </xs:simpleContent>
+</xs:complexType>
+
+<!-- Information type -->
+<xs:complexType name="infoType">
+  <xs:simpleContent>
+    <xs:extension base="xs:string">
+      <xs:attribute name="id" type="xs:string" use="required"/>
+    </xs:extension>
+  </xs:simpleContent>
+</xs:complexType>
+
+<!-- Document type -->
+<xs:complexType name="docType">
+  <xs:simpleContent>
+    <xs:extension base="xs:string">
+      <xs:attribute name="id" type="xs:string" use="required"/>
+    </xs:extension>
+  </xs:simpleContent>
+</xs:complexType>
+
+<!-- Operation type -->
+<xs:simpleType name="operationType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="use"/>
+    <xs:enumeration value="modify"/>
+    <xs:enumeration value="produce"/>
+    <xs:enumeration value="distribute"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<!-- %%%%%%%%%%%%% -->
+<!-- Root element  -->
+<!-- %%%%%%%%%%%%% -->
+ <xs:element name="secReqSpe">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="commitment" type="commitmentType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="knowledgeBase" type="KBType" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+ 
+ 
+<!-- %%%%%%%%%%%%%%% -->
+<!-- commitment part-->
+<!-- %%%%%%%%%%%%%%% -->
+
+<!-- Commitment element -->
+ <xs:complexType name="commitmentType">
+  <xs:sequence>
+    <xs:element name="debtor" type="actorType" minOccurs="1" maxOccurs="1"/>
+    <xs:element name="creditor" type="actorType" minOccurs="1" maxOccurs="1"/>
+    <xs:element name="precondition" type="preType" minOccurs="0" maxOccurs="1"/>
+    <xs:element name="postcondition" type="postType" minOccurs="1" maxOccurs="1"/>
+  </xs:sequence>
+  <xs:attribute name="id" type="xs:string" use="required"/>
+ </xs:complexType> 
+
+<!-- Precondition element -->
+ <xs:complexType name="preType">
+  <xs:choice>
+    <xs:element name="delegation" type="delType"/>
+    <xs:element name="authorization" type="authType"/>
+    <xs:element name="provision" type="provType"/>
+	<xs:element name="trustworthiness" type="trustworthinessType"/>
+  </xs:choice>
+ </xs:complexType>
+
+<!-- Delegation element -->
+ <xs:complexType name="delType">
+  <xs:sequence>
+    <xs:element name="source" type="actorType" minOccurs="1" maxOccurs="1"/>
+    <xs:element name="destination" type="actorType" minOccurs="1" maxOccurs="1"/>
+    <xs:element name="goalSet" type="goalSetType" minOccurs="1" maxOccurs="1"/>
+    <xs:element name="transferable" type="xs:string" minOccurs="1" maxOccurs="1"/>
+  </xs:sequence>
+ </xs:complexType> 
+
+<!-- Delegation, goal set-->
+ <xs:complexType name="goalSetType">
+  <xs:sequence>
+    <xs:element name="goal" type="goalType" minOccurs="1" maxOccurs="unbounded"/>
+  </xs:sequence>
+ </xs:complexType> 
+
+<!-- Provision element -->
+ <xs:complexType name="provType">
+  <xs:sequence>
+    <xs:element name="source" type="actorType" minOccurs="1" maxOccurs="1"/>
+    <xs:element name="destination" type="actorType" minOccurs="1" maxOccurs="1"/>
+    <xs:element name="document" type="docType" minOccurs="1" maxOccurs="1"/>
+  </xs:sequence>
+ </xs:complexType> 
+
+<!-- Authorization element -->
+ <xs:complexType name="authType">
+  <xs:sequence>
+    <xs:element name="source" type="actorType" minOccurs="1" maxOccurs="1"/>
+    <xs:element name="destination" type="actorType" minOccurs="1" maxOccurs="1"/>
+    <xs:element name="infoSet" type="infoSetType" minOccurs="1" maxOccurs="1"/>
+    <xs:element name="scopeSet" type="goalSetType" minOccurs="0" maxOccurs="1"/>
+    <xs:element name="operationSet" type="operationSetType" minOccurs="1" maxOccurs="1"/>
+    <xs:element name="transferable" type="xs:string" minOccurs="1" maxOccurs="1"/>
+  </xs:sequence>
+ </xs:complexType> 
+
+<!-- Authorization, information Set -->
+ <xs:complexType name="infoSetType">
+  <xs:sequence>
+    <xs:element name="information" type="infoType" minOccurs="1" maxOccurs="unbounded"/>
+  </xs:sequence>
+ </xs:complexType> 
+
+<!-- Authorization, operation set-->
+ <xs:complexType name="operationSetType">
+  <xs:sequence>
+    <xs:element name="operation" type="operationType" minOccurs="0" maxOccurs="4"/>
+  </xs:sequence>
+ </xs:complexType> 
+
+<!-- Postcondition element -->
+ <xs:complexType name="postType">
+  <xs:choice>
+  	
+  	<!-- post-conditions related to delegation pre-condition -->
+  	<xs:element name="non-delegation" type="NDType"/>
+    <xs:element name="non-repudiation" type="NRType"/>
+    <xs:element name="redundancy" type="RedType"/>
+  	
+  	<!-- post-conditions related to authorization pre-condition -->
+	<xs:element name="needToKnow" type="NTKType"/>
+    <xs:element name="non-disclosure" type="AuthType"/>
+    <xs:element name="non-modification" type="AuthType"/>
+	<xs:element name="non-usage" type="AuthType"/>
+	<xs:element name="non-production" type="AuthType"/>
+
+	<!-- post-conditions BoD/SoD: no precondition-->    
+    <xs:element name="play-both" type="BoD_SoD_actor_Type"/>
+    <xs:element name="not-play-both" type="BoD_SoD_actor_Type"/>    
+    <xs:element name="achieve-in-combination" type="BoD_SoD_goal_Type"/>
+    <xs:element name="not-achieve-in-combination" type="BoD_SoD_goal_Type"/>
+    
+    <!-- post-conditions related to provision pre-condition -->
+    <xs:element name="integrity" type="integrityType"/>
+    <xs:element name="availability" type="availabilityType"/>
+	<xs:element name="confidentiality" type="confidentialityType"/>
+	
+    
+    <!-- post-conditions related to trustworthiness-->
+    <xs:element name="delegation" type="delType"/>
+    
+  </xs:choice>
+ </xs:complexType>
+
+<!-- Trustworthiness element -->
+ <xs:complexType name="trustworthinessType">
+ 	<xs:sequence>
+	 	<xs:element name="destination" type="actorType" minOccurs="1" maxOccurs="1"/>
+	 	<xs:element name="goal" type="goalType" minOccurs="1" maxOccurs="1"/>
+ 	</xs:sequence>
+ 	
+ 	<xs:attribute name="minLevel" type="xs:string" use="required"/>
+ </xs:complexType> 
+ 
+ <!-- Availability element -->
+ <xs:complexType name="availabilityType">
+	<xs:choice>
+	 	<xs:element name="goal" type="goalType" minOccurs="1" maxOccurs="1"/>
+	 	<xs:element name="document" type="docType" minOccurs="1" maxOccurs="1"/>
+	</xs:choice>
+ 	
+ 	<xs:attribute name="minLevel" type="xs:string" use="required"/>
+ </xs:complexType> 
+
+<!-- Integrity element -->
+ <xs:complexType name="integrityType">
+  <xs:sequence>
+    <xs:element name="document" type="docType" minOccurs="1" maxOccurs="1"/>
+  </xs:sequence>
+ </xs:complexType> 
+
+ <!-- Confidentiality element -->
+ <xs:complexType name="confidentialityType">
+  <xs:sequence>
+    <xs:element name="document" type="docType" minOccurs="1" maxOccurs="1"/>
+  </xs:sequence>
+ </xs:complexType>
+ 
+<!-- (not)-play-both element [BoD/SoD for Roles] -->
+ <xs:complexType name="BoD_SoD_actor_Type">
+  <xs:sequence>
+    <xs:element name="actorSet" type="actorSetType_min2" minOccurs="1" maxOccurs="1"/>
+  </xs:sequence>
+ </xs:complexType>
+ 
+ <!-- Actor set with minimum 2 elements -->
+ <xs:complexType name="actorSetType_min2">
+  <xs:sequence>
+    <xs:element name="role" type="roleType" minOccurs="2" maxOccurs="unbounded"/>
+  </xs:sequence>
+ </xs:complexType> 
+
+<!-- (not)-achieve-in-combination elment [BoD SoD for goals] -->
+ <xs:complexType name="BoD_SoD_goal_Type">
+  <xs:sequence>
+    <xs:element name="goalSet" type="goalSetType_min2" minOccurs="1" maxOccurs="1"/>
+  </xs:sequence>
+ </xs:complexType>
+ 
+ <!-- goal set with minimun 2 elements -->
+ <xs:complexType name="goalSetType_min2">
+  <xs:sequence>
+    <xs:element name="goal" type="goalType" minOccurs="2" maxOccurs="unbounded"/>
+  </xs:sequence>
+ </xs:complexType> 
+
+<!-- Need To Know element -->
+ <xs:complexType name="NTKType">
+  <xs:sequence>
+    <xs:element name="goalSet" type="goalSetType" minOccurs="1" maxOccurs="1"/>
+  </xs:sequence>
+ </xs:complexType>
+
+<!-- Authorization (non-usage, non-modification, non-production, non-disclosure) element -->
+ <xs:complexType name="AuthType">
+  <xs:sequence>
+    <xs:element name="infoSet" type="infoSetType" minOccurs="1" maxOccurs="1"/>
+  </xs:sequence>
+ </xs:complexType>
+
+<!-- Non-delegation element -->
+ <xs:complexType name="NDType">
+  <xs:sequence>
+    <xs:element name="goalSet" type="goalSetType" minOccurs="1" maxOccurs="1"/>
+  </xs:sequence>
+ </xs:complexType>
+
+<!-- Non-repudiation element -->
+ <xs:complexType name="NRType">
+  <xs:sequence>
+    <xs:element name="goalSet" type="goalSetType" minOccurs="1" maxOccurs="1"/>
+  </xs:sequence>
+  
+  <xs:attribute name="type" use="required">
+    <xs:simpleType>
+    	<xs:restriction base="xs:string">
+      		<xs:enumeration value="delegation"/>
+      		<xs:enumeration value="acceptance"/>
+    	</xs:restriction>
+  	</xs:simpleType>
+  </xs:attribute>
+  
+ </xs:complexType>
+
+<!-- Redundancy element -->
+ <xs:complexType name="RedType">    
+  <xs:sequence>
+    <xs:element name="goalSet" type="goalSetType" minOccurs="1" maxOccurs="1"/>
+  </xs:sequence>
+  
+  <xs:attribute name="type" use="required">
+    <xs:simpleType>
+    	<xs:restriction base="xs:string">
+      		<xs:enumeration value="fallback"/>
+      		<xs:enumeration value="true"/>
+    	</xs:restriction>
+  	</xs:simpleType>
+  </xs:attribute>
+  
+  <xs:attribute name="multiplicity" use="required">
+    <xs:simpleType>
+    	<xs:restriction base="xs:string">
+      		<xs:enumeration value="singleActor"/>
+      		<xs:enumeration value="multiActor"/>
+    	</xs:restriction>
+  	</xs:simpleType>
+  </xs:attribute>
+
+ </xs:complexType>
+
+<!-- %%%%%%%%%%%%%%%%%%% -->
+<!-- knowledge base part-->
+<!-- %%%%%%%%%%%%%%%%%%% -->
+
+<!-- knowledge base element -->
+ <xs:complexType name="KBType">
+  <xs:sequence>
+    <xs:element name="partOf" type="partOfType" minOccurs="0" maxOccurs="unbounded"/>
+    <xs:element name="tangibleBy" type="tangibleByType" minOccurs="0" maxOccurs="unbounded"/>
+    <xs:element name="owns" type="ownsType" minOccurs="0" maxOccurs="unbounded"/>
+    <xs:element name="fullyAuthorized" type="ownsType" minOccurs="0" maxOccurs="unbounded"/>
+  </xs:sequence>
+ </xs:complexType>
+
+<!-- Part-of element -->
+ <xs:complexType name="partOfType"> <!-- partOf(A,B) A part of B,  -->
+   <xs:sequence>
+    <xs:element name="container" type="info_docType" minOccurs="1" maxOccurs="1"/>
+    <xs:element name="content" type="info_docType" minOccurs="1" maxOccurs="1"/>
+  </xs:sequence>
+ </xs:complexType>
+
+<!-- container/content element -->
+ <xs:complexType name="info_docType">
+   <xs:choice>
+     <xs:element name="document" type="docType"/>
+     <xs:element name="information" type="infoType"/>   
+   </xs:choice>
+ </xs:complexType>
+ 
+<!-- Tangible-by element -->
+ <xs:complexType name="tangibleByType">
+  <xs:sequence>
+    <xs:element name="information" type="infoType" minOccurs="1" maxOccurs="1"/>
+    <xs:element name="document" type="docType" minOccurs="1" maxOccurs="1"/>
+  </xs:sequence>
+ </xs:complexType>
+
+<!-- Owns element -->
+ <xs:complexType name="ownsType">
+  <xs:sequence>
+    <xs:element name="actor" type="actorType" minOccurs="1" maxOccurs="1"/>
+    <xs:element name="information" type="infoType" minOccurs="1" maxOccurs="1"/>
+  </xs:sequence>
+ </xs:complexType>
+
+</xs:schema>

@@ -1,0 +1,207 @@
+/**
+ * transformation Confidentiality
+ * date: 19/11/2013
+ * modified: 03/03/2014
+ * author: null
+ * description: 
+ */
+
+texttransformation Confidentiality (in cp:"http://eu.aniketos.mtm/consumerpolicies") {
+
+  cp.Confidentiality::main () {
+    file("Confidentiality" + self.ID  + ".xml");
+    
+    var inputSuite = getSuite (self.inputSuite);
+    var inputSchema = getSchema (self.inputSuite);
+    var inputAlgorithm = getAlgorithm (self.inputSuite);
+    var inputKeyLength = getKeyLength (self.inputSuite);
+    var outputSuite = getSuite (self.outputSuite);
+    var outputSchema = getSchema (self.outputSuite);
+    var outputAlgorithm = getAlgorithm (self.outputSuite);
+    var outputKeyLength = getKeyLength (self.outputSuite);
+    
+<%<?xml version="1.0" encoding="UTF-8"?>
+<specification id="Confidentiality">
+	<maxint>32000</maxint>
+	<maxlen>1000</maxlen>
+	<scope>session</scope>
+	<securitystate>
+		<declaration>
+			<type>string</type>
+			<identifier>ServiceID</identifier>
+			<value>
+				<sconst>%>self.guardedTask<%</sconst>
+			</value>
+		</declaration>
+		<declaration>
+			<type>string</type>
+			<identifier>inputSuite</identifier>
+			<value>
+				<sconst>%>inputSuite<%</sconst>
+			</value>
+		</declaration>
+		<declaration>
+			<type>string</type>
+			<identifier>inputSchema</identifier>
+			<value>
+				<sconst>%>inputSchema<%</sconst>
+			</value>
+		</declaration>
+		<declaration>
+			<type>string</type>
+			<identifier>inputAlgorithm</identifier>
+			<value>
+				<sconst>%>inputAlgorithm<%</sconst>
+			</value>
+		</declaration>
+		<declaration>
+			<type>int</type>
+			<identifier>inputKeyLength</identifier>
+			<value>
+				<iconst>%>inputKeyLength<%</iconst>
+			</value>
+		</declaration>
+		<declaration>
+			<type>string</type>
+			<identifier>outputSuite</identifier>
+			<value>
+				<sconst>%>outputSuite<%</sconst>
+			</value>
+		</declaration>
+		<declaration>
+			<type>string</type>
+			<identifier>outputSchema</identifier>
+			<value>
+				<sconst>%>outputSchema<%</sconst>
+			</value>
+		</declaration>
+		<declaration>
+			<type>string</type>
+			<identifier>outputAlgorithm</identifier>
+			<value>
+				<sconst>%>outputAlgorithm<%</sconst>
+			</value>
+		</declaration>
+		<declaration>
+			<type>int</type>
+			<identifier>outputKeyLength</identifier>
+			<value>
+				<iconst>%>outputKeyLength<%</iconst>
+			</value>
+		</declaration>
+	</securitystate>
+	<rule>
+		<before>
+			<identifier>activity.end</identifier>
+			<parameter>
+				<type>string</type>
+				<identifier>id</identifier>
+			</parameter>
+			<parameter>
+				<type>string</type>
+				<identifier>type</identifier>
+			</parameter>
+			<parameter>
+				<type>int</type>
+				<identifier>time</identifier>
+			</parameter>
+			<parameter>
+				<type>int</type>
+				<identifier>date</identifier>
+			</parameter>
+			<parameter>
+				<type>string</type>
+				<identifier>exec</identifier>
+			</parameter>
+			<parameter>
+				<type>string</type>
+				<identifier>Output</identifier>
+			</parameter>
+		</before>
+		<perform>
+			<reaction>
+				<guard>
+					<and>
+						<s_equal>
+							<s_identifier>ServiceID</s_identifier>
+							<s_identifier>id</s_identifier>
+						</s_equal>
+						<invocation>
+							<b_identifier>ProtectOutput</b_identifier>
+							<b_identifier>result</b_identifier>
+							<argument>
+								<i_identifier>outputKeyLength</i_identifier>
+							</argument>
+							<argument>
+								<s_identifier>outputAlgorithm</s_identifier>
+							</argument>
+							<argument>
+								<s_identifier>outputSchema</s_identifier>
+							</argument>
+							<argument>
+								<s_identifier>outputSuite</s_identifier>
+							</argument>
+							<argument>
+								<i_identifier>inputKeyLength</i_identifier>
+							</argument>
+							<argument>
+								<s_identifier>inputAlgorithm</s_identifier>
+							</argument>
+							<argument>
+								<s_identifier>inputSchema</s_identifier>
+							</argument>
+							<argument>
+								<s_identifier>inputSuite</s_identifier>
+							</argument>
+							<argument>
+								<s_identifier>id</s_identifier>
+							</argument>
+						</invocation>
+					</and>
+				</guard>
+				<update />
+			</reaction>
+		</perform>
+	</rule>
+</specification>
+
+%>
+     
+  }
+  
+  getSuite (suite: String){
+  	if(suite == null){
+  		return "null";
+  	}
+  	else{
+  	  return suite;
+  	}
+  }
+  
+  getSchema (suite: String){
+  	if(suite == null){
+  		return "null";
+  	}
+  	else{
+  	  return "symmetric";
+  	}
+  }
+  
+  getAlgorithm (suite: String){
+  	if(suite == null){
+  		return "null";
+  	}
+  	else{
+  	  return "AES";
+  	}
+  }
+  
+  getKeyLength (suite: String){
+  	if(suite == null){
+  		return 0;
+  	}
+  	else{
+  	  return 256;
+  	}
+  }
+}

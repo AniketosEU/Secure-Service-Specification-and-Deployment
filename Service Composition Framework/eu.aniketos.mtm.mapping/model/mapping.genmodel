@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="" modelDirectory="/eu.aniketos.mtm.mapping/src"
+    modelPluginID="eu.aniketos.mtm.mapping" modelName="Mapping" importerID="org.eclipse.xsd.ecore.importer"
+    complianceLevel="6.0" copyrightFields="false">
+  <foreignModel>../metamodel/XSD_mapping_V0.14.xsd</foreignModel>
+  <genPackages prefix="Mapping" basePackage="eu.aniketos.mtm" resource="XML" disposableProviderFactory="true"
+      ecorePackage="mapping.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="mapping.ecore#//TypeType">
+      <genEnumLiterals ecoreEnumLiteral="mapping.ecore#//TypeType/service"/>
+      <genEnumLiterals ecoreEnumLiteral="mapping.ecore#//TypeType/human"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="mapping.ecore#//TypeType1">
+      <genEnumLiterals ecoreEnumLiteral="mapping.ecore#//TypeType1/SoD"/>
+      <genEnumLiterals ecoreEnumLiteral="mapping.ecore#//TypeType1/BoD"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="mapping.ecore#//TypeType2">
+      <genEnumLiterals ecoreEnumLiteral="mapping.ecore#//TypeType2/input"/>
+      <genEnumLiterals ecoreEnumLiteral="mapping.ecore#//TypeType2/output"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="mapping.ecore#//UsertypeType">
+      <genEnumLiterals ecoreEnumLiteral="mapping.ecore#//UsertypeType/UserTask"/>
+      <genEnumLiterals ecoreEnumLiteral="mapping.ecore#//UsertypeType/ServiceTask"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="mapping.ecore#//CommitmentIDType"/>
+    <genDataTypes ecoreDataType="mapping.ecore#//CommitmentIDType1"/>
+    <genDataTypes ecoreDataType="mapping.ecore#//TypeTypeObject"/>
+    <genDataTypes ecoreDataType="mapping.ecore#//TypeTypeObject1"/>
+    <genDataTypes ecoreDataType="mapping.ecore#//TypeTypeObject2"/>
+    <genDataTypes ecoreDataType="mapping.ecore#//UsertypeTypeObject"/>
+    <genClasses ecoreClass="mapping.ecore#//ActivityType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute mapping.ecore#//ActivityType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mapping.ecore#//ActivityType/value"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference mapping.ecore#//ActivityType/variable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mapping.ecore#//ActivityType/participant"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mapping.ecore#//ActivityType/trustworthiness"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference mapping.ecore#//ActivityType/integrity"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference mapping.ecore#//ActivityType/permission"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mapping.ecore#//ActivityType/threat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mapping.ecore#//ActivityType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mapping.ecore#//ActivityType/usertype"/>
+    </genClasses>
+    <genClasses ecoreClass="mapping.ecore#//ActivityVar">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute mapping.ecore#//ActivityVar/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference mapping.ecore#//ActivityVar/confidentiality"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mapping.ecore#//ActivityVar/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mapping.ecore#//ActivityVar/type"/>
+    </genClasses>
+    <genClasses ecoreClass="mapping.ecore#//ActorType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mapping.ecore#//ActorType/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mapping.ecore#//ActorType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="mapping.ecore#//BPPType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mapping.ecore#//BPPType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="mapping.ecore#//BPRType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mapping.ecore#//BPRType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="mapping.ecore#//ConfidentialityType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mapping.ecore#//ConfidentialityType/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mapping.ecore#//ConfidentialityType/algorithm"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mapping.ecore#//ConfidentialityType/commitmentID"/>
+    </genClasses>
+    <genClasses ecoreClass="mapping.ecore#//DocType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mapping.ecore#//DocType/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mapping.ecore#//DocType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="mapping.ecore#//DocumentRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute mapping.ecore#//DocumentRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference mapping.ecore#//DocumentRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference mapping.ecore#//DocumentRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mapping.ecore#//DocumentRoot/mapping"/>
+    </genClasses>
+    <genClasses ecoreClass="mapping.ecore#//GoalType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mapping.ecore#//GoalType/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mapping.ecore#//GoalType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="mapping.ecore#//IntegrityType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute mapping.ecore#//IntegrityType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mapping.ecore#//IntegrityType/with"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mapping.ecore#//IntegrityType/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mapping.ecore#//IntegrityType/algorithm"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mapping.ecore#//IntegrityType/variable"/>
+    </genClasses>
+    <genClasses ecoreClass="mapping.ecore#//IsaType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mapping.ecore#//IsaType/bPRole"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mapping.ecore#//IsaType/bPPart"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mapping.ecore#//IsaType/sRRole"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mapping.ecore#//IsaType/sRAgent"/>
+    </genClasses>
+    <genClasses ecoreClass="mapping.ecore#//MappingType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mapping.ecore#//MappingType/relatesTo"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mapping.ecore#//MappingType/represents"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mapping.ecore#//MappingType/isA"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mapping.ecore#//MappingType/plays"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mapping.ecore#//MappingType/soDBoDProperties"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mapping.ecore#//MappingType/threats"/>
+    </genClasses>
+    <genClasses ecoreClass="mapping.ecore#//ParticipantType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mapping.ecore#//ParticipantType/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mapping.ecore#//ParticipantType/country"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mapping.ecore#//ParticipantType/type"/>
+    </genClasses>
+    <genClasses ecoreClass="mapping.ecore#//PermissionType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute mapping.ecore#//PermissionType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mapping.ecore#//PermissionType/role"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mapping.ecore#//PermissionType/action"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mapping.ecore#//PermissionType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="mapping.ecore#//PlaysType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mapping.ecore#//PlaysType/bPPart"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mapping.ecore#//PlaysType/sRRole"/>
+    </genClasses>
+    <genClasses ecoreClass="mapping.ecore#//RelatesToType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mapping.ecore#//RelatesToType/activity"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mapping.ecore#//RelatesToType/goal"/>
+    </genClasses>
+    <genClasses ecoreClass="mapping.ecore#//RepresentsType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mapping.ecore#//RepresentsType/variable"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mapping.ecore#//RepresentsType/document"/>
+    </genClasses>
+    <genClasses ecoreClass="mapping.ecore#//SoDBoDType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute mapping.ecore#//SoDBoDType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mapping.ecore#//SoDBoDType/permission"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mapping.ecore#//SoDBoDType/commitmentID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mapping.ecore#//SoDBoDType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mapping.ecore#//SoDBoDType/type"/>
+    </genClasses>
+    <genClasses ecoreClass="mapping.ecore#//SRAType"/>
+    <genClasses ecoreClass="mapping.ecore#//SRRType"/>
+    <genClasses ecoreClass="mapping.ecore#//ThreatsMapping">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mapping.ecore#//ThreatsMapping/bPThreat"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mapping.ecore#//ThreatsMapping/sRThreat"/>
+    </genClasses>
+    <genClasses ecoreClass="mapping.ecore#//ThreatType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mapping.ecore#//ThreatType/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mapping.ecore#//ThreatType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mapping.ecore#//ThreatType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mapping.ecore#//ThreatType/repositoryID"/>
+    </genClasses>
+    <genClasses ecoreClass="mapping.ecore#//VarType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mapping.ecore#//VarType/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mapping.ecore#//VarType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mapping.ecore#//VarType/order"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

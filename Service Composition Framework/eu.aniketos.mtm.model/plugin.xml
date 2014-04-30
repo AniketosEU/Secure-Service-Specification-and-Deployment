@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ 
+ Copyright (c) 2010 SAP AG.
+ All rights reserved. This program and the accompanying materials
+ are made available under the terms of the Eclipse Public License v1.0
+ which accompanies this distribution, and is available at
+ http://www.eclipse.org/legal/epl-v10.html
+ 
+ Contributors:
+    Reiner Hille-Doering (SAP AG) - initial API and implementation and/or initial documentation
+ 
+ </copyright>
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.omg.org/spec/BPMN/20100524/MODEL"
+            class="eu.aniketos.mtm.model.mtm_bpmn2.Bpmn2Package"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            type="mtm_bpmn2"
+            class="eu.aniketos.mtm.model.mtm_bpmn2.util.Bpmn2ResourceFactoryImpl"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.omg.org/spec/BPMN/20100524/DI"
+            class="eu.aniketos.mtm.model.mtm_bpmndi.BpmnDiPackage"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            type="mtm_bpmndi"
+            class="eu.aniketos.mtm.model.mtm_bpmndi.util.BpmnDiResourceFactoryImpl"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.omg.org/spec/DD/20100524/DI"
+            class="eu.aniketos.mtm.model.mtm_di.DiPackage"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            type="mtm_di"
+            class="eu.aniketos.mtm.model.mtm_di.util.DiResourceFactoryImpl"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.omg.org/spec/DD/20100524/DC"
+            class="eu.aniketos.mtm.model.mtm_dc.DcPackage"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            type="mtm_dc"
+            class="eu.aniketos.mtm.model.mtm_dc.util.DcResourceFactoryImpl"/>
+   </extension>
+   
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://aniketos.eu_mtm"
+            class="eu.aniketos.mtm.model.mtm_aniketos.AniketosPackage"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            type="mtm_aniketos"
+            class="eu.aniketos.mtm.model.mtm_aniketos.util.AniketosResourceFactoryImpl"/>
+   </extension>
+   
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://securebpmn_mtm"
+            class="eu.aniketos.mtm.model.mtm_securebpmn2.Securebpmn2Package"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            type="mtm_securebpmn2"
+            class="eu.aniketos.mtm.model.mtm_securebpmn2.util.Securebpmn2ResourceFactoryImpl"/>
+   </extension>
+
+</plugin>

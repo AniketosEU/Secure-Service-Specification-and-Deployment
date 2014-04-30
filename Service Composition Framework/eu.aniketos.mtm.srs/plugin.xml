@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.sts-tool.eu/xsd/SRS_1.7.xsd"
+            class="eu.aniketos.mtm.srs.SrsPackage"
+            genModel="model/srs.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            type="srs"
+            class="eu.aniketos.mtm.srs.util.SrsResourceFactoryImpl"/>
+   </extension>
+
+</plugin>

@@ -1,0 +1,492 @@
+@ExtendedMetaData(qualified="false")
+@namespace(uri="http://www.sts-tool-eu/xsd/SRS_1.8.xsd", prefix="srs")
+package srs;
+
+import "http://www.eclipse.org/emf/2003/XMLType";
+
+@ExtendedMetaData(name="actorSetType_min2", kind="elementOnly")
+class ActorSetTypeMin2 {
+
+  @ExtendedMetaData(kind="element", name="role", namespace="##targetNamespace")
+  !resolve val RoleType[2..*] role;
+}
+
+@ExtendedMetaData(name="actorType", kind="elementOnly")
+class ActorType {
+
+  @ExtendedMetaData(kind="element", name="agent", namespace="##targetNamespace")
+  !resolve val AgentType agent;
+
+  @ExtendedMetaData(kind="element", name="role", namespace="##targetNamespace")
+  !resolve val RoleType role;
+}
+
+@ExtendedMetaData(name="agentType", kind="simple")
+class AgentType {
+
+  @ExtendedMetaData(name=":0", kind="simple")
+  attr type.String value;
+
+  @ExtendedMetaData(kind="attribute", name="id", namespace="##targetNamespace")
+  attr type.String[1] ~id;
+}
+
+@ExtendedMetaData(name="AuthType", kind="elementOnly")
+class AuthType {
+
+  @ExtendedMetaData(kind="element", name="infoSet", namespace="##targetNamespace")
+  !resolve val InfoSetType[1] infoSet;
+}
+
+@ExtendedMetaData(name="authType", kind="elementOnly")
+class AuthType1 {
+
+  @ExtendedMetaData(kind="element", name="source", namespace="##targetNamespace")
+  !resolve val ActorType[1] source;
+
+  @ExtendedMetaData(kind="element", name="destination", namespace="##targetNamespace")
+  !resolve val ActorType[1] destination;
+
+  @ExtendedMetaData(kind="element", name="infoSet", namespace="##targetNamespace")
+  !resolve val InfoSetType[1] infoSet;
+
+  @ExtendedMetaData(kind="element", name="scopeSet", namespace="##targetNamespace")
+  !resolve val GoalSetType scopeSet;
+
+  @ExtendedMetaData(kind="element", name="operationSet", namespace="##targetNamespace")
+  !resolve val OperationSetType[1] operationSet;
+
+  @ExtendedMetaData(kind="element", name="transferable", namespace="##targetNamespace")
+  attr type.String[1] transferable;
+}
+
+@ExtendedMetaData(name="availabilityType", kind="elementOnly")
+class AvailabilityType {
+
+  @ExtendedMetaData(kind="element", name="goal", namespace="##targetNamespace")
+  !resolve val GoalType goal;
+
+  @ExtendedMetaData(kind="element", name="document", namespace="##targetNamespace")
+  !resolve val DocType document;
+
+  @ExtendedMetaData(kind="attribute", name="minLevel", namespace="##targetNamespace")
+  attr type.String[1] minLevel;
+}
+
+@ExtendedMetaData(name="BoD_SoD_actor_Type", kind="elementOnly")
+class BoDSoDActorType {
+
+  @ExtendedMetaData(kind="element", name="actorSet", namespace="##targetNamespace")
+  !resolve val ActorSetTypeMin2[1] actorSet;
+}
+
+@ExtendedMetaData(name="BoD_SoD_goal_Type", kind="elementOnly")
+class BoDSoDGoalType {
+
+  @ExtendedMetaData(kind="element", name="goalSet", namespace="##targetNamespace")
+  !resolve val GoalSetTypeMin2[1] goalSet;
+}
+
+@ExtendedMetaData(name="commitmentType", kind="elementOnly")
+class CommitmentType {
+
+  @ExtendedMetaData(kind="element", name="debtor", namespace="##targetNamespace")
+  !resolve val ActorType[1] debtor;
+
+  @ExtendedMetaData(kind="element", name="creditor", namespace="##targetNamespace")
+  !resolve val ActorType[1] creditor;
+
+  @ExtendedMetaData(kind="element", name="precondition", namespace="##targetNamespace")
+  !resolve val PreType precondition;
+
+  @ExtendedMetaData(kind="element", name="postcondition", namespace="##targetNamespace")
+  !resolve val PostType[1] postcondition;
+
+  @ExtendedMetaData(kind="attribute", name="id", namespace="##targetNamespace")
+  attr type.String[1] ~id;
+}
+
+@ExtendedMetaData(name="confidentialityType", kind="elementOnly")
+class ConfidentialityType {
+
+  @ExtendedMetaData(kind="element", name="document", namespace="##targetNamespace")
+  !resolve val DocType[1] document;
+}
+
+@ExtendedMetaData(name="delType", kind="elementOnly")
+class DelType {
+
+  @ExtendedMetaData(kind="element", name="source", namespace="##targetNamespace")
+  !resolve val ActorType[1] source;
+
+  @ExtendedMetaData(kind="element", name="destination", namespace="##targetNamespace")
+  !resolve val ActorType[1] destination;
+
+  @ExtendedMetaData(kind="element", name="goalSet", namespace="##targetNamespace")
+  !resolve val GoalSetType[1] goalSet;
+
+  @ExtendedMetaData(kind="element", name="transferable", namespace="##targetNamespace")
+  attr type.String[1] transferable;
+}
+
+@ExtendedMetaData(name="docType", kind="simple")
+class DocType {
+
+  @ExtendedMetaData(name=":0", kind="simple")
+  attr type.String value;
+
+  @ExtendedMetaData(kind="attribute", name="id", namespace="##targetNamespace")
+  attr type.String[1] ~id;
+}
+
+@ExtendedMetaData(name="", kind="mixed")
+class DocumentRoot {
+
+  @ExtendedMetaData(kind="elementWildcard", name=":mixed")
+  !unique attr ecore.EFeatureMapEntry[*] mixed;
+
+  @ExtendedMetaData(kind="attribute", name="xmlns:prefix")
+  transient !resolve val ecore.EStringToStringMapEntry[*] xMLNSPrefixMap;
+
+  @ExtendedMetaData(kind="attribute", name="xsi:schemaLocation")
+  transient !resolve val ecore.EStringToStringMapEntry[*] xSISchemaLocation;
+
+  @ExtendedMetaData(kind="element", name="secReqSpe", namespace="##targetNamespace")
+  volatile transient derived !resolve val SecReqSpeType[0..?] secReqSpe;
+}
+
+@ExtendedMetaData(name="goalSetType", kind="elementOnly")
+class GoalSetType {
+
+  @ExtendedMetaData(kind="element", name="goal", namespace="##targetNamespace")
+  !resolve val GoalType[+] goal;
+}
+
+@ExtendedMetaData(name="goalSetType_min2", kind="elementOnly")
+class GoalSetTypeMin2 {
+
+  @ExtendedMetaData(kind="element", name="goal", namespace="##targetNamespace")
+  !resolve val GoalType[2..*] goal;
+}
+
+@ExtendedMetaData(name="goalType", kind="simple")
+class GoalType {
+
+  @ExtendedMetaData(name=":0", kind="simple")
+  attr type.String value;
+
+  @ExtendedMetaData(kind="attribute", name="id", namespace="##targetNamespace")
+  attr type.String[1] ~id;
+}
+
+@ExtendedMetaData(name="info_docType", kind="elementOnly")
+class InfoDocType {
+
+  @ExtendedMetaData(kind="element", name="document", namespace="##targetNamespace")
+  !resolve val DocType document;
+
+  @ExtendedMetaData(kind="element", name="information", namespace="##targetNamespace")
+  !resolve val InfoType information;
+}
+
+@ExtendedMetaData(name="infoSetType", kind="elementOnly")
+class InfoSetType {
+
+  @ExtendedMetaData(kind="element", name="information", namespace="##targetNamespace")
+  !resolve val InfoType[+] information;
+}
+
+@ExtendedMetaData(name="infoType", kind="simple")
+class InfoType {
+
+  @ExtendedMetaData(name=":0", kind="simple")
+  attr type.String value;
+
+  @ExtendedMetaData(kind="attribute", name="id", namespace="##targetNamespace")
+  attr type.String[1] ~id;
+}
+
+@ExtendedMetaData(name="integrityType", kind="elementOnly")
+class IntegrityType {
+
+  @ExtendedMetaData(kind="element", name="document", namespace="##targetNamespace")
+  !resolve val DocType[1] document;
+}
+
+@ExtendedMetaData(name="KBType", kind="elementOnly")
+class KBType {
+
+  @ExtendedMetaData(kind="element", name="partOf", namespace="##targetNamespace")
+  !resolve val PartOfType[*] partOf;
+
+  @ExtendedMetaData(kind="element", name="tangibleBy", namespace="##targetNamespace")
+  !resolve val TangibleByType[*] tangibleBy;
+
+  @ExtendedMetaData(kind="element", name="owns", namespace="##targetNamespace")
+  !resolve val OwnsType[*] owns;
+
+  @ExtendedMetaData(kind="element", name="fullyAuthorized", namespace="##targetNamespace")
+  !resolve val OwnsType[*] fullyAuthorized;
+}
+
+@ExtendedMetaData(name="multiplicity_._type")
+enum MultiplicityType {
+  singleActor = 0;
+  multiActor = 1;
+}
+
+@ExtendedMetaData(name="multiplicity_._type:Object", baseType="multiplicity_._type")
+datatype MultiplicityTypeObject : org.eclipse.emf.common.util.Enumerator;
+
+@ExtendedMetaData(name="NDType", kind="elementOnly")
+class NDType {
+
+  @ExtendedMetaData(kind="element", name="goalSet", namespace="##targetNamespace")
+  !resolve val GoalSetType[1] goalSet;
+}
+
+@ExtendedMetaData(name="NRType", kind="elementOnly")
+class NRType {
+
+  @ExtendedMetaData(kind="element", name="goalSet", namespace="##targetNamespace")
+  !resolve val GoalSetType[1] goalSet;
+
+  @ExtendedMetaData(kind="attribute", name="type", namespace="##targetNamespace")
+  unsettable attr TypeType1[1] type;
+}
+
+@ExtendedMetaData(name="NTKType", kind="elementOnly")
+class NTKType {
+
+  @ExtendedMetaData(kind="element", name="goalSet", namespace="##targetNamespace")
+  !resolve val GoalSetType[1] goalSet;
+}
+
+@ExtendedMetaData(name="operationSetType", kind="elementOnly")
+class OperationSetType {
+
+  @ExtendedMetaData(kind="element", name="operation", namespace="##targetNamespace")
+  !unique attr OperationType[0..4] operation;
+}
+
+@ExtendedMetaData(name="operationType")
+enum OperationType {
+  use = 0;
+  modify = 1;
+  produce = 2;
+  distribute = 3;
+}
+
+@ExtendedMetaData(name="operationType:Object", baseType="operationType")
+datatype OperationTypeObject : org.eclipse.emf.common.util.Enumerator;
+
+@ExtendedMetaData(name="ownsType", kind="elementOnly")
+class OwnsType {
+
+  @ExtendedMetaData(kind="element", name="actor", namespace="##targetNamespace")
+  !resolve val ActorType[1] actor;
+
+  @ExtendedMetaData(kind="element", name="information", namespace="##targetNamespace")
+  !resolve val InfoType[1] information;
+}
+
+@ExtendedMetaData(name="partOfType", kind="elementOnly")
+class PartOfType {
+
+  @ExtendedMetaData(kind="element", name="container", namespace="##targetNamespace")
+  !resolve val InfoDocType[1] container;
+
+  @ExtendedMetaData(kind="element", name="content", namespace="##targetNamespace")
+  !resolve val InfoDocType[1] content;
+}
+
+@ExtendedMetaData(name="postType", kind="elementOnly")
+class PostType {
+
+  @ExtendedMetaData(kind="element", name="non-delegation", namespace="##targetNamespace")
+  !resolve val NDType nonDelegation;
+
+  @ExtendedMetaData(kind="element", name="non-repudiation", namespace="##targetNamespace")
+  !resolve val NRType nonRepudiation;
+
+  @ExtendedMetaData(kind="element", name="redundancy", namespace="##targetNamespace")
+  !resolve val RedType redundancy;
+
+  @ExtendedMetaData(kind="element", name="needToKnow", namespace="##targetNamespace")
+  !resolve val NTKType needToKnow;
+
+  @ExtendedMetaData(kind="element", name="non-disclosure", namespace="##targetNamespace")
+  !resolve val AuthType nonDisclosure;
+
+  @ExtendedMetaData(kind="element", name="non-modification", namespace="##targetNamespace")
+  !resolve val AuthType nonModification;
+
+  @ExtendedMetaData(kind="element", name="non-usage", namespace="##targetNamespace")
+  !resolve val AuthType nonUsage;
+
+  @ExtendedMetaData(kind="element", name="non-production", namespace="##targetNamespace")
+  !resolve val AuthType nonProduction;
+
+  @ExtendedMetaData(kind="element", name="play-both", namespace="##targetNamespace")
+  !resolve val BoDSoDActorType playBoth;
+
+  @ExtendedMetaData(kind="element", name="not-play-both", namespace="##targetNamespace")
+  !resolve val BoDSoDActorType notPlayBoth;
+
+  @ExtendedMetaData(kind="element", name="achieve-in-combination", namespace="##targetNamespace")
+  !resolve val BoDSoDGoalType achieveInCombination;
+
+  @ExtendedMetaData(kind="element", name="not-achieve-in-combination", namespace="##targetNamespace")
+  !resolve val BoDSoDGoalType notAchieveInCombination;
+
+  @ExtendedMetaData(kind="element", name="integrity", namespace="##targetNamespace")
+  !resolve val IntegrityType integrity;
+
+  @ExtendedMetaData(kind="element", name="availability", namespace="##targetNamespace")
+  !resolve val AvailabilityType availability;
+
+  @ExtendedMetaData(kind="element", name="confidentiality", namespace="##targetNamespace")
+  !resolve val ConfidentialityType confidentiality;
+
+  @ExtendedMetaData(kind="element", name="delegation", namespace="##targetNamespace")
+  !resolve val DelType delegation;
+}
+
+@ExtendedMetaData(name="preType", kind="elementOnly")
+class PreType {
+
+  @ExtendedMetaData(kind="element", name="delegation", namespace="##targetNamespace")
+  !resolve val DelType delegation;
+
+  @ExtendedMetaData(kind="element", name="authorization", namespace="##targetNamespace")
+  !resolve val AuthType1 authorization;
+
+  @ExtendedMetaData(kind="element", name="provision", namespace="##targetNamespace")
+  !resolve val ProvType provision;
+
+  @ExtendedMetaData(kind="element", name="trustworthiness", namespace="##targetNamespace")
+  !resolve val TrustworthinessType trustworthiness;
+}
+
+@ExtendedMetaData(name="provType", kind="elementOnly")
+class ProvType {
+
+  @ExtendedMetaData(kind="element", name="source", namespace="##targetNamespace")
+  !resolve val ActorType[1] source;
+
+  @ExtendedMetaData(kind="element", name="destination", namespace="##targetNamespace")
+  !resolve val ActorType[1] destination;
+
+  @ExtendedMetaData(kind="element", name="document", namespace="##targetNamespace")
+  !resolve val DocType[1] document;
+}
+
+@ExtendedMetaData(name="RedType", kind="elementOnly")
+class RedType {
+
+  @ExtendedMetaData(kind="element", name="goalSet", namespace="##targetNamespace")
+  !resolve val GoalSetType[1] goalSet;
+
+  @ExtendedMetaData(kind="attribute", name="multiplicity", namespace="##targetNamespace")
+  unsettable attr MultiplicityType[1] multiplicity;
+
+  @ExtendedMetaData(kind="attribute", name="type", namespace="##targetNamespace")
+  unsettable attr TypeType[1] type;
+}
+
+@ExtendedMetaData(name="roleType", kind="simple")
+class RoleType {
+
+  @ExtendedMetaData(name=":0", kind="simple")
+  attr type.String value;
+
+  @ExtendedMetaData(kind="attribute", name="id", namespace="##targetNamespace")
+  attr type.String[1] ~id;
+}
+
+@ExtendedMetaData(name="secReqSpe_._type", kind="elementOnly")
+class SecReqSpeType {
+
+  @ExtendedMetaData(kind="element", name="commitment", namespace="##targetNamespace")
+  !resolve val CommitmentType[*] commitment;
+
+  @ExtendedMetaData(kind="element", name="knowledgeBase", namespace="##targetNamespace")
+  !resolve val KBType[1] knowledgeBase;
+
+  @ExtendedMetaData(kind="element", name="threatList", namespace="##targetNamespace")
+  !resolve val ThreatListType threatList;
+}
+
+@ExtendedMetaData(name="tangibleByType", kind="elementOnly")
+class TangibleByType {
+
+  @ExtendedMetaData(kind="element", name="information", namespace="##targetNamespace")
+  !resolve val InfoType[1] information;
+
+  @ExtendedMetaData(kind="element", name="document", namespace="##targetNamespace")
+  !resolve val DocType[1] document;
+}
+
+@ExtendedMetaData(name="threatListType", kind="elementOnly")
+class ThreatListType {
+
+  @ExtendedMetaData(kind="element", name="threat", namespace="##targetNamespace")
+  !resolve val ThreatType[+] threat;
+}
+
+@ExtendedMetaData(name="threatType", kind="elementOnly")
+class ThreatType {
+
+  @ExtendedMetaData(kind="element", name="actor", namespace="##targetNamespace")
+  !resolve val ActorType[*] actor;
+
+  @ExtendedMetaData(kind="element", name="document", namespace="##targetNamespace")
+  !resolve val DocType[*] document;
+
+  @ExtendedMetaData(kind="element", name="goal", namespace="##targetNamespace")
+  !resolve val GoalType[*] goal;
+
+  @ExtendedMetaData(kind="element", name="delegation", namespace="##targetNamespace")
+  !resolve val DelType[*] delegation;
+
+  @ExtendedMetaData(kind="attribute", name="id", namespace="##targetNamespace")
+  attr type.String[1] ~id;
+
+  @ExtendedMetaData(kind="attribute", name="name", namespace="##targetNamespace")
+  attr type.String[1] name;
+
+  @ExtendedMetaData(kind="attribute", name="repositoryID", namespace="##targetNamespace")
+  attr type.String repositoryID;
+}
+
+@ExtendedMetaData(name="trustworthinessType", kind="elementOnly")
+class TrustworthinessType {
+
+  @ExtendedMetaData(kind="element", name="destination", namespace="##targetNamespace")
+  !resolve val ActorType[1] destination;
+
+  @ExtendedMetaData(kind="element", name="goal", namespace="##targetNamespace")
+  !resolve val GoalType[1] goal;
+
+  @ExtendedMetaData(kind="attribute", name="minLevel", namespace="##targetNamespace")
+  attr type.String[1] minLevel;
+}
+
+@ExtendedMetaData(name="type_._type")
+enum TypeType {
+  fallback = 0;
+  ~true = 1;
+}
+
+@ExtendedMetaData(name="type_._1_._type")
+enum TypeType1 {
+  delegation = 0;
+  acceptance = 1;
+}
+
+@ExtendedMetaData(name="type_._type:Object", baseType="type_._type")
+datatype TypeTypeObject : org.eclipse.emf.common.util.Enumerator;
+
+@ExtendedMetaData(name="type_._1_._type:Object", baseType="type_._1_._type")
+datatype TypeTypeObject1 : org.eclipse.emf.common.util.Enumerator;
+

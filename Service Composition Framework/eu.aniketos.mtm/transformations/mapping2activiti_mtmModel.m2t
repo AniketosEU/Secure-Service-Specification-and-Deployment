@@ -1,0 +1,151 @@
+/**
+ * transformation mapping2activiti
+ * date: 15/5/2013
+ * author: eneko.gomez@tecnalia.com
+ * description: 
+ */
+
+texttransformation mapping2activiti (in mapping:"XSD_mapping_V0.14",
+	out bpmn:"http://www.omg.org/spec/BPMN/20100524/MODEL" (bpmn.DocumentRoot),
+	out bpmndi:"http://www.omg.org/spec/BPMN/20100524/DI" (bpmndi.DocumentRoot),
+	out dc:"http://www.omg.org/spec/DD/20100524/DC" (dc.DocumentRoot),
+	out xmltype:"http://www.eclipse.org/emf/2003/XMLType" (xmltype.XMLTypeDocumentRoot)) {
+	  
+	property DEBUG_PATH:String = "/home/eneko/workspace-modeling/eu.aniketos.wp5.mtm/bin/;/home/eneko/workspace-modeling/eu.aniketos.wp5.mtm.activiti/bin/;/home/eneko/apps/eclipse/plugins/org.eclipse.emf.ecore_2.7.0.v20120127-1122.jar;/home/eneko/apps/eclipse/plugins/org.eclipse.emf.common_2.7.0.v20120127-1122.jar"
+	  
+	property offsetX:Real = 10
+	property offsetY:Real = 10
+	property w:Real = 105
+	property h:Real = 55
+	property processId:String = "main_process"
+	
+	var x:Real = offsetX
+	var y:Real = offsetY
+	
+	var classpath:String = ""
+	
+	mapping.MappingType::main () {
+	    var root:bpmn.DocumentRoot = new bpmn.DocumentRoot()
+	    var definitionsObj:bpmn.Definitions = new bpmn.Definitions()
+	    var process:bpmn.Process = new bpmn.Process(id=processId)
+	    var bpmnDiagram:bpmndi.BPMNDiagram = new bpmndi.BPMNDiagram()
+	    var bpmnPlane:bpmndi.BPMNPlane = new bpmndi.BPMNPlane()
+	      
+	    classpath = getenv("UTILS_CLASSPATH")
+	    if(classpath == null || classpath == "") {
+	      classpath = DEBUG_PATH
+	    }
+	    //println("mapping2activiti CLASSPATH: " + classpath)
+	    
+	    bpmnDiagram.bPMNPlane = bpmnPlane
+	    definitionsObj.rootElements.addOrg(process)
+	    definitionsObj.diagrams.addOrg(bpmnDiagram)
+	    root.definitions = definitionsObj
+	   
+	    bpmnPlane.bpmnElement = buildQName(process.id)
+	    
+	    self.relatesTo->forEach(r:mapping.RelatesToType) {
+	      r.mapRelatesTo(process, bpmnPlane)
+	    }
+	    
+	    self.isA->forEach(i:mapping.IsaType) {
+	      i.mapIsA(process)
+	    }
+	    
+	    self.plays->forEach(p:mapping.PlaysType) {
+	      p.mapPlays(process)
+	    }
+	    
+	    // self.represents is mapped in a second step in Java, not in mofscript
+	   
+	    var name:string = getenv("ACTIVITI_FILE_NAME")
+	    if(name == null || name == "") {
+	      name = "output.bpmn20"
+	    }
+	    println(name);
+	    root.store(name)
+	}
+	    
+	mapping.RelatesToType::mapRelatesTo(outProcess:bpmn.Process, outPlane:bpmndi.BPMNPlane) {
+	  	var activity:mapping.ActivityType = self.activity
+	    var activityId:String = activity.id
+	    var activityName:String = activity.value.trim()
+	    var activityType:String = activity.usertype
+	    
+	    var foundList:List = outProcess.flowElements->select(f:bpmn.UserTask | f.id.equals(activityId))	    
+	    if(foundList.isEmpty()) {
+	      var bpmnShape:bpmndi.BPMNShape = new bpmndi.BPMNShape()
+	      if("ServiceTask".equals(activityType)) {
+		      var newTask:bpmn.ServiceTask = new bpmn.ServiceTask(id=activityId, name=activityName)
+		      outProcess.flowElements.addOrg(newTask)		      
+	      } else {
+		      var newTask:bpmn.UserTask = new bpmn.UserTask(id=activityId, name=activityName)
+		      outProcess.flowElements.addOrg(newTask)		      
+	      }
+	      var bounds:dc.Bounds =  new dc.Bounds(height=h, width=w, x=x, y=y)
+	      x = x + w + offsetX
+	      y = y + h + offsety
+	      
+	      var bpmnShape:bpmndi.BPMNShape = new bpmndi.BPMNShape()
+	      bpmnShape.bpmnElement = buildQName(activity.id)
+	      bpmnShape.bounds = bounds
+	      outPlane.diagramElement.addOrg(bpmnShape)
+	    }
+	}
+	    
+	mapping.IsaType::mapIsA(outProcess:bpmn.Process) {
+	  	self.bPPart->forEach(bpp:mapping.BPPType) {
+	      bpp.mapBPP(outProcess)
+	    }
+	  	self.bPRole->forEach(bpr:mapping.BPRType) {
+	      bpr.mapBPR(outProcess)
+	    }
+	}
+	    
+	mapping.PlaysType::mapPlays(outProcess:bpmn.Process) {	
+		var bpp:mapping.BPPType = self.bPPart
+	  	if(bpp != null) {
+	      bpp.mapBPP(outProcess)
+	    }
+	}
+	
+	mapping.BPPType::mapBPP(outProcess:bpmn.Process) {
+	  	var performerId:String = self.id
+	  	var performerName:String = self.value.trim()
+	    
+	    var foundList:List = outProcess.resources->select(p:bpmn.Performer | p.id.equals(performerId))	    
+	    if(foundList.isEmpty()) {
+	      var newPerformer:bpmn.Performer = new bpmn.Performer(id=performerId, name=performerName)
+	      outProcess.resources.addOrg(newPerformer)
+	    }
+	}
+	
+	mapping.BPRType::mapBPR(outProcess:bpmn.Process) {
+	  	var performerId:String = self.id
+	  	var performerName:String = self.value.trim()
+	    
+	    var foundList:List = outProcess.resources->select(p:bpmn.Performer | p.id.equals(performerId))	    
+	    if(foundList.isEmpty()) {
+	      var newPerformer:bpmn.Performer = new bpmn.Performer(id=performerId, name=performerName)
+	      outProcess.resources.addOrg(newPerformer)
+	    }
+	}
+	
+	int2float(int:Integer) : Object {
+	  var obj:Object = java ("eu.aniketos.mtm.util.MofscriptUtils", "int2float", int, classpath)
+	  return obj
+	}
+	
+	buildQName(processId:String) {
+	    var qName:xmltype.QName = java ("eu.aniketos.mtm.util.MofscriptUtils", "buildQName", processId, classpath)
+	    return qName
+	}
+	
+	buildEntry(id:String, name:String) {
+	  	var params:List = new List()
+	  	params.add(id)
+	  	params.add(name)
+	    return java ("eu.aniketos.mtm.util.MofscriptUtils", "buildEntry", params, classpath)
+	}
+	
+}

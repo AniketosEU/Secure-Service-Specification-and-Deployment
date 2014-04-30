@@ -1,0 +1,6 @@
+<contexts>
+      <context  id="wizardhelp">
+        <description>This wizard guides you through the SRS to BPMN transformation.</description>
+        <topic href="html/SRS2BPMNWizard_help.html"  label="MTM Transformation - BPMN generation from SRS"/> 
+  </context>
+</contexts>

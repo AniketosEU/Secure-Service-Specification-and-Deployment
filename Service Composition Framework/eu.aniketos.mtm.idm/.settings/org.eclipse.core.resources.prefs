@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+encoding//src/eu/aniketos/mtm/idm/client/implementation/EntityId.java=UTF-8
+encoding//src/eu/aniketos/mtm/idm/client/implementation/IdentityRepositoryService.java=UTF-8
+encoding//src/eu/aniketos/mtm/idm/client/implementation/IdentityRepositoryServiceLocator.java=UTF-8
+encoding//src/eu/aniketos/mtm/idm/client/implementation/IdentityRepositoryServicePortType.java=UTF-8
+encoding//src/eu/aniketos/mtm/idm/client/implementation/IdentityRepositoryServiceSoapBindingStub.java=UTF-8

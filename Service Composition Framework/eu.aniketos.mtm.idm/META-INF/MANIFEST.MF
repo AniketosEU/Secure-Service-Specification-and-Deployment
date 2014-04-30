@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: IDM Client
+Bundle-SymbolicName: eu.aniketos.mtm.idm;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: eu.aniketos.mtm.idm.Activator
+Bundle-Vendor: Tecnalia
+Require-Bundle: org.eclipse.core.runtime,
+ org.junit,
+ org.apache.axis;bundle-version="1.4.0",
+ org.apache.commons.discovery;bundle-version="0.2.0",
+ javax.wsdl;bundle-version="1.6.2",
+ org.apache.commons.logging;bundle-version="1.0.4",
+ javax.xml.rpc;bundle-version="1.1.0",
+ org.eclipse.emf.ecore;bundle-version="2.8.1",
+ org.eclipse.emf.ecore.xmi;bundle-version="2.8.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Export-Package: eu.aniketos.mtm.idm.client,
+ eu.aniketos.mtm.idm.client.implementation,
+ eu.aniketos.mtm.idm.model.idm,
+ eu.aniketos.mtm.idm.model.idm.impl,
+ eu.aniketos.mtm.idm.model.idm.util

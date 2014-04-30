@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="" modelDirectory="/eu.aniketos.mtm.consumerpolicies/src"
+    modelPluginID="eu.aniketos.mtm.consumerpolicies" modelName="Consumerpolicies"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false">
+  <foreignModel>consumerpolicies.ecore</foreignModel>
+  <genPackages prefix="Consumerpolicies" basePackage="eu.aniketos.mtm.consumerpolicies"
+      disposableProviderFactory="true" ecorePackage="consumerpolicies.ecore#/">
+    <genClasses image="false" ecoreClass="consumerpolicies.ecore#//Policy">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute consumerpolicies.ecore#//Policy/ID"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="consumerpolicies.ecore#//GuardedTaskPolicy">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute consumerpolicies.ecore#//GuardedTaskPolicy/guardedTask"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="consumerpolicies.ecore#//MultipleGuardedTaskPolicy">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute consumerpolicies.ecore#//MultipleGuardedTaskPolicy/guardedTasks"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="consumerpolicies.ecore#//AllowedRolePolicy">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute consumerpolicies.ecore#//AllowedRolePolicy/allowedRole"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="consumerpolicies.ecore#//LevelPolicy">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute consumerpolicies.ecore#//LevelPolicy/minLevel"/>
+    </genClasses>
+    <genClasses ecoreClass="consumerpolicies.ecore#//Trustworthiness"/>
+    <genClasses ecoreClass="consumerpolicies.ecore#//Availability"/>
+    <genClasses ecoreClass="consumerpolicies.ecore#//Integrity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute consumerpolicies.ecore#//Integrity/guardedSender"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute consumerpolicies.ecore#//Integrity/processingService"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute consumerpolicies.ecore#//Integrity/generatingService"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute consumerpolicies.ecore#//Integrity/algorithm"/>
+    </genClasses>
+    <genClasses ecoreClass="consumerpolicies.ecore#//NoDelegation"/>
+    <genClasses ecoreClass="consumerpolicies.ecore#//NoRepudiation"/>
+    <genClasses ecoreClass="consumerpolicies.ecore#//BindingOfDuty"/>
+    <genClasses ecoreClass="consumerpolicies.ecore#//SeparationOfDuty"/>
+  </genPackages>
+</genmodel:GenModel>

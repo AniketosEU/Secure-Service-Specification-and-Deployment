@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ASCII"?>
+<idm>
+	<roles type="Human">
+		<value>Manager</value>
+		<value>Supervisor</value>
+		<value>Clerk</value>
+	</roles>
+	<roles type="Services">
+		<value>GeoLocatorService</value>
+		<value>TravellerService</value>
+		<value>MapService</value>
+		<value>PaymentService</value>
+	</roles>
+	<users role="Manager">
+		<value>Mike</value>
+		<value>Kate</value>
+		<value>John</value>
+		<value>Sarah</value>
+	</users>
+	<users role="Supervisor">
+		<value>Sam</value>
+		<value>Stefan</value>
+		<value>Anna</value>
+		<value>Jane</value>
+	</users>
+	<users role="Clerk">
+		<value>Adam</value>
+		<value>Daniel</value>
+		<value>Joan</value>
+		<value>Karen</value>
+	</users>
+	<users role="GeoLocatorService">
+		<value>IPGeo</value>
+		<value>GeoLocatorService</value>
+	</users>
+	<users role="TravellerService">
+		<value>Amadeus</value>
+		<value>Yahoo</value>
+	</users>
+	<users role="MapService">
+		<value>Google</value>
+		<value>Bing</value>
+		<value>Yahoo</value>
+	</users>
+	<users role="PaymentService">
+		<value>Google Wallet</value>
+		<value>PayPal</value>
+	</users>
+</idm>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="consumerpolicies" nsURI="http://eu.aniketos.mtm/consumerpolicies"
+    nsPrefix="ConsumerPolicies">
+  <eAnnotations source="emf.gen">
+    <details key="basePackage" value="eu.aniketos.mtm.consumerpolicies"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="Policy" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GuardedTaskPolicy" abstract="true" eSuperTypes="#//Policy">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="guardedTask" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MultipleGuardedTaskPolicy" abstract="true"
+      eSuperTypes="#//Policy">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="guardedTasks" lowerBound="2"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AllowedRolePolicy" abstract="true" eSuperTypes="#//Policy">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="allowedRole" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LevelPolicy" abstract="true" eSuperTypes="#//Policy">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="minLevel" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Trustworthiness" eSuperTypes="#//LevelPolicy #//GuardedTaskPolicy"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Availability" eSuperTypes="#//LevelPolicy"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Integrity" eSuperTypes="#//Policy">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="guardedSender" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="processingService" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="generatingService" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="algorithm" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NoDelegation" eSuperTypes="#//GuardedTaskPolicy #//AllowedRolePolicy"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NoRepudiation" eSuperTypes="#//GuardedTaskPolicy"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BindingOfDuty" eSuperTypes="#//MultipleGuardedTaskPolicy"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SeparationOfDuty" eSuperTypes="#//MultipleGuardedTaskPolicy"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Confidentiality" eSuperTypes="#//GuardedTaskPolicy">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="inputSuite" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="outputSuite" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+</ecore:EPackage>

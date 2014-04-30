@@ -1,0 +1,177 @@
+Manifest-Version: 1.0
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Built-By: hudsonbuild
+Bundle-SymbolicName: org.eclipse.zest.cloudio;singleton:=true
+Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime
+Bundle-Activator: org.eclipse.zest.cloudio.Activator
+Export-Package: org.eclipse.zest.cloudio,org.eclipse.zest.cloudio.layo
+ ut,org.eclipse.zest.cloudio.util
+Bundle-Version: 2.0.0.201208101920
+Build-Jdk: 1.6.0_21
+Bundle-ActivationPolicy: lazy
+Bundle-Name: Cloudio UI
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Bundle-ManifestVersion: 2
+
+Name: org/eclipse/zest/cloudio/layout/ILayouter.class
+SHA1-Digest: eOmmuWK1a0VZrjsuv5LRVaSAvUs=
+
+Name: org/eclipse/zest/cloudio/TagCloudViewer$2.class
+SHA1-Digest: Wzlj0T05/MeDgsZ4x1LWAx5I5Oc=
+
+Name: org/eclipse/zest/cloudio/TagCloudViewer$4.class
+SHA1-Digest: i5ZN0XG2zu6PMytc5VC8CddPvAA=
+
+Name: META-INF/maven/org.eclipse/org.eclipse.zest.cloudio/pom.properti
+ es
+SHA1-Digest: ZKB1MnObB+QrkXkFzUHFxhxUr0A=
+
+Name: org/eclipse/zest/cloudio/util/CloudMatrix.class
+SHA1-Digest: kdXLRuD4rorgkipHj4fbUpSmp+E=
+
+Name: org/eclipse/zest/cloudio/TagCloud$2.class
+SHA1-Digest: lixfBQZ61PUek/6Q7gFVJRoDnok=
+
+Name: org/eclipse/zest/cloudio/TagCloud$4.class
+SHA1-Digest: UoMgjsYyp+X0n9wWlUyETDT6T9Y=
+
+Name: org/eclipse/zest/cloudio/Activator.class
+SHA1-Digest: BUJtsdAu1i3kNAfEB1aQ3WSycys=
+
+Name: org/eclipse/zest/cloudio/TagCloud$6.class
+SHA1-Digest: L/i70MyX8sYwbUpTDJvbQO8Yycc=
+
+Name: org/eclipse/zest/cloudio/TagCloud$8.class
+SHA1-Digest: eQNxPru1ru7blwPukM/vgGpkUS0=
+
+Name: org/eclipse/zest/cloudio/ICloudLabelProvider.class
+SHA1-Digest: uz+x0goHkLoWBKRvRHhrSDQVPCc=
+
+Name: org/eclipse/zest/cloudio/layout/DefaultLayouter.class
+SHA1-Digest: QHKDyaVvOTsCk0gcH/EMe4HNOwU=
+
+Name: org/eclipse/zest/cloudio/IEditableCloudLabelProvider.class
+SHA1-Digest: RJVMUCZ1DbwqN3H+f8+QgYwi8JE=
+
+Name: META-INF/eclipse.inf
+SHA1-Digest: 09gN05tobgS/MdtqyTNQhOhB73M=
+
+Name: org/eclipse/zest/cloudio/CloudOptionsComposite.class
+SHA1-Digest: 38Bl61TGZz9NdZn8U5JWc9jk+BM=
+
+Name: img/remove.gif
+SHA1-Digest: ORJe0sG1BDPf20zkd9DI+HUjfk8=
+
+Name: img/add.gif
+SHA1-Digest: yoxjmqMtVphUpFQAd45TKQuy8gU=
+
+Name: org/eclipse/zest/cloudio/TagCloud$11.class
+SHA1-Digest: 9eGyRwqpSQj2MV/dUco0TMn3ZU0=
+
+Name: org/eclipse/zest/cloudio/TagCloud$13.class
+SHA1-Digest: 1zKWJe+KBVFMuhhw8TFaluKN3Kg=
+
+Name: org/eclipse/zest/cloudio/CloudOptionsComposite$2.class
+SHA1-Digest: VjX8nydOfiHE8WIKDiuDTR0kk3g=
+
+Name: org/eclipse/zest/cloudio/CloudOptionsComposite$10.class
+SHA1-Digest: Ze3/dY4dFCeFdvKgu1TywXN/r7s=
+
+Name: org/eclipse/zest/cloudio/CloudOptionsComposite$4.class
+SHA1-Digest: N6iBdby9efOVF4DaDPgH0FKOtDM=
+
+Name: org/eclipse/zest/cloudio/CloudOptionsComposite$12.class
+SHA1-Digest: hCxX7abSnulkzyVypbsJ8z+Zk7Q=
+
+Name: org/eclipse/zest/cloudio/CloudOptionsComposite$6.class
+SHA1-Digest: Za0ZPgzSZm2MTR0JM1v+x7nAmgA=
+
+Name: org/eclipse/zest/cloudio/CloudOptionsComposite$14.class
+SHA1-Digest: HgoOFoSA6ehCUwcs7Au13IXqJXM=
+
+Name: org/eclipse/zest/cloudio/CloudOptionsComposite$8.class
+SHA1-Digest: BE5R+y711S5+NJCheGUvHvryqqk=
+
+Name: org/eclipse/zest/cloudio/TagCloudViewer.class
+SHA1-Digest: OtZAfQCEl/SQL740MjNQW0cMxws=
+
+Name: img/toggle_colors.gif
+SHA1-Digest: eq6Q/3e/FKV+jSxDuAhZTyZkLQE=
+
+Name: org/eclipse/zest/cloudio/TagCloudViewer$1.class
+SHA1-Digest: 5PWDj8szXnNdrxqBxeARS8YYmsc=
+
+Name: org/eclipse/zest/cloudio/TagCloud.class
+SHA1-Digest: ZPhRv32qpswd19C3R4u0fnNtSZA=
+
+Name: org/eclipse/zest/cloudio/TagCloudViewer$3.class
+SHA1-Digest: vU/1K5Cu+Ri02wMeiRhkHi4weB0=
+
+Name: org/eclipse/zest/cloudio/util/SmallRect.class
+SHA1-Digest: c7IxlnUwd3aAn1zEZFlhjDipUro=
+
+Name: org/eclipse/zest/cloudio/util/RectTree.class
+SHA1-Digest: GncybjDbXV1pPgE3UibLoXYAQKA=
+
+Name: org/eclipse/zest/cloudio/TagCloud$1.class
+SHA1-Digest: chjxbwY2yRtMA+FzgPswAkYsiMI=
+
+Name: org/eclipse/zest/cloudio/Word.class
+SHA1-Digest: SZDzjLlGnLR0GWMylXLZwIyHBPg=
+
+Name: org/eclipse/zest/cloudio/TagCloud$3.class
+SHA1-Digest: X+x5BKPiSx7KzGVMIawxgVGmqFk=
+
+Name: org/eclipse/zest/cloudio/TagCloud$5.class
+SHA1-Digest: ccASFXR41/+qAm7CBrGb3mLzovQ=
+
+Name: org/eclipse/zest/cloudio/TagCloud$7.class
+SHA1-Digest: gg7z3veIhxWwxNdyQRxAcnmdbuo=
+
+Name: META-INF/maven/org.eclipse/org.eclipse.zest.cloudio/pom.xml
+SHA1-Digest: Rdj7Cm0XaFTf0AvPNfS3UIefkMU=
+
+Name: org/eclipse/zest/cloudio/TagCloud$9.class
+SHA1-Digest: tJ7YlMbXsSLv9nYuvIIdFAPeHjc=
+
+Name: org/eclipse/zest/cloudio/util/RectTree$RectNode.class
+SHA1-Digest: Cs+3RzDqoyDLrud9EY9jJsseQ6w=
+
+Name: org/eclipse/zest/cloudio/CloudOptionsComposite$ListContentProvid
+ er.class
+SHA1-Digest: sKzJ2YbJBGX0eN/OZkS6dip0tMU=
+
+Name: org/eclipse/zest/cloudio/TagCloud$10.class
+SHA1-Digest: 8alffTD8yYVFSzRFKj01Va0VeM8=
+
+Name: org/eclipse/zest/cloudio/TagCloud$12.class
+SHA1-Digest: ru+VZvSeREYlhQuao+Dqe6kTdiQ=
+
+Name: org/eclipse/zest/cloudio/CloudOptionsComposite$1.class
+SHA1-Digest: ksnOnQj50rFyZqfHU3/tIuNdJ3k=
+
+Name: org/eclipse/zest/cloudio/TagCloud$14.class
+SHA1-Digest: 4A0yqmZIgbRrpCil2NdMuG0aWAg=
+
+Name: org/eclipse/zest/cloudio/CloudOptionsComposite$3.class
+SHA1-Digest: 99GLYVC5nSA+bGh/vW4CBBKvPYc=
+
+Name: org/eclipse/zest/cloudio/CloudOptionsComposite$11.class
+SHA1-Digest: 0BYZTYWp++QFcTVHQSvUwN2DqlI=
+
+Name: org/eclipse/zest/cloudio/CloudOptionsComposite$5.class
+SHA1-Digest: GH5KH5up63usH4XwLoV+Q+rc6ZA=
+
+Name: org/eclipse/zest/cloudio/CloudOptionsComposite$13.class
+SHA1-Digest: MOEm1PZJheFoqcaQpXZ14Zg9PlQ=
+
+Name: org/eclipse/zest/cloudio/CloudOptionsComposite$7.class
+SHA1-Digest: +WhirK+rDfM/AS0mmmtreGvj9Cw=
+
+Name: org/eclipse/zest/cloudio/CloudOptionsComposite$15.class
+SHA1-Digest: dKY3jrg2VFg3soGixPnpgm2hzsU=
+
+Name: org/eclipse/zest/cloudio/CloudOptionsComposite$9.class
+SHA1-Digest: 2P1jE63FN2iENv4xDt32Xtg/LNo=
+

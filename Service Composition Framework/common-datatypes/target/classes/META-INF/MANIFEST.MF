@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1398846741443
+Build-Jdk: 1.7.0_15
+Built-By: Francesco Malmignati, Selex ES S.p.A.
+Bundle-Description: common-datatypes OSGi bundle project.
+Bundle-ManifestVersion: 2
+Bundle-Name: Common Datatypes Bundle
+Bundle-SymbolicName: common-datatypes
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: eu.aniketos.data.impl;uses:="eu.aniketos.data";version="
+ 1.0.0.SNAPSHOT",eu.aniketos.data;uses:="eu.aniketos.data.impl";version=
+ "1.0.0.SNAPSHOT"
+Tool: Bnd-1.50.0

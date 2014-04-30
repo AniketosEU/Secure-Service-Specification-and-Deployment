@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.emf.ecore.generated_package">
+      <package
+            class="eu.aniketos.mtm.idm.model.idm.IdmPackage"
+            genModel="model/idm.genmodel"
+            uri="idm_v1">
+      </package>
+   </extension>
+   <extension
+         point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            class="eu.aniketos.mtm.idm.model.idm.util.IdmResourceFactoryImpl"
+            type="idm">
+      </parser>
+   </extension>
+   <extension
+         point="org.eclipse.emf.ecore.content_parser">
+      <parser
+            class="eu.aniketos.mtm.idm.model.idm.util.IdmResourceFactoryImpl"
+            contentTypeIdentifier="idm">
+      </parser>
+   </extension>
+
+</plugin>

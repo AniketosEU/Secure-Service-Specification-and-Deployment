@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ASCII"?>
+<idm:idm xmlns:idm="idm_v1">
+  <idm:roles type="Human">
+    <idm:value>Manager</idm:value>
+    <idm:value>Supervisor</idm:value>
+    <idm:value>Clerk</idm:value>
+  </idm:roles>
+  <idm:roles type="Services">
+    <idm:value>GeoLocatorService</idm:value>
+    <idm:value>TravellerService</idm:value>
+    <idm:value>MapService</idm:value>
+	<idm:value>PaymentService</idm:value>
+  </idm:roles>
+  <idm:users role="Manager">
+    <idm:value>Mike</idm:value>
+	<idm:value>Kate</idm:value>
+	<idm:value>John</idm:value>
+	<idm:value>Sarah</idm:value>
+  </idm:users>
+  <idm:users role="Supervisor">
+    <idm:value>Sam</idm:value>
+	<idm:value>Stefan</idm:value>
+	<idm:value>Anna</idm:value>
+	<idm:value>Jane</idm:value>
+  </idm:users>
+  <idm:users role="Clerk">
+	<idm:value>Adam</idm:value>
+	<idm:value>Daniel</idm:value>
+	<idm:value>Joan</idm:value>
+	<idm:value>Karen</idm:value>
+  </idm:users>
+  <idm:users role="GeoLocatorService">
+    <idm:value>IPGeo</idm:value>
+	<idm:value>GeoLocatorService</idm:value>
+  </idm:users>
+  <idm:users role="TravellerService">
+    <idm:value>Amadeus</idm:value>
+	<idm:value>Yahoo</idm:value>
+  </idm:users>
+  <idm:users role="MapService">
+    <idm:value>Google</idm:value>
+	<idm:value>Bing</idm:value>
+	<idm:value>Yahoo</idm:value>
+  </idm:users>
+  <idm:users role="PaymentService">
+    <idm:value>Google Wallet</idm:value>
+	<idm:value>PayPal</idm:value>
+  </idm:users>
+</idm:idm>

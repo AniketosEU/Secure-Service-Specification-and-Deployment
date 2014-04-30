@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.5"?>
+
+<product name="Service Composition Framework" id="org.activiti.designer.elsag.ServiceCompositionFramework" application="org.activiti.designer.elsag.application" version="1.4.5" useFeatures="false" includeLaunchers="true">
+
+   <aboutInfo>
+      <image path="/org.activiti.designer.elsag/icons/aniketos.png"/>
+      <text>
+         Version 1.4.5
+      </text>
+   </aboutInfo>
+
+   <configIni use="default">
+   </configIni>
+
+   <launcherArgs>
+      <vmArgs>-Dosgi.requiredJavaVersion=1.5 -Xms256m -Xmx1024m</vmArgs>
+      <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts</vmArgsMac>
+   </launcherArgs>
+
+   <windowImages i16="/org.activiti.designer.elsag/icons/aniketos.png" i32="/org.activiti.designer.elsag/icons/aniketos.png" i48="/org.activiti.designer.elsag/icons/aniketos.png" i64="/org.activiti.designer.elsag/icons/aniketos.png" i128="/org.activiti.designer.elsag/icons/aniketos.png"/>
+
+   <splash
+      location="org.activiti.designer.elsag"
+      startupProgressRect="20,200,410,15"
+      startupMessageRect="22,180,410,20"
+      startupForegroundColor="000000" />
+   <launcher name="Service Composition Framework">
+      <solaris/>
+      <win useIco="false">
+         <bmp/>
+      </win>
+   </launcher>
+
+   <vm>
+      <linux include="true">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6</linux>
+      <windows include="true">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7</windows>
+   </vm>
+
+   <plugins>
+      <plugin id="com.ibm.icu"/>
+      <plugin id="common-datatypes"/>
+      <plugin id="cxf-dosgi-ri-singlebundle-distribution"/>
+      <plugin id="es.esi.gemde.modeltransformator"/>
+      <plugin id="es.esi.gemde.modeltransformator.mofscriptengine"/>
+      <plugin id="eu.aniketos.mtm"/>
+      <plugin id="eu.aniketos.mtm.consumerpolicies"/>
+      <plugin id="eu.aniketos.mtm.idm"/>
+      <plugin id="eu.aniketos.mtm.mapping"/>
+      <plugin id="eu.aniketos.mtm.model"/>
+      <plugin id="eu.aniketos.mtm.srs"/>
+      <plugin id="eu.aniketos.scf"/>
+      <plugin id="eu.aniketos.scf.implementation"/>
+      <plugin id="eu.aniketos.scpm.userinterface"/>
+      <plugin id="eu.aniketos.wp1.ststool.threats"/>
+      <plugin id="javax.annotation"/>
+      <plugin id="javax.inject"/>
+      <plugin id="javax.servlet"/>
+      <plugin id="javax.wsdl"/>
+      <plugin id="javax.xml"/>
+      <plugin id="javax.xml.rpc"/>
+      <plugin id="javax.xml.soap"/>
+      <plugin id="org.activiti.designer.eclipse"/>
+      <plugin id="org.activiti.designer.elsag"/>
+      <plugin id="org.activiti.designer.export.bpmn20"/>
+      <plugin id="org.activiti.designer.export.image"/>
+      <plugin id="org.activiti.designer.export.srcm"/>
+      <plugin id="org.activiti.designer.gui"/>
+      <plugin id="org.activiti.designer.help"/>
+      <plugin id="org.activiti.designer.integration"/>
+      <plugin id="org.activiti.designer.model.aniketosBPMN"/>
+      <plugin id="org.activiti.designer.util"/>
+      <plugin id="org.activiti.designer.validation.bpmn20"/>
+      <plugin id="org.antlr.runtime"/>
+      <plugin id="org.apache.axis"/>
+      <plugin id="org.apache.batik.css"/>
+      <plugin id="org.apache.batik.util"/>
+      <plugin id="org.apache.batik.util.gui"/>
+      <plugin id="org.apache.commons.discovery"/>
+      <plugin id="org.apache.commons.lang"/>
+      <plugin id="org.apache.commons.logging"/>
+      <plugin id="org.apache.xerces"/>
+      <plugin id="org.apache.xml.resolver"/>
+      <plugin id="org.apache.xml.serializer"/>
+      <plugin id="org.eclipse.compare"/>
+      <plugin id="org.eclipse.compare.core"/>
+      <plugin id="org.eclipse.core.commands"/>
+      <plugin id="org.eclipse.core.contenttype"/>
+      <plugin id="org.eclipse.core.databinding"/>
+      <plugin id="org.eclipse.core.databinding.observable"/>
+      <plugin id="org.eclipse.core.databinding.property"/>
+      <plugin id="org.eclipse.core.expressions"/>
+      <plugin id="org.eclipse.core.filebuffers"/>
+      <plugin id="org.eclipse.core.filesystem"/>
+      <plugin id="org.eclipse.core.filesystem.aix.ppc" fragment="true"/>
+      <plugin id="org.eclipse.core.filesystem.hpux.ia64_32" fragment="true"/>
+      <plugin id="org.eclipse.core.filesystem.linux.x86" fragment="true"/>
+      <plugin id="org.eclipse.core.filesystem.linux.x86_64" fragment="true"/>
+      <plugin id="org.eclipse.core.filesystem.macosx" fragment="true"/>
+      <plugin id="org.eclipse.core.filesystem.solaris.sparc" fragment="true"/>
+      <plugin id="org.eclipse.core.filesystem.win32.x86" fragment="true"/>
+      <plugin id="org.eclipse.core.filesystem.win32.x86_64" fragment="true"/>
+      <plugin id="org.eclipse.core.jobs"/>
+      <plugin id="org.eclipse.core.resources"/>
+      <plugin id="org.eclipse.core.resources.win32.x86" fragment="true"/>
+      <plugin id="org.eclipse.core.runtime"/>
+      <plugin id="org.eclipse.core.runtime.compatibility"/>
+      <plugin id="org.eclipse.core.runtime.compatibility.registry" fragment="true"/>
+      <plugin id="org.eclipse.core.variables"/>
+      <plugin id="org.eclipse.debug.core"/>
+      <plugin id="org.eclipse.debug.ui"/>
+      <plugin id="org.eclipse.draw2d"/>
+      <plugin id="org.eclipse.e4.core.commands"/>
+      <plugin id="org.eclipse.e4.core.contexts"/>
+      <plugin id="org.eclipse.e4.core.di"/>
+      <plugin id="org.eclipse.e4.core.di.extensions"/>
+      <plugin id="org.eclipse.e4.core.services"/>
+      <plugin id="org.eclipse.e4.ui.bindings"/>
+      <plugin id="org.eclipse.e4.ui.css.core"/>
+      <plugin id="org.eclipse.e4.ui.css.swt"/>
+      <plugin id="org.eclipse.e4.ui.css.swt.theme"/>
+      <plugin id="org.eclipse.e4.ui.di"/>
+      <plugin id="org.eclipse.e4.ui.model.workbench"/>
+      <plugin id="org.eclipse.e4.ui.services"/>
+      <plugin id="org.eclipse.e4.ui.widgets"/>
+      <plugin id="org.eclipse.e4.ui.workbench"/>
+      <plugin id="org.eclipse.e4.ui.workbench.addons.swt"/>
+      <plugin id="org.eclipse.e4.ui.workbench.renderers.swt"/>
+      <plugin id="org.eclipse.e4.ui.workbench.renderers.swt.cocoa" fragment="true"/>
+      <plugin id="org.eclipse.e4.ui.workbench.swt"/>
+      <plugin id="org.eclipse.e4.ui.workbench3"/>
+      <plugin id="org.eclipse.emf"/>
+      <plugin id="org.eclipse.emf.common"/>
+      <plugin id="org.eclipse.emf.common.ui"/>
+      <plugin id="org.eclipse.emf.ecore"/>
+      <plugin id="org.eclipse.emf.ecore.change"/>
+      <plugin id="org.eclipse.emf.ecore.xmi"/>
+      <plugin id="org.eclipse.emf.edit"/>
+      <plugin id="org.eclipse.emf.edit.ui"/>
+      <plugin id="org.eclipse.emf.mapping.ecore2xml"/>
+      <plugin id="org.eclipse.emf.transaction"/>
+      <plugin id="org.eclipse.emf.validation"/>
+      <plugin id="org.eclipse.emf.workspace"/>
+      <plugin id="org.eclipse.equinox.app"/>
+      <plugin id="org.eclipse.equinox.common"/>
+      <plugin id="org.eclipse.equinox.ds"/>
+      <plugin id="org.eclipse.equinox.event"/>
+      <plugin id="org.eclipse.equinox.frameworkadmin"/>
+      <plugin id="org.eclipse.equinox.frameworkadmin.equinox"/>
+      <plugin id="org.eclipse.equinox.p2.core"/>
+      <plugin id="org.eclipse.equinox.p2.engine"/>
+      <plugin id="org.eclipse.equinox.p2.metadata"/>
+      <plugin id="org.eclipse.equinox.p2.metadata.repository"/>
+      <plugin id="org.eclipse.equinox.p2.repository"/>
+      <plugin id="org.eclipse.equinox.preferences"/>
+      <plugin id="org.eclipse.equinox.registry"/>
+      <plugin id="org.eclipse.equinox.security"/>
+      <plugin id="org.eclipse.equinox.security.macosx" fragment="true"/>
+      <plugin id="org.eclipse.equinox.security.win32.x86" fragment="true"/>
+      <plugin id="org.eclipse.equinox.security.win32.x86_64" fragment="true"/>
+      <plugin id="org.eclipse.equinox.simpleconfigurator"/>
+      <plugin id="org.eclipse.equinox.simpleconfigurator.manipulator"/>
+      <plugin id="org.eclipse.equinox.util"/>
+      <plugin id="org.eclipse.gef"/>
+      <plugin id="org.eclipse.graphiti"/>
+      <plugin id="org.eclipse.graphiti.mm"/>
+      <plugin id="org.eclipse.graphiti.pattern"/>
+      <plugin id="org.eclipse.graphiti.ui"/>
+      <plugin id="org.eclipse.help"/>
+      <plugin id="org.eclipse.jdt"/>
+      <plugin id="org.eclipse.jdt.compiler.apt" fragment="true"/>
+      <plugin id="org.eclipse.jdt.compiler.tool" fragment="true"/>
+      <plugin id="org.eclipse.jdt.core"/>
+      <plugin id="org.eclipse.jdt.core.manipulation"/>
+      <plugin id="org.eclipse.jdt.debug"/>
+      <plugin id="org.eclipse.jdt.junit.core"/>
+      <plugin id="org.eclipse.jdt.junit.runtime"/>
+      <plugin id="org.eclipse.jdt.launching"/>
+      <plugin id="org.eclipse.jdt.ui"/>
+      <plugin id="org.eclipse.jface"/>
+      <plugin id="org.eclipse.jface.databinding"/>
+      <plugin id="org.eclipse.jface.text"/>
+      <plugin id="org.eclipse.ltk.core.refactoring"/>
+      <plugin id="org.eclipse.ltk.ui.refactoring"/>
+      <plugin id="org.eclipse.mofscript.editor"/>
+      <plugin id="org.eclipse.mofscript.fileresourcemodel"/>
+      <plugin id="org.eclipse.mofscript.model"/>
+      <plugin id="org.eclipse.mofscript.parser"/>
+      <plugin id="org.eclipse.mofscript.runtime"/>
+      <plugin id="org.eclipse.mofscript.traceabilitymodel"/>
+      <plugin id="org.eclipse.osgi"/>
+      <plugin id="org.eclipse.osgi.services"/>
+      <plugin id="org.eclipse.osgi.util"/>
+      <plugin id="org.eclipse.search"/>
+      <plugin id="org.eclipse.swt"/>
+      <plugin id="org.eclipse.swt.cocoa.macosx" fragment="true"/>
+      <plugin id="org.eclipse.swt.cocoa.macosx.x86_64" fragment="true"/>
+      <plugin id="org.eclipse.swt.gtk.aix.ppc" fragment="true"/>
+      <plugin id="org.eclipse.swt.gtk.aix.ppc64" fragment="true"/>
+      <plugin id="org.eclipse.swt.gtk.hpux.ia64_32" fragment="true"/>
+      <plugin id="org.eclipse.swt.gtk.linux.ppc64" fragment="true"/>
+      <plugin id="org.eclipse.swt.gtk.linux.s390" fragment="true"/>
+      <plugin id="org.eclipse.swt.gtk.linux.s390x" fragment="true"/>
+      <plugin id="org.eclipse.swt.gtk.linux.x86" fragment="true"/>
+      <plugin id="org.eclipse.swt.gtk.linux.x86_64" fragment="true"/>
+      <plugin id="org.eclipse.swt.gtk.solaris.sparc" fragment="true"/>
+      <plugin id="org.eclipse.swt.gtk.solaris.x86" fragment="true"/>
+      <plugin id="org.eclipse.swt.win32.win32.x86" fragment="true"/>
+      <plugin id="org.eclipse.swt.win32.win32.x86_64" fragment="true"/>
+      <plugin id="org.eclipse.team.core"/>
+      <plugin id="org.eclipse.team.ui"/>
+      <plugin id="org.eclipse.text"/>
+      <plugin id="org.eclipse.ui"/>
+      <plugin id="org.eclipse.ui.cheatsheets"/>
+      <plugin id="org.eclipse.ui.console"/>
+      <plugin id="org.eclipse.ui.editors"/>
+      <plugin id="org.eclipse.ui.forms"/>
+      <plugin id="org.eclipse.ui.ide"/>
+      <plugin id="org.eclipse.ui.intro"/>
+      <plugin id="org.eclipse.ui.navigator"/>
+      <plugin id="org.eclipse.ui.navigator.resources"/>
+      <plugin id="org.eclipse.ui.views"/>
+      <plugin id="org.eclipse.ui.views.properties.tabbed"/>
+      <plugin id="org.eclipse.ui.win32" fragment="true"/>
+      <plugin id="org.eclipse.ui.workbench"/>
+      <plugin id="org.eclipse.ui.workbench.texteditor"/>
+      <plugin id="org.eclipse.uml2.common"/>
+      <plugin id="org.eclipse.uml2.types"/>
+      <plugin id="org.eclipse.uml2.uml"/>
+      <plugin id="org.eclipse.update.configurator"/>
+      <plugin id="org.eclipse.wst.common.core"/>
+      <plugin id="org.eclipse.wst.common.environment"/>
+      <plugin id="org.eclipse.wst.common.frameworks"/>
+      <plugin id="org.eclipse.wst.common.project.facet.core"/>
+      <plugin id="org.eclipse.wst.common.ui"/>
+      <plugin id="org.eclipse.wst.common.uriresolver"/>
+      <plugin id="org.eclipse.wst.sse.core"/>
+      <plugin id="org.eclipse.wst.sse.ui"/>
+      <plugin id="org.eclipse.wst.validation"/>
+      <plugin id="org.eclipse.wst.xml.core"/>
+      <plugin id="org.eclipse.wst.xml.ui"/>
+      <plugin id="org.eclipse.zest.cloudio"/>
+      <plugin id="org.hamcrest.core"/>
+      <plugin id="org.jdom"/>
+      <plugin id="org.junit"/>
+      <plugin id="org.w3c.css.sac"/>
+      <plugin id="org.w3c.dom.smil"/>
+      <plugin id="org.w3c.dom.svg"/>
+      <plugin id="threatrepository-impl"/>
+      <plugin id="threatrepository-interface"/>
+   </plugins>
+
+   <configurations>
+      <plugin id="com.ibm.icu" autoStart="false" startLevel="0" />
+      <plugin id="common-datatypes" autoStart="false" startLevel="0" />
+      <plugin id="cxf-dosgi-ri-singlebundle-distribution" autoStart="true" startLevel="0" />
+      <plugin id="es.esi.gemde.modeltransformator" autoStart="false" startLevel="0" />
+      <plugin id="es.esi.gemde.modeltransformator.mofscriptengine" autoStart="false" startLevel="0" />
+      <plugin id="eu.aniketos.mtm" autoStart="false" startLevel="0" />
+      <plugin id="eu.aniketos.mtm.consumerpolicies" autoStart="false" startLevel="0" />
+      <plugin id="eu.aniketos.mtm.idm" autoStart="false" startLevel="0" />
+      <plugin id="eu.aniketos.mtm.mapping" autoStart="false" startLevel="0" />
+      <plugin id="eu.aniketos.mtm.model" autoStart="false" startLevel="0" />
+      <plugin id="eu.aniketos.mtm.srs" autoStart="false" startLevel="0" />
+      <plugin id="eu.aniketos.scf" autoStart="false" startLevel="0" />
+      <plugin id="eu.aniketos.scf.implementation" autoStart="true" startLevel="0" />
+      <plugin id="eu.aniketos.scpm.userinterface" autoStart="false" startLevel="0" />
+      <plugin id="eu.aniketos.wp1.ststool.threats" autoStart="false" startLevel="0" />
+      <plugin id="javax.annotation" autoStart="false" startLevel="0" />
+      <plugin id="javax.inject" autoStart="false" startLevel="0" />
+      <plugin id="javax.servlet" autoStart="false" startLevel="0" />
+      <plugin id="javax.wsdl" autoStart="false" startLevel="0" />
+      <plugin id="javax.xml" autoStart="false" startLevel="0" />
+      <plugin id="javax.xml.rpc" autoStart="false" startLevel="0" />
+      <plugin id="javax.xml.soap" autoStart="false" startLevel="0" />
+      <plugin id="org.activiti.designer.eclipse" autoStart="false" startLevel="0" />
+      <plugin id="org.activiti.designer.elsag" autoStart="false" startLevel="0" />
+      <plugin id="org.activiti.designer.export.bpmn20" autoStart="false" startLevel="0" />
+      <plugin id="org.activiti.designer.export.image" autoStart="false" startLevel="0" />
+      <plugin id="org.activiti.designer.export.srcm" autoStart="false" startLevel="0" />
+      <plugin id="org.activiti.designer.gui" autoStart="false" startLevel="0" />
+      <plugin id="org.activiti.designer.help" autoStart="false" startLevel="0" />
+      <plugin id="org.activiti.designer.integration" autoStart="false" startLevel="0" />
+      <plugin id="org.activiti.designer.model.aniketosBPMN" autoStart="false" startLevel="0" />
+      <plugin id="org.activiti.designer.util" autoStart="false" startLevel="0" />
+      <plugin id="org.activiti.designer.validation.bpmn20" autoStart="false" startLevel="0" />
+      <plugin id="org.antlr.runtime" autoStart="false" startLevel="0" />
+      <plugin id="org.apache.axis" autoStart="false" startLevel="0" />
+      <plugin id="org.apache.batik.css" autoStart="false" startLevel="0" />
+      <plugin id="org.apache.batik.util" autoStart="false" startLevel="0" />
+      <plugin id="org.apache.batik.util.gui" autoStart="false" startLevel="0" />
+      <plugin id="org.apache.commons.discovery" autoStart="false" startLevel="0" />
+      <plugin id="org.apache.commons.lang" autoStart="false" startLevel="0" />
+      <plugin id="org.apache.commons.logging" autoStart="false" startLevel="0" />
+      <plugin id="org.apache.xerces" autoStart="false" startLevel="0" />
+      <plugin id="org.apache.xml.resolver" autoStart="false" startLevel="0" />
+      <plugin id="org.apache.xml.serializer" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.compare" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.compare.core" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.core.commands" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.core.contenttype" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.core.databinding" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.core.databinding.observable" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.core.databinding.property" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.core.expressions" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.core.filebuffers" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.core.filesystem" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.core.jobs" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.core.resources" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.core.runtime.compatibility" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.core.variables" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.debug.core" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.debug.ui" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.draw2d" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.e4.core.commands" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.e4.core.contexts" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.e4.core.di" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.e4.core.di.extensions" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.e4.core.services" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.e4.ui.bindings" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.e4.ui.css.core" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.e4.ui.css.swt" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.e4.ui.css.swt.theme" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.e4.ui.di" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.e4.ui.model.workbench" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.e4.ui.services" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.e4.ui.widgets" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.e4.ui.workbench" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.e4.ui.workbench.addons.swt" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.e4.ui.workbench.renderers.swt" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.e4.ui.workbench.swt" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.e4.ui.workbench3" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.emf" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.emf.common" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.emf.common.ui" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.emf.ecore" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.emf.ecore.change" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.emf.ecore.xmi" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.emf.edit" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.emf.edit.ui" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.emf.mapping.ecore2xml" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.emf.transaction" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.emf.validation" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.emf.workspace" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.equinox.app" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.equinox.common" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.equinox.ds" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.event" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.equinox.frameworkadmin" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.equinox.frameworkadmin.equinox" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.equinox.p2.core" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.equinox.p2.engine" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.equinox.p2.metadata" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.equinox.p2.metadata.repository" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.equinox.p2.repository" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.equinox.preferences" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.equinox.registry" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.equinox.security" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.equinox.simpleconfigurator.manipulator" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.equinox.util" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.gef" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.graphiti" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.graphiti.mm" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.graphiti.pattern" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.graphiti.ui" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.help" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.jdt" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.jdt.core" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.jdt.core.manipulation" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.jdt.debug" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.jdt.junit.core" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.jdt.junit.runtime" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.jdt.launching" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.jdt.ui" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.jface" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.jface.databinding" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.jface.text" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.ltk.core.refactoring" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.ltk.ui.refactoring" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.mofscript.editor" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.mofscript.fileresourcemodel" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.mofscript.model" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.mofscript.parser" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.mofscript.runtime" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.mofscript.traceabilitymodel" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.osgi" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.osgi.services" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.osgi.util" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.search" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.swt" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.team.core" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.team.ui" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.text" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.ui" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.ui.cheatsheets" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.ui.console" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.ui.editors" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.ui.forms" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.ui.ide" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.ui.intro" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.ui.navigator" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.ui.navigator.resources" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.ui.views" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.ui.views.properties.tabbed" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.ui.workbench" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.ui.workbench.texteditor" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.uml2.common" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.uml2.types" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.uml2.uml" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.update.configurator" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.wst.common.core" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.wst.common.environment" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.wst.common.frameworks" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.wst.common.project.facet.core" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.wst.common.ui" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.wst.common.uriresolver" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.wst.sse.core" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.wst.sse.ui" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.wst.validation" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.wst.xml.core" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.wst.xml.ui" autoStart="false" startLevel="0" />
+      <plugin id="org.eclipse.zest.cloudio" autoStart="false" startLevel="0" />
+      <plugin id="org.hamcrest.core" autoStart="false" startLevel="0" />
+      <plugin id="org.jdom" autoStart="false" startLevel="0" />
+      <plugin id="org.junit" autoStart="false" startLevel="0" />
+      <plugin id="org.w3c.css.sac" autoStart="false" startLevel="0" />
+      <plugin id="org.w3c.dom.smil" autoStart="false" startLevel="0" />
+      <plugin id="org.w3c.dom.svg" autoStart="false" startLevel="0" />
+      <plugin id="threatrepository-impl" autoStart="true" startLevel="0" />
+      <plugin id="threatrepository-interface" autoStart="false" startLevel="0" />
+   </configurations>
+
+</product>

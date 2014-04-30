@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/eu.aniketos.mtm.srs/src" modelPluginID="eu.aniketos.mtm.srs"
+    modelName="Srs" featureMapWrapperClass="" importerID="org.eclipse.xsd.ecore.importer"
+    complianceLevel="6.0" copyrightFields="false">
+  <foreignModel>../metamodel/SRS_1.8.xsd</foreignModel>
+  <genPackages prefix="Srs" basePackage="eu.aniketos.mtm" resource="XML" disposableProviderFactory="true"
+      ecorePackage="srs.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="srs.ecore#//MultiplicityType">
+      <genEnumLiterals ecoreEnumLiteral="srs.ecore#//MultiplicityType/singleActor"/>
+      <genEnumLiterals ecoreEnumLiteral="srs.ecore#//MultiplicityType/multiActor"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="srs.ecore#//OperationType">
+      <genEnumLiterals ecoreEnumLiteral="srs.ecore#//OperationType/use"/>
+      <genEnumLiterals ecoreEnumLiteral="srs.ecore#//OperationType/modify"/>
+      <genEnumLiterals ecoreEnumLiteral="srs.ecore#//OperationType/produce"/>
+      <genEnumLiterals ecoreEnumLiteral="srs.ecore#//OperationType/distribute"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="srs.ecore#//TypeType">
+      <genEnumLiterals ecoreEnumLiteral="srs.ecore#//TypeType/fallback"/>
+      <genEnumLiterals ecoreEnumLiteral="srs.ecore#//TypeType/true"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="srs.ecore#//TypeType1">
+      <genEnumLiterals ecoreEnumLiteral="srs.ecore#//TypeType1/delegation"/>
+      <genEnumLiterals ecoreEnumLiteral="srs.ecore#//TypeType1/acceptance"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="srs.ecore#//MultiplicityTypeObject"/>
+    <genDataTypes ecoreDataType="srs.ecore#//OperationTypeObject"/>
+    <genDataTypes ecoreDataType="srs.ecore#//TypeTypeObject"/>
+    <genDataTypes ecoreDataType="srs.ecore#//TypeTypeObject1"/>
+    <genClasses ecoreClass="srs.ecore#//ActorSetTypeMin2">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//ActorSetTypeMin2/role"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//ActorType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//ActorType/agent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//ActorType/role"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//AgentType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute srs.ecore#//AgentType/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute srs.ecore#//AgentType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//AuthType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//AuthType/infoSet"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//AuthType1">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//AuthType1/source"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//AuthType1/destination"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//AuthType1/infoSet"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//AuthType1/scopeSet"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//AuthType1/operationSet"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute srs.ecore#//AuthType1/transferable"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//AvailabilityType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//AvailabilityType/goal"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//AvailabilityType/document"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute srs.ecore#//AvailabilityType/minLevel"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//BoDSoDActorType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//BoDSoDActorType/actorSet"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//BoDSoDGoalType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//BoDSoDGoalType/goalSet"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//CommitmentType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//CommitmentType/debtor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//CommitmentType/creditor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//CommitmentType/precondition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//CommitmentType/postcondition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute srs.ecore#//CommitmentType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//ConfidentialityType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//ConfidentialityType/document"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//DelType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//DelType/source"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//DelType/destination"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//DelType/goalSet"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute srs.ecore#//DelType/transferable"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//DocType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute srs.ecore#//DocType/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute srs.ecore#//DocType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//DocumentRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute srs.ecore#//DocumentRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference srs.ecore#//DocumentRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference srs.ecore#//DocumentRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//DocumentRoot/secReqSpe"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//GoalSetType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//GoalSetType/goal"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//GoalSetTypeMin2">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//GoalSetTypeMin2/goal"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//GoalType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute srs.ecore#//GoalType/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute srs.ecore#//GoalType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//InfoDocType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//InfoDocType/document"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//InfoDocType/information"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//InfoSetType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//InfoSetType/information"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//InfoType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute srs.ecore#//InfoType/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute srs.ecore#//InfoType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//IntegrityType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//IntegrityType/document"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//KBType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//KBType/partOf"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//KBType/tangibleBy"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//KBType/owns"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//KBType/fullyAuthorized"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//NDType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//NDType/goalSet"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//NRType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//NRType/goalSet"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute srs.ecore#//NRType/type"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//NTKType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//NTKType/goalSet"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//OperationSetType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute srs.ecore#//OperationSetType/operation"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//OwnsType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//OwnsType/actor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//OwnsType/information"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//PartOfType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//PartOfType/container"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//PartOfType/content"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//PostType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//PostType/nonDelegation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//PostType/nonRepudiation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//PostType/redundancy"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//PostType/needToKnow"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//PostType/nonDisclosure"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//PostType/nonModification"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//PostType/nonUsage"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//PostType/nonProduction"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//PostType/playBoth"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//PostType/notPlayBoth"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//PostType/achieveInCombination"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//PostType/notAchieveInCombination"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//PostType/integrity"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//PostType/availability"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//PostType/confidentiality"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//PostType/delegation"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//PreType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//PreType/delegation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//PreType/authorization"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//PreType/provision"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//PreType/trustworthiness"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//ProvType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//ProvType/source"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//ProvType/destination"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//ProvType/document"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//RedType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//RedType/goalSet"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute srs.ecore#//RedType/multiplicity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute srs.ecore#//RedType/type"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//RoleType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute srs.ecore#//RoleType/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute srs.ecore#//RoleType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//SecReqSpeType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//SecReqSpeType/commitment"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//SecReqSpeType/knowledgeBase"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//SecReqSpeType/threatList"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//TangibleByType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//TangibleByType/information"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//TangibleByType/document"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//ThreatListType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//ThreatListType/threat"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//ThreatType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//ThreatType/actor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//ThreatType/document"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//ThreatType/goal"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//ThreatType/delegation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute srs.ecore#//ThreatType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute srs.ecore#//ThreatType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute srs.ecore#//ThreatType/repositoryID"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//TrustworthinessType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//TrustworthinessType/destination"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//TrustworthinessType/goal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute srs.ecore#//TrustworthinessType/minLevel"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

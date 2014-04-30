@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/eu.aniketos.mtm.idm/src" modelPluginID="eu.aniketos.mtm.idm"
+    modelName="Idm" importerID="org.eclipse.xsd.ecore.importer" complianceLevel="6.0"
+    copyrightFields="false">
+  <foreignModel>idm_v1.xsd</foreignModel>
+  <genPackages prefix="Idm" basePackage="eu.aniketos.mtm.idm.model" resource="XML"
+      disposableProviderFactory="true" ecorePackage="idm.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="idm.ecore#//TypeType">
+      <genEnumLiterals ecoreEnumLiteral="idm.ecore#//TypeType/Human"/>
+      <genEnumLiterals ecoreEnumLiteral="idm.ecore#//TypeType/Services"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="idm.ecore#//TypeTypeObject"/>
+    <genClasses ecoreClass="idm.ecore#//DocumentRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute idm.ecore#//DocumentRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference idm.ecore#//DocumentRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference idm.ecore#//DocumentRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference idm.ecore#//DocumentRoot/idm"/>
+    </genClasses>
+    <genClasses ecoreClass="idm.ecore#//IdmType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference idm.ecore#//IdmType/roles"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference idm.ecore#//IdmType/users"/>
+    </genClasses>
+    <genClasses ecoreClass="idm.ecore#//Roles">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idm.ecore#//Roles/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idm.ecore#//Roles/type"/>
+    </genClasses>
+    <genClasses ecoreClass="idm.ecore#//Users">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idm.ecore#//Users/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idm.ecore#//Users/role"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

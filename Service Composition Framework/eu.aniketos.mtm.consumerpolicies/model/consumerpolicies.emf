@@ -1,0 +1,48 @@
+@namespace(uri="http://eu.aniketos.mtm/consumerpolicies", prefix="ConsumerPolicies")
+@emf.gen(basePackage="eu.aniketos.mtm.consumerpolicies")
+package consumerpolicies;
+
+abstract class Policy {
+	attr String [1] ID;
+}
+
+abstract class GuardedTaskPolicy extends Policy {
+	attr String [1] guardedTask;
+}
+
+abstract class MultipleGuardedTaskPolicy extends Policy {
+	unique attr String [2..*] guardedTasks;
+}
+
+abstract class AllowedRolePolicy extends Policy {
+	attr String [1] allowedRole;
+}
+
+abstract class LevelPolicy extends Policy {
+	attr Float [1] minLevel;
+}
+
+class Trustworthiness extends LevelPolicy, GuardedTaskPolicy {}
+
+class Availability extends LevelPolicy {}
+
+class Integrity extends Policy {
+	attr String [1] guardedSender;
+	attr String [1] processingService;
+	attr String [1] generatingService;
+	attr String [1] algorithm;
+}
+
+class NoDelegation extends GuardedTaskPolicy, AllowedRolePolicy {}
+
+class NoRepudiation extends GuardedTaskPolicy {}
+
+class BindingOfDuty extends MultipleGuardedTaskPolicy {}
+
+class SeparationOfDuty extends MultipleGuardedTaskPolicy {}
+
+class Confidentiality extends GuardedTaskPolicy {
+	attr String [1] inputSuite;
+	attr String [1] outputSuite;
+}
+

@@ -1,0 +1,100 @@
+/**
+ * transformation Trustworthiness
+ * date: 10/6/2013
+ * author: null
+ * description: 
+ */
+
+texttransformation NoRepudiation (in cp:"http://eu.aniketos.mtm/consumerpolicies") {
+
+  cp.NoRepudiation::main () {
+    file("Non_Repudiation" + self.ID + ".xml");
+<%<?xml version="1.0" encoding="UTF-8"?>
+<specification id="%>self.ID<%_Non_Repudiation">
+	<maxint>32000</maxint>
+	<maxlen>1000</maxlen>
+	<scope>Session</scope>
+	<securitystate>
+		<declaration>
+			<type>string</type>
+			<identifier>guardedTask</identifier>
+			<value>
+				<sconst>%>self.guardedTask<%</sconst>
+			</value>
+		</declaration>
+	</securitystate>
+	<rule>
+		<before>
+			<identifier>activity.start</identifier>
+			<parameter>
+				<type>string</type>
+				<identifier>id</identifier>
+			</parameter>
+			<parameter>
+				<type>string</type>
+				<identifier>name</identifier>
+			</parameter>
+			<parameter>
+				<type>string</type>
+				<identifier>type</identifier>
+			</parameter>
+			<parameter>
+				<type>int</type>
+				<identifier>time</identifier>
+			</parameter>
+			<parameter>
+				<type>int</type>
+				<identifier>date</identifier>
+			</parameter>
+			<parameter>
+				<type>string</type>
+				<identifier>exec</identifier>
+			</parameter>
+			<parameter>
+				<type>string</type>
+				<identifier>input</identifier>
+			</parameter>
+			<parameter>
+				<type>string</type>
+				<identifier>ack</identifier>
+			</parameter>
+		</before>
+		<perform>
+			<reaction>
+				<guard>
+					<and>
+						<s_equal>
+							<s_identifier>guardedTask</s_identifier>
+							<s_identifier>name</s_identifier>
+						</s_equal>
+						<s_equal>
+							<invocation>
+								<s_identifier>getAssignee</s_identifier>
+								<s_identifier>result</s_identifier>
+								<argument>
+									<s_identifier>ack</s_identifier>
+								</argument>
+							</invocation>
+							<s_identifier>exec</s_identifier>
+						</s_equal>
+					</and>
+				</guard>
+				<update />
+			</reaction>
+			<reaction>
+				<guard>
+					<not>
+						<s_equal>
+							<s_identifier>guardedTask</s_identifier>
+							<s_identifier>name</s_identifier>
+						</s_equal>
+					</not>
+				</guard>
+				<update />
+			</reaction>
+		</perform>
+	</rule>
+</specification>
+%>
+  }
+}
