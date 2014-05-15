@@ -1,0 +1,68 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>eu.aniketos.serviceruntime</groupId>
+    <artifactId>serviceruntime</artifactId>
+    <name>Aniketos Service Runtime Bundles</name>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <modules>
+      <module>serviceruntimeremote</module>      
+      <module>serviceruntimeremotefeature</module>
+      <module>serviceruntimedata</module>
+    </modules>
+    
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>       
+        </plugins>
+    </build>
+    
+    <dependencies>        
+        <dependency> 
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.framework</artifactId>
+            <version>3.0.8</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.felix</groupId>
+                    <artifactId>org.osgi.foundation</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>    
+
+    <repositories>
+        <repository>
+            <id>prometheus-atc-snapshots</id> 
+            <url>http://prometheus.atc.gr:8080/nexus/content/repositories/snapshots/</url> 
+        </repository>
+        <repository>
+            <id>prometheus-atc</id> 
+            <url>http://prometheus.atc.gr:8080/nexus/content/repositories/releases/</url> 
+        </repository>		
+    </repositories> 
+    
+    <distributionManagement>
+        <repository>
+            <id>prometheus-atc</id> 
+            <name>prometheus-atc-releases</name> 
+            <url>http://prometheus.atc.gr:8080/nexus/content/repositories/releases/</url> 
+        </repository>
+        <snapshotRepository>
+            <id>prometheus-atc</id> 
+            <name>prometheus-atc-snapshots</name> 
+            <url>http://prometheus.atc.gr:8080/nexus/content/repositories/snapshots/</url> 
+        </snapshotRepository>
+    </distributionManagement> 
+</project>

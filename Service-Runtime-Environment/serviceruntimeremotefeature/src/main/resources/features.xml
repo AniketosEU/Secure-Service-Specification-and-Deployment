@@ -1,0 +1,56 @@
+<features>
+    <feature name='serviceruntimeremote' version='1.0'>
+
+        <bundle>mvn:org.apache.geronimo.specs/geronimo-jpa_2.0_spec/1.1</bundle>
+        <bundle>mvn:commons-collections/commons-collections/3.2.1</bundle>
+        <bundle>mvn:commons-pool/commons-pool/1.5.4</bundle>
+        <bundle>mvn:commons-dbcp/commons-dbcp/1.4</bundle>
+        <bundle>mvn:commons-lang/commons-lang/2.6</bundle>
+        <bundle>wrap:mvn:net.sourceforge.serp/serp/1.13.1</bundle>
+        <bundle>mvn:org.apache.openjpa/openjpa/2.1.1</bundle>
+        <bundle>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.stax-api-1.0/1.9.0</bundle>
+        <bundle>mvn:mysql/mysql-connector-java/5.1.18</bundle>
+    
+        <bundle>mvn:org.codehaus.jackson/jackson-core-asl/1.9.5</bundle>
+        <bundle>mvn:org.codehaus.jackson/jackson-xc/1.9.5</bundle>        
+        <bundle>mvn:org.codehaus.jackson/jackson-jaxrs/1.9.5</bundle>
+        <bundle>mvn:org.codehaus.jackson/jackson-mapper-asl/1.9.5</bundle>        
+        <bundle>mvn:org.codehaus.jettison/jettison/1.1</bundle>
+        <bundle>mvn:org.jvnet.mimepull/mimepull/1.9.1</bundle>
+        <bundle>mvn:com.sun.jersey.contribs/jersey-multipart/1.17</bundle>    
+        <bundle>mvn:com.sun.jersey/jersey-core/1.17</bundle>
+        <bundle>mvn:com.sun.jersey/jersey-client/1.17</bundle>
+        <bundle>mvn:javax.ws.rs/jsr311-api/1.1.1</bundle>
+        <bundle start='false'>mvn:com.sun.jersey/jersey-json/1.17</bundle>    
+    
+        <bundle>mvn:eu.aniketos.data/common-datatypes/1.0.0-SNAPSHOT</bundle>
+        <!--
+        <bundle>mvn:eu.aniketos.scpm/interface/1.0.0.0</bundle>
+        -->
+        <!--
+        <bundle>mvn:eu.aniketos.serviceruntime/eventlistener/1.0.0-SNAPSHOT</bundle>
+        <bundle>mvn:eu.aniketos.serviceruntime/notification/1.0.0-SNAPSHOT</bundle>
+        -->
+        <bundle>mvn:eu.aniketos.serviceruntime/data-adapter/1.0.0-SNAPSHOT</bundle>      
+        <bundle start='false'>mvn:eu.aniketos.serviceruntime/remote/1.0.0-SNAPSHOT</bundle>
+    </feature>
+</features>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

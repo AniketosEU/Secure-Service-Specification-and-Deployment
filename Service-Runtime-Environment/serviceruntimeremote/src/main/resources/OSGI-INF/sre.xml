@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" immediate="true" modified="modified" name="eu.aniketos.serviceruntime.remote2">
+   <implementation class="eu.aniketos.serviceruntime.remote.RuntimeRemoteImpl"/>
+   <service>
+      <provide interface="eu.aniketos.serviceruntime.remote.IRuntimeRemote"/>
+   </service>
+   
+   <reference bind="setMarketplaceService" cardinality="1..1" interface="eu.aniketos.marketplace.IMarketplace" 
+   			  name="IMarketplace" policy="static" unbind="unsetMartketplaceService"/>
+
+   <reference bind="setDataAdapter" cardinality="1..1" interface="eu.aniketos.serviceruntime.data.DataAdapter" 
+   			  name="DataAdapter" policy="static" unbind="unsetDataAdapter"/>   
+
+    <reference bind="setScpmClient" cardinality="0..1" interface="eu.aniketos.scpm.ICompositionPlanner" 
+   			  name="ScpmClient" policy="static" unbind="unsetScpmClient"/>                
+            
+   <property name="broker.url" type="String" value="ssl://notification.aniketos.eu:61617"/>
+      
+   <property name="service.exported.interfaces" type="String" value="*"/>
+   <property name="service.exported.configs" type="String" value="org.apache.cxf.ws"/>
+   <property name="org.apache.cxf.ws.address" type="String" value="http://localhost:9079/sre"/>
+   
+   <property name="compositions.dir" type="String" value="compositions"/>
+   <property name="activiti.address" type="String" value="http://localhost:8080/"/>
+   <property name="activiti.username" type="String" value="kermit"/>
+   <property name="activiti.password" type="String" value="aniketos"/>
+   <property name="tomcat.address" type="String" value="http://localhost:8080/"/>
+   <property name="tomcat.publicAddress" type="String" value="http://hestia.atc.gr/"/>
+   <property name="tomcat.username" type="String" value="tomcatscript"/>
+   <property name="tomcat.password" type="String" value="tomcat"/>
+   <property name="tomcat.version" type="String" value="6"/>
+</scr:component>

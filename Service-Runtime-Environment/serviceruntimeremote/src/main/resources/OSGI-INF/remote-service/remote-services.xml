@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="windows-1253"?>
+<service-descriptions xmlns="http://www.osgi.org/xmlns/sd/v1.0.0">
+    <service-description>
+        <provide interface="eu.aniketos.scpm.ICompositionPlanner"></provide>
+        <property name="service.exported.interfaces">*</property>
+        <property name="service.exported.configs">org.apache.cxf.ws</property>
+        <property name="org.apache.cxf.ws.address">http://ec2-54-235-118-152.compute-1.amazonaws.com:9092/scpm</property>
+    </service-description>
+</service-descriptions>
