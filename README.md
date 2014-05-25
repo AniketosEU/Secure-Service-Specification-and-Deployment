@@ -15,7 +15,7 @@ Currently, a set of security properties are supported, which have to do with the
 
 ###Build
 
-The SSSD package requires [JDK 1.7](http://www.oracle.com/technetwork/java/javaee/downloads/java-archive-downloads-eesdk-419427.html#java_ee_sdk-6-oth-JPR). To build and execute all packages [Eclipse for RCP and RAP Developers, Juno or above](http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/juno/SR2/eclipse-rcp-juno-SR2-win32.zip) and apache Maven (http://maven.apache.org/) are required.
+The SSSD package requires [JDK 1.7](http://www.oracle.com/technetwork/java/javaee/downloads/java-archive-downloads-eesdk-419427.html#java_ee_sdk-6-oth-JPR). To build and execute all packages, [Eclipse for RCP and RAP Developers](http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/juno/SR2/eclipse-rcp-juno-SR2-win32.zip) and [Apache Maven](http://maven.apache.org/) are required.
 
 ###Run
 
@@ -57,7 +57,7 @@ The open source SSSD package provides the following features:
 
 ####Service Composition Framework
 Prerequisites:
-* Marketplace (see https://github.com/AniketosEU/Security-Service-Validation-and-Verification)
+* Marketplace [Security Monitoring and Notification package](https://github.com/AniketosEU/Security-Service-Validation-and-Verification)
 * Service Runtime Environment
 
 1. Open the org.activiti.designer.elsag project
@@ -71,7 +71,7 @@ Prerequisites:
 * SCPM [Security Service Validation and Verification package](https://github.com/AniketosEU/Security-Service-Validation-and-Verification)
 * Activiti
 
-Install the Activiti war files activiti-explorer.war and activiti-rest.war(http://activiti.org/) in a Apache Tomcat instance.
+Install the [Activiti](http://activiti.org/) war files activiti-explorer.war and activiti-rest.war in a Apache Tomcat instance.
 Then the following two files need to be modified:
 	- activiti-explorer/WEB-INF/classes/db.properties
 	- activiti-rest/WEB-INF/classes/db.properties
