@@ -75,8 +75,9 @@ The open source SSSD package provides the following features:
 #####Installation and execution:
 Install the Activiti war files activiti-explorer.war and activiti-rest.war in a Apache Tomcat instance.
 Then the following two files need to be modified:
-	- activiti-explorer/WEB-INF/classes/db.properties
-	- activiti-rest/WEB-INF/classes/db.properties
+* activiti-explorer/WEB-INF/classes/db.properties
+* activiti-rest/WEB-INF/classes/db.properties
+
 The content of these two files should be:
 ```
 db=mysql
