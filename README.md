@@ -66,9 +66,9 @@ Prerequisites:
 
 ####Service Runtime Environment
 Prerequisites:
-* Notification Service (see https://github.com/AniketosEU/Security-Monitoring-and-Notification)
-* Marketplace (see https://github.com/AniketosEU/Security-Service-Validation-and-Verification)
-* SCPM (see https://github.com/AniketosEU/Security-Service-Validation-and-Verification)
+* Notification Service [Security Monitoring and Notification package](https://github.com/AniketosEU/Security-Monitoring-and-Notification)
+* Marketplace [Security Service Validation and Verification package](https://github.com/AniketosEU/Security-Service-Validation-and-Verification)
+* SCPM [Security Service Validation and Verification package](https://github.com/AniketosEU/Security-Service-Validation-and-Verification)
 * Activiti
 
 Install the Activiti war files activiti-explorer.war and activiti-rest.war(http://activiti.org/) in a Apache Tomcat instance.
@@ -170,7 +170,7 @@ The data source configuration file is as follows:
 </blueprint>
 ```
 
-After the database has been created and the data source bundle is deployed, the SRE feature can be installed in Apache Karaf 2.3.1(https://karaf.apache.org/index/community/download/archives.html#Karaf2.3.1). with the following commands:
+After the database has been created and the data source bundle is deployed, the SRE feature can be installed in [Apache Karaf 2.3.1](https://karaf.apache.org/index/community/download/archives.html#Karaf2.3.1). with the following commands:
 ```
 features:addUrl mvn:eu.aniketos.serviceruntime/feature/1.0.0-SNAPSHOT/xml/features
 features:install serviceruntimeremote
@@ -195,8 +195,7 @@ tomcat.publicAddress=http://hestia.atc.gr/
 
 ##Contributing (guide)
 
-Bugs, suggestions and issues can be submitted through the Github [issue tracker]
-https://github.com/AniketosEU/Secure-Service-Specification-and-Deployment/issues
+Bugs, suggestions and issues can be submitted through the Github [issue tracker](https://github.com/AniketosEU/Secure-Service-Specification-and-Deployment/issues)
 
 ##Modules
 
@@ -208,11 +207,11 @@ The Service Composition Framework allows a service designer to model the composi
 
 ###MTM
 
-The Model Transformation Module (MTM) is the module responsible to extract the Security Requirements Specification (SRS) coming from STS-Tool (see https://github.com/AniketosEU/Socio-technical-Security-Requirements) and transform it to other formats that are needed by other Aniketos modules, i.e., the service specification and the consumer policies.
+The Model Transformation Module (MTM) is the module responsible to extract the Security Requirements Specification (SRS) coming from STS-Tool [Socio-Technical Security Requirements package](https://github.com/AniketosEU/Socio-technical-Security-Requirements) and transform it to other formats that are needed by other Aniketos modules, i.e., the service specification and the consumer policies.
 
 ###SCPM Client View
 
-This module provides the GUI client for the invocation of the SCPM relased in package SSVV(https://github.com/AniketosEU/Security-Service-Validation-and-Verification).
+This module provides the GUI client for the invocation of the SCPM relased in package [Security Service Validation and Verification package](https://github.com/AniketosEU/Security-Service-Validation-and-Verification).
 
 ###SRE
 
@@ -234,10 +233,10 @@ The general steps for using these services are:
 The various modules that make up the SSVV package have been developed by a number of organisations:
 
 1. SCF developed by [SELEX](http://www.selex-es.com/).
-2. MTM developed by [TECNALIA] (http://www.tecnalia.com).
-3. SRE developed by [ATC] (http://www.atc.gr).
-4. SRCM developed by [UNITN] (http://www.unitn.it).
-5. SCPM client developed by [LJMU] (http://www.ljmu.ac.uk).
+2. MTM developed by [TECNALIA](http://www.tecnalia.com).
+3. SRE developed by [ATC](http://www.atc.gr).
+4. SRCM developed by [UNITN](http://www.unitn.it).
+5. SCPM client developed by [LJMU](http://www.ljmu.ac.uk).
 
 ##Official site, external resources
 
