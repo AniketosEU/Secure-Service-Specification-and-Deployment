@@ -57,7 +57,7 @@ The open source SSSD package provides the following features:
 
 ####Service Composition Framework
 Prerequisites:
-* Marketplace [Security Monitoring and Notification package](https://github.com/AniketosEU/Security-Service-Validation-and-Verification)
+* Marketplace (see [Security Monitoring and Notification](https://github.com/AniketosEU/Security-Service-Validation-and-Verification) package)
 * Service Runtime Environment
 
 1. Open the org.activiti.designer.elsag project
@@ -66,9 +66,9 @@ Prerequisites:
 
 ####Service Runtime Environment
 Prerequisites:
-* Notification Service (see package [Security Monitoring and Notification package](https://github.com/AniketosEU/Security-Monitoring-and-Notification))
-* Marketplace (see package [Security Service Validation and Verification package](https://github.com/AniketosEU/Security-Service-Validation-and-Verification))
-* SCPM (see package [Security Service Validation and Verification package](https://github.com/AniketosEU/Security-Service-Validation-and-Verification))
+* Notification Service (see [Security Monitoring and Notification](https://github.com/AniketosEU/Security-Monitoring-and-Notification) package)
+* Marketplace (see package [Security Service Validation and Verification](https://github.com/AniketosEU/Security-Service-Validation-and-Verification) package)
+* SCPM (see package [Security Service Validation and Verification](https://github.com/AniketosEU/Security-Service-Validation-and-Verification) package)
 * [Activiti](http://activiti.org/)
 
 Install the Activiti war files activiti-explorer.war and activiti-rest.war in a Apache Tomcat instance.
