@@ -66,12 +66,12 @@ Prerequisites:
 
 ####Service Runtime Environment
 Prerequisites:
-* Notification Service [Security Monitoring and Notification package](https://github.com/AniketosEU/Security-Monitoring-and-Notification)
-* Marketplace [Security Service Validation and Verification package](https://github.com/AniketosEU/Security-Service-Validation-and-Verification)
-* SCPM [Security Service Validation and Verification package](https://github.com/AniketosEU/Security-Service-Validation-and-Verification)
-* Activiti
+* Notification Service (see package [Security Monitoring and Notification package](https://github.com/AniketosEU/Security-Monitoring-and-Notification))
+* Marketplace (see package [Security Service Validation and Verification package](https://github.com/AniketosEU/Security-Service-Validation-and-Verification))
+* SCPM (see package [Security Service Validation and Verification package](https://github.com/AniketosEU/Security-Service-Validation-and-Verification))
+* [Activiti](http://activiti.org/)
 
-Install the [Activiti](http://activiti.org/) war files activiti-explorer.war and activiti-rest.war in a Apache Tomcat instance.
+Install the Activiti war files activiti-explorer.war and activiti-rest.war in a Apache Tomcat instance.
 Then the following two files need to be modified:
 	- activiti-explorer/WEB-INF/classes/db.properties
 	- activiti-rest/WEB-INF/classes/db.properties
