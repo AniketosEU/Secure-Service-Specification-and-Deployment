@@ -126,7 +126,9 @@ The Activiti installation must be extended with a module that is responsible for
 This jar also provides the AniketosClientDelegation class that is required by the composition plans created by SCF.
 Connection to the SRE database is performed through the dataManager.jar. This jar file is created by the project https://github.com/AniketosEU/Secure-Service-Specification-and-Deployment/tree/master/Service-Runtime-Environment/datamanager. 
 The database connection string is defined in the sre_db.properties file:
+```
 dbconnstring=jdbc:mysql://localhost:3306/aniketos_runtime?user=user&password=pass
+```
 This file can must be placed in the user’s home directory (C:\Users\username in Windows and /home/username in Linux).
 Both these jar files (aniketosDelegation.jar, datamanager-1.0-SNAPSHOT.jar) must be copied to activity-explorer/WEB-INF/lib and activity-rest/WEB-INF/lib folders. After copying the files the web applications must be reloaded.
 
