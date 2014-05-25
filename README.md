@@ -88,7 +88,7 @@ jdbc.password=password
 ```
 
 A change is also required to:
-activiti-explorer/WEB-INF/activiti-standalone-context.xml
+* activiti-explorer/WEB-INF/activiti-standalone-context.xml
 
 In the demoDataGenerator bean it is recommended to initially set the createDemoUsersAndGroups to true and all other properties to false.
 ```
