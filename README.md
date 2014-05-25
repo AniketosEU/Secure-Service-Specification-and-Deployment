@@ -1,8 +1,6 @@
 Secure-Service-Specification-and-Deployment
 ============================================
 
-Secure-Service-Specification-and-Deployment
-
 ##Short description
 
 The Secure Service Specification and Deployment package offers the possibility to model the composite service's BPMN process and to specify the desired security requirements. It also supports the service discovery and enables the packaging and deployment of the security enriched composite service specification. 
