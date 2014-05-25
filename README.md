@@ -56,21 +56,23 @@ The open source SSSD package provides the following features:
 ###Execute the modules:
 
 ####Service Composition Framework
-Prerequisites:
+#####Prerequisites:
 * Marketplace (see [Security Monitoring and Notification](https://github.com/AniketosEU/Security-Service-Validation-and-Verification) package)
 * Service Runtime Environment
 
+#####Execution:
 1. Open the org.activiti.designer.elsag project
 2. Open the file org.activiti.designer.scf.product
 3. Click on the "Launch an Eclipse application" in the Overview tab.
 
 ####Service Runtime Environment
-Prerequisites:
+#####Prerequisites:
 * Notification Service (see [Security Monitoring and Notification](https://github.com/AniketosEU/Security-Monitoring-and-Notification) package)
 * Marketplace (see package [Security Service Validation and Verification](https://github.com/AniketosEU/Security-Service-Validation-and-Verification) package)
 * SCPM (see package [Security Service Validation and Verification](https://github.com/AniketosEU/Security-Service-Validation-and-Verification) package)
 * [Activiti](http://activiti.org/)
 
+#####Installation and execution:
 Install the Activiti war files activiti-explorer.war and activiti-rest.war in a Apache Tomcat instance.
 Then the following two files need to be modified:
 	- activiti-explorer/WEB-INF/classes/db.properties
