@@ -1,0 +1,46 @@
+.TH "eu.aniketos.srcm.functional.OperationInst" 3 "Fri Oct 4 2013" "SRCM" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eu.aniketos.srcm.functional.OperationInst \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBinstatiateCommitment\fP (\fBCommitment\fP commitment, \fBSRS\fP srs, \fBMapping\fP mapping, HashSet< \fBCommitment\fP > undecCommitmentList)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class manages the authorization operation instantiation algorithms 
+.PP
+\fBAuthor:\fP
+.RS 4
+Mattia Salnitri 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "static void eu\&.aniketos\&.srcm\&.functional\&.OperationInst\&.instatiateCommitment (\fBCommitment\fPcommitment, \fBSRS\fPsrs, \fBMapping\fPmapping, HashSet< \fBCommitment\fP >undecCommitmentList)\fC [static]\fP"
+This methods instantiate all the authorization commitments (non usage, non disclosure, non production and non modification) 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcommitment\fP the non disclosure commitment that has to be instantiated 
+.br
+\fIsrs\fP the security requirement specification, used for the relation contained in knowledge base 
+.br
+\fImapping\fP the mapping between STS-ml elements and secureBPMN elements 
+.br
+\fIundecCommitmentList\fP list of undecidable commitments 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SRCM from the source code\&.

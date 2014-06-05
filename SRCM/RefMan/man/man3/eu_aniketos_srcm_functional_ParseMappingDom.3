@@ -1,0 +1,80 @@
+.TH "eu.aniketos.srcm.functional.ParseMappingDom" 3 "Fri Oct 4 2013" "SRCM" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eu.aniketos.srcm.functional.ParseMappingDom \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBParseMappingDom\fP (\fBDocument\fP domMapping, HashMap< String, \fBParticipant\fP > BPParticipantList, HashMap< String, \fBRole\fP > SRRoleList, HashMap< String, \fBAgent\fP > SRAgentList, HashMap< String, \fBGoal\fP > SRGoalList, HashMap< String, \fBElement\fP > BPActivityList, HashMap< String, \fBeu\&.aniketos\&.srcm\&.SRS\&.Document\fP > SRDocumentList, Vector< \fBVariable\fP > BPVariableList)"
+.br
+.ti -1c
+.RI "\fBMapping\fP \fBgetMapping\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetMapping\fP (\fBMapping\fP mapping)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class parses the Mapping XML document received as inputs, and instantiates the correspondent data structure 
+.PP
+\fBAuthor:\fP
+.RS 4
+Mattia Salnitri 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "eu\&.aniketos\&.srcm\&.functional\&.ParseMappingDom\&.ParseMappingDom (\fBDocument\fPdomMapping, HashMap< String, \fBParticipant\fP >BPParticipantList, HashMap< String, \fBRole\fP >SRRoleList, HashMap< String, \fBAgent\fP >SRAgentList, HashMap< String, \fBGoal\fP >SRGoalList, HashMap< String, \fBElement\fP >BPActivityList, HashMap< String, \fBeu\&.aniketos\&.srcm\&.SRS\&.Document\fP >SRDocumentList, Vector< \fBVariable\fP >BPVariableList)"
+Constructor of the class\&. This class should be instantiated after both the \fBBPM\fP and the SRS are already parsed\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdomMapping\fP the XML mapping document 
+.br
+\fIBPParticipantList\fP the list of the \fBBPM\fP participants 
+.br
+\fISRRoleList\fP the list of the STS-ml roles 
+.br
+\fISRAgentList\fP the list of the STS-ml agents 
+.br
+\fISRGoalList\fP the list of the STS-ml goals 
+.br
+\fIBPActivityList\fP the list of the \fBBPM\fP activities 
+.br
+\fISRDocumentList\fP the list of the STS-ml documents 
+.br
+\fIBPVariableList\fP the list of the \fBBPM\fP variables 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBMapping\fP eu\&.aniketos\&.srcm\&.functional\&.ParseMappingDom\&.getMapping ()"
+Getter of the mapping data structure 
+.PP
+\fBReturns:\fP
+.RS 4
+the mapping data structure 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.functional\&.ParseMappingDom\&.setMapping (\fBMapping\fPmapping)"
+Setter of the mapping data structure 
+.PP
+\fBParameters:\fP
+.RS 4
+\fImapping\fP the mapping data structure 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SRCM from the source code\&.

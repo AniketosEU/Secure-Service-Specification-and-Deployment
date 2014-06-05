@@ -1,0 +1,184 @@
+.TH "eu.aniketos.srcm.mapping.Mapping" 3 "Fri Oct 4 2013" "SRCM" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eu.aniketos.srcm.mapping.Mapping \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMapping\fP ()"
+.br
+.ti -1c
+.RI "void \fBclearLists\fP ()"
+.br
+.ti -1c
+.RI "Vector< \fBPlays\fP > \fBgetPlaysList\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddPlaysRelation\fP (\fBPlays\fP playsRelation)"
+.br
+.ti -1c
+.RI "void \fBremovePlaysRelation\fP (\fBPlays\fP playsRelation)"
+.br
+.ti -1c
+.RI "Vector< \fBIsA\fP > \fBgetIsaList\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddIsaRelation\fP (\fBIsA\fP isaRelation)"
+.br
+.ti -1c
+.RI "void \fBremoveIsaRelation\fP (\fBIsA\fP isaRelation)"
+.br
+.ti -1c
+.RI "Vector< \fBRelatesTo\fP > \fBgetRelatesToList\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddRelatesToRelation\fP (\fBRelatesTo\fP relatesToRelation)"
+.br
+.ti -1c
+.RI "void \fBremoveRelatesToRelation\fP (\fBRelatesTo\fP relatesToRelation)"
+.br
+.ti -1c
+.RI "Vector< \fBRepresents\fP > \fBgetRepresentsList\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddRepresentsRelation\fP (\fBRepresents\fP representsRelation)"
+.br
+.ti -1c
+.RI "void \fBremoveRepresentsRelation\fP (\fBRepresents\fP representsRelation)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This is the main class of the mapping class structure\&. This class contains the list of all the relations between the Business Process and the SRS 
+.PP
+\fBAuthor:\fP
+.RS 4
+Mattia Salnitri 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "eu\&.aniketos\&.srcm\&.mapping\&.Mapping\&.Mapping ()"
+Constructor of the class 
+.SH "Member Function Documentation"
+.PP 
+.SS "void eu\&.aniketos\&.srcm\&.mapping\&.Mapping\&.addIsaRelation (\fBIsA\fPisaRelation)"
+This function adds a relation to the list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIisaRelation\fP the relation that has to be added 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.mapping\&.Mapping\&.addPlaysRelation (\fBPlays\fPplaysRelation)"
+This function adds a relation to the list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIplaysRelation\fP the relation that has to be added 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.mapping\&.Mapping\&.addRelatesToRelation (\fBRelatesTo\fPrelatesToRelation)"
+This function adds a relation to the list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIrelatesToRelation\fP the relation that has to be added 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.mapping\&.Mapping\&.addRepresentsRelation (\fBRepresents\fPrepresentsRelation)"
+This function adds a relation to the list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIrepresentsRelation\fP the relation that has to be added 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.mapping\&.Mapping\&.clearLists ()"
+Clean up all the lists removing all the relations which has one of the two target set to null\&. This happens when there is no correspondent elements in the mapping\&. 
+.SS "Vector<\fBIsA\fP> eu\&.aniketos\&.srcm\&.mapping\&.Mapping\&.getIsaList ()"
+Getter of is-a relations 
+.PP
+\fBReturns:\fP
+.RS 4
+is-a list 
+.RE
+.PP
+
+.SS "Vector<\fBPlays\fP> eu\&.aniketos\&.srcm\&.mapping\&.Mapping\&.getPlaysList ()"
+Getter of plays relations 
+.PP
+\fBReturns:\fP
+.RS 4
+plays list 
+.RE
+.PP
+
+.SS "Vector<\fBRelatesTo\fP> eu\&.aniketos\&.srcm\&.mapping\&.Mapping\&.getRelatesToList ()"
+Getter of relates-to relations 
+.PP
+\fBReturns:\fP
+.RS 4
+relates-to list 
+.RE
+.PP
+
+.SS "Vector<\fBRepresents\fP> eu\&.aniketos\&.srcm\&.mapping\&.Mapping\&.getRepresentsList ()"
+Getter of \fBRepresents\fP relations 
+.PP
+\fBReturns:\fP
+.RS 4
+the represents relations list 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.mapping\&.Mapping\&.removeIsaRelation (\fBIsA\fPisaRelation)"
+This function removes a relation to the list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIisaRelation\fP the relation that has to be removed 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.mapping\&.Mapping\&.removePlaysRelation (\fBPlays\fPplaysRelation)"
+This function removes a relation to the list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIplaysRelation\fP the relation that has to be removed 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.mapping\&.Mapping\&.removeRelatesToRelation (\fBRelatesTo\fPrelatesToRelation)"
+This function removes a relation to the list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIrelatesToRelation\fP the relation that has to be removed 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.mapping\&.Mapping\&.removeRepresentsRelation (\fBRepresents\fPrepresentsRelation)"
+This function removes a relation to the list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIrepresentsRelation\fP the relation that has to be removed 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SRCM from the source code\&.

@@ -1,0 +1,134 @@
+.TH "eu.aniketos.srcm.functional.VerifyAlignment" 3 "Fri Oct 4 2013" "SRCM" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eu.aniketos.srcm.functional.VerifyAlignment \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBVerifyAlignment\fP (\fBSRS\fP srs, \fBDocument\fP domSRS, \fBMapping\fP mapping, \fBBPM\fP bpm, \fBActiviti\fP activiti)"
+.br
+.ti -1c
+.RI "String \fBcheckAlignment\fP ()"
+.br
+.ti -1c
+.RI "HashSet< \fBCommitment\fP > \fBgetUndecCommitmentList\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetUndecCommitmentList\fP (HashSet< \fBCommitment\fP > undecCommitmentList)"
+.br
+.ti -1c
+.RI "HashSet< \fBCommitment\fP > \fBgetSatCommitmentList\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetSatCommitmentList\fP (HashSet< \fBCommitment\fP > satCommitmentList)"
+.br
+.ti -1c
+.RI "HashSet< \fBCommitment\fP > \fBgetUnSatCommitmentList\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetUnSatCommitmentList\fP (HashSet< \fBCommitment\fP > unSatCommitmentList)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class instantiates the SRS and it calls the appropriate compliance algorithms for every commitments\&. 
+.PP
+\fBAuthor:\fP
+.RS 4
+Mattia Salnitri 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "eu\&.aniketos\&.srcm\&.functional\&.VerifyAlignment\&.VerifyAlignment (\fBSRS\fPsrs, \fBDocument\fPdomSRS, \fBMapping\fPmapping, \fBBPM\fPbpm, \fBActiviti\fPactiviti)"
+Constructor of the class 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIsrs\fP The Security Requirements Specification class structure 
+.br
+\fIdomSRS\fP The SRS document 
+.br
+\fImapping\fP The mapping class structure 
+.br
+\fIbpm\fP The Business Process Model class structure 
+.br
+\fIactiviti\fP the activiti set of information 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "String eu\&.aniketos\&.srcm\&.functional\&.VerifyAlignment\&.checkAlignment ()"
+Main method of the class, it instantiate the SRS and check all the commitments 
+.PP
+\fBReturns:\fP
+.RS 4
+the output XML document 
+.RE
+.PP
+
+.SS "HashSet<\fBCommitment\fP> eu\&.aniketos\&.srcm\&.functional\&.VerifyAlignment\&.getSatCommitmentList ()"
+Getter of the satisfied commitments list 
+.PP
+\fBReturns:\fP
+.RS 4
+The satisfied commitments list 
+.RE
+.PP
+
+.SS "HashSet<\fBCommitment\fP> eu\&.aniketos\&.srcm\&.functional\&.VerifyAlignment\&.getUndecCommitmentList ()"
+Getter of the undecidable commitments list 
+.PP
+\fBReturns:\fP
+.RS 4
+The undecidable commitments list 
+.RE
+.PP
+
+.SS "HashSet<\fBCommitment\fP> eu\&.aniketos\&.srcm\&.functional\&.VerifyAlignment\&.getUnSatCommitmentList ()"
+Getter of the unsatisfied commitments list 
+.PP
+\fBReturns:\fP
+.RS 4
+The unsatisfied commitments list 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.functional\&.VerifyAlignment\&.setSatCommitmentList (HashSet< \fBCommitment\fP >satCommitmentList)"
+Setter of the satisfied commitments list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIsatCommitmentList\fP the satisfied commitments list 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.functional\&.VerifyAlignment\&.setUndecCommitmentList (HashSet< \fBCommitment\fP >undecCommitmentList)"
+Setter of the undecidable commitments list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIundecCommitmentList\fP the undecidable commitments list 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.functional\&.VerifyAlignment\&.setUnSatCommitmentList (HashSet< \fBCommitment\fP >unSatCommitmentList)"
+Setter of the unsatisfied commitments list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIunSatCommitmentList\fP the unsatisfied commitments list 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SRCM from the source code\&.

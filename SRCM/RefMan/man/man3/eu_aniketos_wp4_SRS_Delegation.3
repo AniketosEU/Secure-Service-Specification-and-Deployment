@@ -1,0 +1,145 @@
+.TH "eu.aniketos.wp4.SRS.Delegation" 3 "Fri Oct 4 2013" "SRCM" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eu.aniketos.wp4.SRS.Delegation \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBeu\&.aniketos\&.wp4\&.SRS\&.Precondition\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDelegation\fP ()"
+.br
+.ti -1c
+.RI "\fBActor\fP \fBgetDestination\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetDestination\fP (\fBActor\fP destination)"
+.br
+.ti -1c
+.RI "\fBActor\fP \fBgetSource\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetSource\fP (\fBActor\fP source)"
+.br
+.ti -1c
+.RI "Vector< \fBGoal\fP > \fBgetGoalList\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddGoal\fP (\fBGoal\fP goal)"
+.br
+.ti -1c
+.RI "void \fBremoveGoal\fP (\fBGoal\fP goal)"
+.br
+.ti -1c
+.RI "Boolean \fBgetTransferable\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetTransferable\fP (Boolean trasferable)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class manages the delegation \fBSRS\fP element 
+.PP
+\fBAuthor:\fP
+.RS 4
+Mattia Salnitri 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "eu\&.aniketos\&.wp4\&.SRS\&.Delegation\&.Delegation ()"
+Constructor of the class 
+.SH "Member Function Documentation"
+.PP 
+.SS "void eu\&.aniketos\&.wp4\&.SRS\&.Delegation\&.addGoal (\fBGoal\fPgoal)"
+This function adds a goal to the goal list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIgoal\fP the goal that has to be added 
+.RE
+.PP
+
+.SS "\fBActor\fP eu\&.aniketos\&.wp4\&.SRS\&.Delegation\&.getDestination ()"
+Getter of the target of the delegation 
+.PP
+\fBReturns:\fP
+.RS 4
+the actor targeted by the delegation 
+.RE
+.PP
+
+.SS "Vector<\fBGoal\fP> eu\&.aniketos\&.wp4\&.SRS\&.Delegation\&.getGoalList ()"
+Getter of the goal list the delegation 
+.PP
+\fBReturns:\fP
+.RS 4
+the goal list in the delegation 
+.RE
+.PP
+
+.SS "\fBActor\fP eu\&.aniketos\&.wp4\&.SRS\&.Delegation\&.getSource ()"
+Getter of the source of the delegation 
+.PP
+\fBReturns:\fP
+.RS 4
+the source actor of the delegation 
+.RE
+.PP
+
+.SS "Boolean eu\&.aniketos\&.wp4\&.SRS\&.Delegation\&.getTransferable ()"
+Getter of the transferable option 
+.PP
+\fBReturns:\fP
+.RS 4
+the transferable option value 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.wp4\&.SRS\&.Delegation\&.removeGoal (\fBGoal\fPgoal)"
+This function removes a goal to the goal list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIgoal\fP the goal that has to be removed 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.wp4\&.SRS\&.Delegation\&.setDestination (\fBActor\fPdestination)"
+Setter of the delegation target 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdestination\fP the targeted actor 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.wp4\&.SRS\&.Delegation\&.setSource (\fBActor\fPsource)"
+Setter of the delegation source relation 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIsource\fP actor which is the source of the delegation relation 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.wp4\&.SRS\&.Delegation\&.setTransferable (Booleantrasferable)"
+Setter of the transferable option 
+.PP
+\fBParameters:\fP
+.RS 4
+\fItrasferable\fP the value that have to be set to the transferable option 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SRCM from the source code\&.

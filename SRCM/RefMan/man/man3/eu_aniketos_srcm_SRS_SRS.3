@@ -1,0 +1,229 @@
+.TH "eu.aniketos.srcm.SRS.SRS" 3 "Fri Oct 4 2013" "SRCM" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eu.aniketos.srcm.SRS.SRS \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSRS\fP ()"
+.br
+.ti -1c
+.RI "\fBKnowledgeBase\fP \fBgetKnowledgeBase\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetKnowledgeBase\fP (\fBKnowledgeBase\fP knowledgeBase)"
+.br
+.ti -1c
+.RI "Vector< \fBCommitment\fP > \fBgetCommitmentList\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetCommitmentList\fP (Vector< \fBCommitment\fP > commitment)"
+.br
+.ti -1c
+.RI "void \fBaddCommitment\fP (\fBCommitment\fP commitment)"
+.br
+.ti -1c
+.RI "void \fBremoveCommitment\fP (\fBCommitment\fP commitment)"
+.br
+.ti -1c
+.RI "HashMap< String, \fBRole\fP > \fBgetRoleList\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetRoleList\fP (HashMap< String, \fBRole\fP > roleList)"
+.br
+.ti -1c
+.RI "HashMap< String, \fBAgent\fP > \fBgetAgentList\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetAgentList\fP (HashMap< String, \fBAgent\fP > agentList)"
+.br
+.ti -1c
+.RI "HashMap< String, \fBGoal\fP > \fBgetGoalList\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetGoalList\fP (HashMap< String, \fBGoal\fP > goalList)"
+.br
+.ti -1c
+.RI "HashMap< String, \fBInformation\fP > \fBgetInformationList\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetInformationList\fP (HashMap< String, \fBInformation\fP > informationList)"
+.br
+.ti -1c
+.RI "HashMap< String, 
+.br
+\fBeu\&.aniketos\&.srcm\&.SRS\&.Document\fP > \fBgetDocumentList\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetDocumentList\fP (HashMap< String, \fBeu\&.aniketos\&.srcm\&.SRS\&.Document\fP > documentList)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This Class manages the \fBSRS\fP elements 
+.PP
+\fBAuthor:\fP
+.RS 4
+Mattia Salnitri 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "eu\&.aniketos\&.srcm\&.SRS\&.SRS\&.SRS ()"
+Constructor of the class 
+.SH "Member Function Documentation"
+.PP 
+.SS "void eu\&.aniketos\&.srcm\&.SRS\&.SRS\&.addCommitment (\fBCommitment\fPcommitment)"
+This class adds a commitment to the commitments list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcommitment\fP the commitment that will be added 
+.RE
+.PP
+
+.SS "HashMap<String, \fBAgent\fP> eu\&.aniketos\&.srcm\&.SRS\&.SRS\&.getAgentList ()"
+Getter of the agent list 
+.PP
+\fBReturns:\fP
+.RS 4
+the agent list 
+.RE
+.PP
+
+.SS "Vector<\fBCommitment\fP> eu\&.aniketos\&.srcm\&.SRS\&.SRS\&.getCommitmentList ()"
+Getter of the commitment list 
+.PP
+\fBReturns:\fP
+.RS 4
+the commitment list 
+.RE
+.PP
+
+.SS "HashMap<String, \fBeu\&.aniketos\&.srcm\&.SRS\&.Document\fP> eu\&.aniketos\&.srcm\&.SRS\&.SRS\&.getDocumentList ()"
+Getter of the \fBSRS\fP document list 
+.PP
+\fBReturns:\fP
+.RS 4
+the information list 
+.RE
+.PP
+
+.SS "HashMap<String, \fBGoal\fP> eu\&.aniketos\&.srcm\&.SRS\&.SRS\&.getGoalList ()"
+Getter of the goal list 
+.PP
+\fBReturns:\fP
+.RS 4
+the goal list 
+.RE
+.PP
+
+.SS "HashMap<String, \fBInformation\fP> eu\&.aniketos\&.srcm\&.SRS\&.SRS\&.getInformationList ()"
+Getter of the information list 
+.PP
+\fBReturns:\fP
+.RS 4
+the information list 
+.RE
+.PP
+
+.SS "\fBKnowledgeBase\fP eu\&.aniketos\&.srcm\&.SRS\&.SRS\&.getKnowledgeBase ()"
+Getter of the knowledge base 
+.PP
+\fBReturns:\fP
+.RS 4
+the knowledge base 
+.RE
+.PP
+
+.SS "HashMap<String, \fBRole\fP> eu\&.aniketos\&.srcm\&.SRS\&.SRS\&.getRoleList ()"
+Getter of the role list 
+.PP
+\fBReturns:\fP
+.RS 4
+the role list 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.SRS\&.SRS\&.removeCommitment (\fBCommitment\fPcommitment)"
+This class removes a commitment to the commitments list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcommitment\fP the commitment that will be removed 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.SRS\&.SRS\&.setAgentList (HashMap< String, \fBAgent\fP >agentList)"
+Setter of the agent list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIagentList\fP the agent list that has to be set 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.SRS\&.SRS\&.setCommitmentList (Vector< \fBCommitment\fP >commitment)"
+Setter of the commitment list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcommitment\fP the commitment list 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.SRS\&.SRS\&.setDocumentList (HashMap< String, \fBeu\&.aniketos\&.srcm\&.SRS\&.Document\fP >documentList)"
+Setter of the \fBSRS\fP document list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdocumentList\fP thet \fBSRS\fP document list that has to be set 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.SRS\&.SRS\&.setGoalList (HashMap< String, \fBGoal\fP >goalList)"
+Setter of the goal list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIgoalList\fP the goal list that has to be set 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.SRS\&.SRS\&.setInformationList (HashMap< String, \fBInformation\fP >informationList)"
+Setter of the information list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinformationList\fP the information list that has to be set 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.SRS\&.SRS\&.setKnowledgeBase (\fBKnowledgeBase\fPknowledgeBase)"
+Setter of the knowledge base 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIknowledgeBase\fP the knowledge base that has to be setted 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.SRS\&.SRS\&.setRoleList (HashMap< String, \fBRole\fP >roleList)"
+Setter of the role list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIroleList\fP the role list that has to be set 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SRCM from the source code\&.

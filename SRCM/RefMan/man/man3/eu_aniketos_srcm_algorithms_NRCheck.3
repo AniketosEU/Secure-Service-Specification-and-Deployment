@@ -1,0 +1,49 @@
+.TH "eu.aniketos.srcm.algorithms.NRCheck" 3 "Fri Oct 4 2013" "SRCM" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eu.aniketos.srcm.algorithms.NRCheck \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBeu\&.aniketos\&.srcm\&.algorithms\&.SecReqCheck\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "boolean \fBcheckNR\fP (\fBCommitment\fP SecReq, \fBBPM\fP bpm)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class control if a non-repudiation security requirement is respected by a Business Process model 
+.PP
+\fBAuthor:\fP
+.RS 4
+Mattia Salnitri 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "boolean eu\&.aniketos\&.srcm\&.algorithms\&.NRCheck\&.checkNR (\fBCommitment\fPSecReq, \fBBPM\fPbpm)"
+Main function of the class, it checks the alignment of the security requirements (secReq) with the Business process (BPM) 
+.PP
+\fBParameters:\fP
+.RS 4
+\fISecReq\fP a commitment which represents the non repudiation security requirements 
+.br
+\fIbpm\fP the business process to control 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+boolean value, false if the security requirement is not respected 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SRCM from the source code\&.

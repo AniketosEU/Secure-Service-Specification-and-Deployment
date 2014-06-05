@@ -1,0 +1,48 @@
+.TH "eu.aniketos.srcm.functional.TWCheck" 3 "Fri Oct 4 2013" "SRCM" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eu.aniketos.srcm.functional.TWCheck \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBcheckTrustworthiness\fP (\fBCommitment\fP commitment, \fBEABPM\fP bpm, HashSet< \fBCommitment\fP > undecCommitmentList, HashSet< \fBCommitment\fP > satCommitmentList, HashSet< \fBCommitment\fP > unSatCommitmentList)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+this class manages the trustworthiness check 
+.PP
+\fBAuthor:\fP
+.RS 4
+Mattia Salnitri 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "static void eu\&.aniketos\&.srcm\&.functional\&.TWCheck\&.checkTrustworthiness (\fBCommitment\fPcommitment, \fBEABPM\fPbpm, HashSet< \fBCommitment\fP >undecCommitmentList, HashSet< \fBCommitment\fP >satCommitmentList, HashSet< \fBCommitment\fP >unSatCommitmentList)\fC [static]\fP"
+Function which check the trustworthiness security requirement
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcommitment\fP the trustworthiness commitment 
+.br
+\fIbpm\fP the secure service composition to check 
+.br
+\fIundecCommitmentList\fP the list of undecidable security requirements 
+.br
+\fIsatCommitmentList\fP the list of fulfilled security requirements 
+.br
+\fIunSatCommitmentList\fP the list of violated security requirements 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SRCM from the source code\&.

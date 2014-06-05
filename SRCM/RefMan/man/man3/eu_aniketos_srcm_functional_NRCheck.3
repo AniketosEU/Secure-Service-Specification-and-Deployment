@@ -1,0 +1,48 @@
+.TH "eu.aniketos.srcm.functional.NRCheck" 3 "Fri Oct 4 2013" "SRCM" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eu.aniketos.srcm.functional.NRCheck \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBcheckNonRepudiation\fP (\fBCommitment\fP commitment, \fBEABPM\fP bpm, HashSet< \fBCommitment\fP > undecCommitmentList, HashSet< \fBCommitment\fP > satCommitmentList, HashSet< \fBCommitment\fP > unSatCommitmentList)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+this class manages the Non-Repudiation algorithms 
+.PP
+\fBAuthor:\fP
+.RS 4
+Mattia Salnitri 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "static void eu\&.aniketos\&.srcm\&.functional\&.NRCheck\&.checkNonRepudiation (\fBCommitment\fPcommitment, \fBEABPM\fPbpm, HashSet< \fBCommitment\fP >undecCommitmentList, HashSet< \fBCommitment\fP >satCommitmentList, HashSet< \fBCommitment\fP >unSatCommitmentList)\fC [static]\fP"
+check if the given non-repudiation commitment is respected in the business process 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcommitment\fP the commitment that has to be checked 
+.br
+\fIbpm\fP the business process that has to respect the commitment 
+.br
+\fIundecCommitmentList\fP list of undecidable commitments 
+.br
+\fIsatCommitmentList\fP list of satisfied commitments 
+.br
+\fIunSatCommitmentList\fP list of unsatisfied commitments 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SRCM from the source code\&.

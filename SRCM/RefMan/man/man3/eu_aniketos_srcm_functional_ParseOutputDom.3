@@ -1,0 +1,50 @@
+.TH "eu.aniketos.srcm.functional.ParseOutputDom" 3 "Fri Oct 4 2013" "SRCM" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eu.aniketos.srcm.functional.ParseOutputDom \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "String \fBcreateDom\fP (\fBDocument\fP domSRS, HashSet< \fBCommitment\fP > satCommitmentList, HashSet< \fBCommitment\fP > unsatCommitmentList, HashSet< \fBCommitment\fP > undecCommitmentList)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class parses the list of commitments processed by the verification algorithms and creates the XML document containing the results information of the \fBSRCM\fP 
+.PP
+\fBAuthor:\fP
+.RS 4
+Mattia Salnitri 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "String eu\&.aniketos\&.srcm\&.functional\&.ParseOutputDom\&.createDom (\fBDocument\fPdomSRS, HashSet< \fBCommitment\fP >satCommitmentList, HashSet< \fBCommitment\fP >unsatCommitmentList, HashSet< \fBCommitment\fP >undecCommitmentList)"
+Constructor of the class 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdomSRS\fP the srs document 
+.br
+\fIsatCommitmentList\fP the list of the commitments satisfied by the \fBBPM\fP 
+.br
+\fIunsatCommitmentList\fP the list of the commitments unsatisfied by the \fBBPM\fP 
+.br
+\fIundecCommitmentList\fP the list of the commitments for which is impossible to understand whether they are satisfied by the \fBBPM\fP or not\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SRCM from the source code\&.

@@ -1,0 +1,114 @@
+.TH "eu.aniketos.srcm.SRCM" 3 "Fri Oct 4 2013" "SRCM" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eu.aniketos.srcm.SRCM \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits ICompliance\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "String \fBgetComplianceStatus\fP (String xmlSRS, String xmlMapping, String xmlSecureBPMN, String xmlActiviti)"
+.br
+.ti -1c
+.RI "Document \fBgetDomBPM\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetDomBPM\fP (Document domBPM)"
+.br
+.ti -1c
+.RI "Document \fBgetDomMapping\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetDomMapping\fP (Document domMapping)"
+.br
+.ti -1c
+.RI "Document \fBgetDomSRS\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetDomSRS\fP (Document domSRS)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Main class of the \fBSRCM\fP module, it manages the XML document received in input and generates the output XML document 
+.PP
+\fBAuthor:\fP
+.RS 4
+Mattia Salnitri 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "String eu\&.aniketos\&.srcm\&.SRCM\&.getComplianceStatus (StringxmlSRS, StringxmlMapping, StringxmlSecureBPMN, StringxmlActiviti)"
+Function which calls the parsers for every XML documents and return the compliance results status as another XML document 
+.PP
+\fBReturns:\fP
+.RS 4
+XML document 
+.RE
+.PP
+
+.SS "Document eu\&.aniketos\&.srcm\&.SRCM\&.getDomBPM ()"
+Getter for the BPM XML document 
+.PP
+\fBReturns:\fP
+.RS 4
+domBPM a XML document 
+.RE
+.PP
+
+.SS "Document eu\&.aniketos\&.srcm\&.SRCM\&.getDomMapping ()"
+Getter for the Mapping XML document 
+.PP
+\fBReturns:\fP
+.RS 4
+domMapping a XML document 
+.RE
+.PP
+
+.SS "Document eu\&.aniketos\&.srcm\&.SRCM\&.getDomSRS ()"
+Getter for the SRS XML document 
+.PP
+\fBReturns:\fP
+.RS 4
+domSRS a XML document 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.SRCM\&.setDomBPM (DocumentdomBPM)"
+Setter for the BPM XML document 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdomBPM\fP a XML document 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.SRCM\&.setDomMapping (DocumentdomMapping)"
+Setter for the Mapping XML document 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdomMapping\fP a XML document 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.SRCM\&.setDomSRS (DocumentdomSRS)"
+Setter for the SRS XML document 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdomSRS\fP a XML document 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SRCM from the source code\&.

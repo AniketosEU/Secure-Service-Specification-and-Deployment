@@ -1,0 +1,203 @@
+.TH "eu.aniketos.srcm.SRS.KnowledgeBase" 3 "Fri Oct 4 2013" "SRCM" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eu.aniketos.srcm.SRS.KnowledgeBase \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBKnowledgeBase\fP ()"
+.br
+.ti -1c
+.RI "Vector< \fBOwns\fP > \fBgetOwnsList\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddOwns\fP (\fBOwns\fP owns)"
+.br
+.ti -1c
+.RI "void \fBremoveOwns\fP (\fBOwns\fP owns)"
+.br
+.ti -1c
+.RI "Vector< \fBFullyAuthorized\fP > \fBgetFullyAuthorizedList\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddFullyAuthorized\fP (\fBFullyAuthorized\fP fullyAuthorized)"
+.br
+.ti -1c
+.RI "void \fBremoveFullyAuthorized\fP (\fBFullyAuthorized\fP fullyAuthorized)"
+.br
+.ti -1c
+.RI "Vector< \fBPartOf\fP > \fBgetPartOfList\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddPartOf\fP (\fBPartOf\fP partOf)"
+.br
+.ti -1c
+.RI "void \fBremovePartOf\fP (\fBPartOf\fP partOf)"
+.br
+.ti -1c
+.RI "Vector< \fBTangibleBy\fP > \fBgetTangibleByList\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddTangibleBy\fP (\fBTangibleBy\fP tangibleBy)"
+.br
+.ti -1c
+.RI "void \fBremoveTangibleBy\fP (\fBTangibleBy\fP tangibleBy)"
+.br
+.ti -1c
+.RI "void \fBsetOwnsList\fP (Vector< \fBOwns\fP > ownsList)"
+.br
+.ti -1c
+.RI "void \fBsetFullyAuthorizedList\fP (Vector< \fBFullyAuthorized\fP > fullyAuthorizedList)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class manages the Knowledge base part of \fBSRS\fP 
+.PP
+\fBAuthor:\fP
+.RS 4
+Mattia Salnitri 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "eu\&.aniketos\&.srcm\&.SRS\&.KnowledgeBase\&.KnowledgeBase ()"
+Constructor of the class 
+.SH "Member Function Documentation"
+.PP 
+.SS "void eu\&.aniketos\&.srcm\&.SRS\&.KnowledgeBase\&.addFullyAuthorized (\fBFullyAuthorized\fPfullyAuthorized)"
+This function adds a Fully Authorized relation to the list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfullyAuthorized\fP the relation that have to be added 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.SRS\&.KnowledgeBase\&.addOwns (\fBOwns\fPowns)"
+This function adds an \fBOwns\fP relation to the list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIowns\fP the relation that have to be added 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.SRS\&.KnowledgeBase\&.addPartOf (\fBPartOf\fPpartOf)"
+This function adds a Part Of relation to the list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpartOf\fP the relation that have to be added 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.SRS\&.KnowledgeBase\&.addTangibleBy (\fBTangibleBy\fPtangibleBy)"
+This function adds a Tangible By relation to the list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fItangibleBy\fP the relation that have to be added 
+.RE
+.PP
+
+.SS "Vector<\fBFullyAuthorized\fP> eu\&.aniketos\&.srcm\&.SRS\&.KnowledgeBase\&.getFullyAuthorizedList ()"
+Getter of the Fully Authorized relations list 
+.PP
+\fBReturns:\fP
+.RS 4
+the Fully Authorized relations list 
+.RE
+.PP
+
+.SS "Vector<\fBOwns\fP> eu\&.aniketos\&.srcm\&.SRS\&.KnowledgeBase\&.getOwnsList ()"
+Getter of the \fBOwns\fP relations list 
+.PP
+\fBReturns:\fP
+.RS 4
+the \fBOwns\fP relations list 
+.RE
+.PP
+
+.SS "Vector<\fBPartOf\fP> eu\&.aniketos\&.srcm\&.SRS\&.KnowledgeBase\&.getPartOfList ()"
+Getter of the Part OF relations list 
+.PP
+\fBReturns:\fP
+.RS 4
+the Part Of relations list 
+.RE
+.PP
+
+.SS "Vector<\fBTangibleBy\fP> eu\&.aniketos\&.srcm\&.SRS\&.KnowledgeBase\&.getTangibleByList ()"
+Getter of the Tangible By relations list 
+.PP
+\fBReturns:\fP
+.RS 4
+the Tangible By relations list 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.SRS\&.KnowledgeBase\&.removeFullyAuthorized (\fBFullyAuthorized\fPfullyAuthorized)"
+This function removes an \fBOwns\fP relation to the list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfullyAuthorized\fP the relation that have to be removed 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.SRS\&.KnowledgeBase\&.removeOwns (\fBOwns\fPowns)"
+This function removes an \fBOwns\fP relation to the list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIowns\fP the relation that have to be removed 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.SRS\&.KnowledgeBase\&.removePartOf (\fBPartOf\fPpartOf)"
+This function removes a Part Of relation to the list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpartOf\fP the relation that have to be removed 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.SRS\&.KnowledgeBase\&.removeTangibleBy (\fBTangibleBy\fPtangibleBy)"
+This function removes a Tangible by relation to the list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fItangibleBy\fP the relation that have to be removed 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.SRS\&.KnowledgeBase\&.setFullyAuthorizedList (Vector< \fBFullyAuthorized\fP >fullyAuthorizedList)"
+Setter of the Fully Authorized relations list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfullyAuthorizedList\fP the list that have to be setted 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.SRS\&.KnowledgeBase\&.setOwnsList (Vector< \fBOwns\fP >ownsList)"
+Setter of the Own relations list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIownsList\fP list the own relation list that have to be setted 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SRCM from the source code\&.

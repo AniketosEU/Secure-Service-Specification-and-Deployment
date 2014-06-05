@@ -1,0 +1,224 @@
+.TH "eu.aniketos.srcm.SRS.Authorization" 3 "Fri Oct 4 2013" "SRCM" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eu.aniketos.srcm.SRS.Authorization \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBeu\&.aniketos\&.srcm\&.SRS\&.Precondition\fP\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "enum \fBOperation\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAuthorization\fP ()"
+.br
+.ti -1c
+.RI "\fBActor\fP \fBgetDestination\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetDestination\fP (\fBActor\fP destination)"
+.br
+.ti -1c
+.RI "\fBActor\fP \fBgetSource\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetSource\fP (\fBActor\fP source)"
+.br
+.ti -1c
+.RI "Vector< \fBGoal\fP > \fBgetGoalList\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddGoal\fP (\fBGoal\fP goal)"
+.br
+.ti -1c
+.RI "void \fBremoveGoal\fP (\fBGoal\fP goal)"
+.br
+.ti -1c
+.RI "Vector< \fBInformation\fP > \fBgetInformationList\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddInformation\fP (\fBInformation\fP information)"
+.br
+.ti -1c
+.RI "void \fBremoveInformation\fP (\fBInformation\fP information)"
+.br
+.ti -1c
+.RI "HashSet< \fBOperation\fP > \fBgetOperations\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddOperations\fP (\fBOperation\fP operation)"
+.br
+.ti -1c
+.RI "void \fBremoveOperations\fP (\fBOperation\fP operation)"
+.br
+.ti -1c
+.RI "Boolean \fBgetTransferable\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetTransferable\fP (Boolean transferable)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class manage the authorizations set 
+.PP
+\fBAuthor:\fP
+.RS 4
+Mattia Salnitri 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "eu\&.aniketos\&.srcm\&.SRS\&.Authorization\&.Authorization ()"
+Constructor of the class 
+.SH "Member Function Documentation"
+.PP 
+.SS "void eu\&.aniketos\&.srcm\&.SRS\&.Authorization\&.addGoal (\fBGoal\fPgoal)"
+This functions adds a goal to the goal list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIgoal\fP the goal list 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.SRS\&.Authorization\&.addInformation (\fBInformation\fPinformation)"
+This functions adds an information to the information list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinformation\fP the information list 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.SRS\&.Authorization\&.addOperations (\fBOperation\fPoperation)"
+This functions adds an authorization to the authorizations set 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIoperation\fP the goal list 
+.RE
+.PP
+
+.SS "\fBActor\fP eu\&.aniketos\&.srcm\&.SRS\&.Authorization\&.getDestination ()"
+Getter of the target of the authorizations set 
+.PP
+\fBReturns:\fP
+.RS 4
+the actor targeted 
+.RE
+.PP
+
+.SS "Vector<\fBGoal\fP> eu\&.aniketos\&.srcm\&.SRS\&.Authorization\&.getGoalList ()"
+Getter of the goal list for which authorization set is valid 
+.PP
+\fBReturns:\fP
+.RS 4
+the goal list 
+.RE
+.PP
+
+.SS "Vector<\fBInformation\fP> eu\&.aniketos\&.srcm\&.SRS\&.Authorization\&.getInformationList ()"
+Getter of the information list for which authorization set is valid 
+.PP
+\fBReturns:\fP
+.RS 4
+information list 
+.RE
+.PP
+
+.SS "HashSet<\fBOperation\fP> eu\&.aniketos\&.srcm\&.SRS\&.Authorization\&.getOperations ()"
+Getter of the authorizations set 
+.PP
+\fBReturns:\fP
+.RS 4
+the authorization set 
+.RE
+.PP
+
+.SS "\fBActor\fP eu\&.aniketos\&.srcm\&.SRS\&.Authorization\&.getSource ()"
+Getter of the source of the authorizations set 
+.PP
+\fBReturns:\fP
+.RS 4
+the source actor 
+.RE
+.PP
+
+.SS "Boolean eu\&.aniketos\&.srcm\&.SRS\&.Authorization\&.getTransferable ()"
+Getter of the transferable options 
+.PP
+\fBReturns:\fP
+.RS 4
+the value of the transferable option 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.SRS\&.Authorization\&.removeGoal (\fBGoal\fPgoal)"
+This functions removes a given goal from the goal list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIgoal\fP the goal that have to be removed 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.SRS\&.Authorization\&.removeInformation (\fBInformation\fPinformation)"
+This functions removes a information from the information list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinformation\fP the information that have to be removed 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.SRS\&.Authorization\&.removeOperations (\fBOperation\fPoperation)"
+This functions removes a given authorization from the authorizations set 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIoperation\fP the operation that have to be removed 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.SRS\&.Authorization\&.setDestination (\fBActor\fPdestination)"
+Setter of the target of the authorizations set 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdestination\fP the actor targeted 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.SRS\&.Authorization\&.setSource (\fBActor\fPsource)"
+Setter of the source of the authorizations set 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIsource\fP the source actor 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.SRS\&.Authorization\&.setTransferable (Booleantransferable)"
+Setter of the transferable option 
+.PP
+\fBParameters:\fP
+.RS 4
+\fItransferable\fP the value of the transferable option that has to be set 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SRCM from the source code\&.

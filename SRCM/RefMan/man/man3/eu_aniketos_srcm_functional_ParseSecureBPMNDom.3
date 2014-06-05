@@ -1,0 +1,214 @@
+.TH "eu.aniketos.srcm.functional.ParseSecureBPMNDom" 3 "Fri Oct 4 2013" "SRCM" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eu.aniketos.srcm.functional.ParseSecureBPMNDom \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBParseSecureBPMNDom\fP (\fBDocument\fP domBPM)"
+.br
+.ti -1c
+.RI "\fBEABPM\fP \fBgetEabpm\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetEabpm\fP (\fBEABPM\fP eabpm)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static HashMap< String, 
+.br
+\fBParticipant\fP > \fBgetParticipantList\fP ()"
+.br
+.ti -1c
+.RI "static void \fBaddParticipant\fP (\fBParticipant\fP participant)"
+.br
+.ti -1c
+.RI "static void \fBremoveParticipant\fP (\fBParticipant\fP participant)"
+.br
+.ti -1c
+.RI "static \fBParticipant\fP \fBaddUniqueParticipant\fP (\fBParticipant\fP participant)"
+.br
+.ti -1c
+.RI "static HashMap< String, \fBElement\fP > \fBgetElementList\fP ()"
+.br
+.ti -1c
+.RI "static void \fBaddElement\fP (\fBElement\fP element)"
+.br
+.ti -1c
+.RI "static void \fBremoveElement\fP (\fBElement\fP element)"
+.br
+.ti -1c
+.RI "static Vector< \fBVariable\fP > \fBgetVariableList\fP ()"
+.br
+.ti -1c
+.RI "static void \fBaddVariable\fP (\fBVariable\fP variable)"
+.br
+.ti -1c
+.RI "static void \fBremoveVariable\fP (\fBVariable\fP variable)"
+.br
+.ti -1c
+.RI "static \fBVariable\fP \fBaddUniqueVariable\fP (\fBVariable\fP variable)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class parses the Business process XML document received as inputs, and instantiates the correspondent data structure it supposes the name of the variable is unique 
+.PP
+\fBAuthor:\fP
+.RS 4
+Mattia Salnitri 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "eu\&.aniketos\&.srcm\&.functional\&.ParseSecureBPMNDom\&.ParseSecureBPMNDom (\fBDocument\fPdomBPM)"
+Constructor of the class 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdomBPM\fP the XML document 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "static void eu\&.aniketos\&.srcm\&.functional\&.ParseSecureBPMNDom\&.addElement (\fBElement\fPelement)\fC [static]\fP"
+This function adds an element to the participants list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIelement\fP the element that have to be added to the list 
+.RE
+.PP
+
+.SS "static void eu\&.aniketos\&.srcm\&.functional\&.ParseSecureBPMNDom\&.addParticipant (\fBParticipant\fPparticipant)\fC [static]\fP"
+This function adds a participant to the participants list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIparticipant\fP the participant that have to be added to the list 
+.RE
+.PP
+
+.SS "static \fBParticipant\fP eu\&.aniketos\&.srcm\&.functional\&.ParseSecureBPMNDom\&.addUniqueParticipant (\fBParticipant\fPparticipant)\fC [static]\fP"
+This function adds a given element only if there is no other element in the participant list with the same name\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIparticipant\fP the participant that have to be added 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the same object received in input, if the is no participant, or the participant object in the list with the same name 
+.RE
+.PP
+
+.SS "static \fBVariable\fP eu\&.aniketos\&.srcm\&.functional\&.ParseSecureBPMNDom\&.addUniqueVariable (\fBVariable\fPvariable)\fC [static]\fP"
+This function adds a given variable only if there is no other variable in the variable list with the same name and id\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvariable\fP the variable that have to be added 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the same object received in input, if the is no variable with the same id and name, or the variable object in the list with the same name 
+.RE
+.PP
+
+.SS "static void eu\&.aniketos\&.srcm\&.functional\&.ParseSecureBPMNDom\&.addVariable (\fBVariable\fPvariable)\fC [static]\fP"
+This function adds a variable to the participants list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvariable\fP the variable that have to be added to the list 
+.RE
+.PP
+
+.SS "\fBEABPM\fP eu\&.aniketos\&.srcm\&.functional\&.ParseSecureBPMNDom\&.getEabpm ()"
+Getters of the instantiated Business Process data structure 
+.PP
+\fBReturns:\fP
+.RS 4
+the instantiated data structure 
+.RE
+.PP
+
+.SS "static HashMap<String, \fBElement\fP> eu\&.aniketos\&.srcm\&.functional\&.ParseSecureBPMNDom\&.getElementList ()\fC [static]\fP"
+Getter of the element list 
+.PP
+\fBReturns:\fP
+.RS 4
+the list of the elements 
+.RE
+.PP
+
+.SS "static HashMap<String, \fBParticipant\fP> eu\&.aniketos\&.srcm\&.functional\&.ParseSecureBPMNDom\&.getParticipantList ()\fC [static]\fP"
+Getter of the participants list 
+.PP
+\fBReturns:\fP
+.RS 4
+the participant list 
+.RE
+.PP
+
+.SS "static Vector<\fBVariable\fP> eu\&.aniketos\&.srcm\&.functional\&.ParseSecureBPMNDom\&.getVariableList ()\fC [static]\fP"
+Getter of the variable list 
+.PP
+\fBReturns:\fP
+.RS 4
+the list of all the variables 
+.RE
+.PP
+
+.SS "static void eu\&.aniketos\&.srcm\&.functional\&.ParseSecureBPMNDom\&.removeElement (\fBElement\fPelement)\fC [static]\fP"
+This function removes a given element from the participant list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIelement\fP the element that have to be removed 
+.RE
+.PP
+
+.SS "static void eu\&.aniketos\&.srcm\&.functional\&.ParseSecureBPMNDom\&.removeParticipant (\fBParticipant\fPparticipant)\fC [static]\fP"
+This function removes a given participant from the participant list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIparticipant\fP the participant that have to be removed 
+.RE
+.PP
+
+.SS "static void eu\&.aniketos\&.srcm\&.functional\&.ParseSecureBPMNDom\&.removeVariable (\fBVariable\fPvariable)\fC [static]\fP"
+This function removes a given variable from the participant list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvariable\fP the variable that have to be removed 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.functional\&.ParseSecureBPMNDom\&.setEabpm (\fBEABPM\fPeabpm)"
+Setter of the instantiated Business Process data structure 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIeabpm\fP the instantiated data structure 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SRCM from the source code\&.

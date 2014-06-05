@@ -1,0 +1,333 @@
+.TH "eu.aniketos.srcm.functional.ParseSRSDom" 3 "Fri Oct 4 2013" "SRCM" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eu.aniketos.srcm.functional.ParseSRSDom \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBParseSRSDom\fP (\fBDocument\fP domSRS)"
+.br
+.ti -1c
+.RI "\fBSRS\fP \fBgetSrs\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetSrs\fP (\fBSRS\fP srs)"
+.br
+.ti -1c
+.RI "HashMap< String, \fBRole\fP > \fBgetRoleList\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddRole\fP (\fBRole\fP role)"
+.br
+.ti -1c
+.RI "void \fBremoveRole\fP (\fBRole\fP role)"
+.br
+.ti -1c
+.RI "\fBRole\fP \fBaddUniqueRole\fP (\fBRole\fP role)"
+.br
+.ti -1c
+.RI "HashMap< String, \fBAgent\fP > \fBgetAgentList\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddAgent\fP (\fBAgent\fP agent)"
+.br
+.ti -1c
+.RI "void \fBremoveAgent\fP (\fBAgent\fP agent)"
+.br
+.ti -1c
+.RI "\fBAgent\fP \fBaddUniqueAgent\fP (\fBAgent\fP agent)"
+.br
+.ti -1c
+.RI "HashMap< String, \fBGoal\fP > \fBgetGoalList\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddGoal\fP (\fBGoal\fP goal)"
+.br
+.ti -1c
+.RI "void \fBremoveGoal\fP (\fBGoal\fP goal)"
+.br
+.ti -1c
+.RI "\fBGoal\fP \fBaddUniqueGoal\fP (\fBGoal\fP goal)"
+.br
+.ti -1c
+.RI "HashMap< String, \fBInformation\fP > \fBgetInformationList\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddInformation\fP (\fBInformation\fP information)"
+.br
+.ti -1c
+.RI "void \fBremoveInformation\fP (\fBInformation\fP information)"
+.br
+.ti -1c
+.RI "\fBInformation\fP \fBaddUniqueInformation\fP (\fBInformation\fP information)"
+.br
+.ti -1c
+.RI "HashMap< String, 
+.br
+\fBeu\&.aniketos\&.srcm\&.SRS\&.Document\fP > \fBgetDocumentList\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddDocument\fP (\fBeu\&.aniketos\&.srcm\&.SRS\&.Document\fP document)"
+.br
+.ti -1c
+.RI "void \fBremoveDocument\fP (\fBeu\&.aniketos\&.srcm\&.SRS\&.Document\fP document)"
+.br
+.ti -1c
+.RI "\fBeu\&.aniketos\&.srcm\&.SRS\&.Document\fP \fBaddUniqueDocument\fP (\fBeu\&.aniketos\&.srcm\&.SRS\&.Document\fP document)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class parses the SRS XML document received as inputs, and instantiates the correspondent data structure 
+.PP
+\fBAuthor:\fP
+.RS 4
+Mattia Salnitri 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "eu\&.aniketos\&.srcm\&.functional\&.ParseSRSDom\&.ParseSRSDom (\fBDocument\fPdomSRS)"
+constructor of the class 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdomSRS\fP the SRS XML document 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void eu\&.aniketos\&.srcm\&.functional\&.ParseSRSDom\&.addAgent (\fBAgent\fPagent)"
+This functions adds a given agent to the agent list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIagent\fP the agent that have to be added 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.functional\&.ParseSRSDom\&.addDocument (\fBeu\&.aniketos\&.srcm\&.SRS\&.Document\fPdocument)"
+This functions adds a given document to the document list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdocument\fP the document that have to be added 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.functional\&.ParseSRSDom\&.addGoal (\fBGoal\fPgoal)"
+This functions adds a given goal to the goal list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIgoal\fP the goal that have to be added 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.functional\&.ParseSRSDom\&.addInformation (\fBInformation\fPinformation)"
+This functions adds a given information to the information list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinformation\fP the information that have to be added to the list 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.functional\&.ParseSRSDom\&.addRole (\fBRole\fProle)"
+This adds a role to the role list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIrole\fP the role that have to be added 
+.RE
+.PP
+
+.SS "\fBAgent\fP eu\&.aniketos\&.srcm\&.functional\&.ParseSRSDom\&.addUniqueAgent (\fBAgent\fPagent)"
+this functions helps in maintaining the objects in the list unique 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIagent\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the element itself if it is not present in the hash map (first time meet), the correspondent element if it is already present in the hash map 
+.RE
+.PP
+
+.SS "\fBeu\&.aniketos\&.srcm\&.SRS\&.Document\fP eu\&.aniketos\&.srcm\&.functional\&.ParseSRSDom\&.addUniqueDocument (\fBeu\&.aniketos\&.srcm\&.SRS\&.Document\fPdocument)"
+this functions helps in maintaining the objects in the list unique 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdocument\fP the document that have to be added 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+it returns the element itself if it is not present in the hash map (first time meet), the correspondent element if it is already present in the hash map 
+.RE
+.PP
+
+.SS "\fBGoal\fP eu\&.aniketos\&.srcm\&.functional\&.ParseSRSDom\&.addUniqueGoal (\fBGoal\fPgoal)"
+this functions helps in maintaining the objects in the list unique 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIgoal\fP the goal that have to be added 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the element itself if it is not present in the hash map (first time meet), the correspondent element if it is already present in the hash map 
+.RE
+.PP
+
+.SS "\fBInformation\fP eu\&.aniketos\&.srcm\&.functional\&.ParseSRSDom\&.addUniqueInformation (\fBInformation\fPinformation)"
+this functions helps in maintaining the objects in the list unique 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinformation\fP the information that have to be added 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+it returns the element itself if it is not present in the hash map (first time meet), the correspondent element if it is already present in the hash map 
+.RE
+.PP
+
+.SS "\fBRole\fP eu\&.aniketos\&.srcm\&.functional\&.ParseSRSDom\&.addUniqueRole (\fBRole\fProle)"
+this functions helps in maintaining the objects in the list unique 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIrole\fP the role that have to be added 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the element itself if it is not present in the hash map (first time meet), the correspondent element if it is already present in the hash map 
+.RE
+.PP
+
+.SS "HashMap<String, \fBAgent\fP> eu\&.aniketos\&.srcm\&.functional\&.ParseSRSDom\&.getAgentList ()"
+Getter of the agent list 
+.PP
+\fBReturns:\fP
+.RS 4
+the agent list 
+.RE
+.PP
+
+.SS "HashMap<String, \fBeu\&.aniketos\&.srcm\&.SRS\&.Document\fP> eu\&.aniketos\&.srcm\&.functional\&.ParseSRSDom\&.getDocumentList ()"
+Getter of the document list 
+.PP
+\fBReturns:\fP
+.RS 4
+the list of document 
+.RE
+.PP
+
+.SS "HashMap<String, \fBGoal\fP> eu\&.aniketos\&.srcm\&.functional\&.ParseSRSDom\&.getGoalList ()"
+Getter of the goal list 
+.PP
+\fBReturns:\fP
+.RS 4
+the goal list 
+.RE
+.PP
+
+.SS "HashMap<String, \fBInformation\fP> eu\&.aniketos\&.srcm\&.functional\&.ParseSRSDom\&.getInformationList ()"
+Getter of the information list 
+.PP
+\fBReturns:\fP
+.RS 4
+the information list 
+.RE
+.PP
+
+.SS "HashMap<String, \fBRole\fP> eu\&.aniketos\&.srcm\&.functional\&.ParseSRSDom\&.getRoleList ()"
+Getter of the list of the roles 
+.PP
+\fBReturns:\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "\fBSRS\fP eu\&.aniketos\&.srcm\&.functional\&.ParseSRSDom\&.getSrs ()"
+Getter of the SRS instantiated data structure 
+.PP
+\fBReturns:\fP
+.RS 4
+the instantiated data structure 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.functional\&.ParseSRSDom\&.removeAgent (\fBAgent\fPagent)"
+This function removes a given agent from the agent list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIagent\fP the agent that have to be removed 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.functional\&.ParseSRSDom\&.removeDocument (\fBeu\&.aniketos\&.srcm\&.SRS\&.Document\fPdocument)"
+This functions removes a given document to the document list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdocument\fP the document that have to be removed 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.functional\&.ParseSRSDom\&.removeGoal (\fBGoal\fPgoal)"
+This functions removes a given goal to the goal list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIgoal\fP the goal that have to be removed 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.functional\&.ParseSRSDom\&.removeInformation (\fBInformation\fPinformation)"
+This functions removes a given information to the information list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinformation\fP the information that have to be removed from the list 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.functional\&.ParseSRSDom\&.removeRole (\fBRole\fProle)"
+This class removes a given role frol the role list 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIrole\fP the role that have to be removed 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.srcm\&.functional\&.ParseSRSDom\&.setSrs (\fBSRS\fPsrs)"
+Setter of the instantiated data structure 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIsrs\fP the instantiated data structure 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SRCM from the source code\&.

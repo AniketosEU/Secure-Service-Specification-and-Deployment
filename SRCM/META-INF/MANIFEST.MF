@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: SRCM
+Bundle-SymbolicName: SRCM
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: eu.aniketos.srcm.Activator
+Import-Package: javax.xml,
+ javax.xml.parsers,
+ javax.xml.transform,
+ javax.xml.transform.dom,
+ javax.xml.transform.stream,
+ org.osgi.framework;version="1.3.0",
+ org.w3c.dom,
+ org.xml.sax
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: ICompliance;bundle-version="1.0.0"

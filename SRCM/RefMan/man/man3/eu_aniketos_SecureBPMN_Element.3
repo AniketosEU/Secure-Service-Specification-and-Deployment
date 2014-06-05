@@ -1,0 +1,139 @@
+.TH "eu.aniketos.SecureBPMN.Element" 3 "Fri Oct 4 2013" "SRCM" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eu.aniketos.SecureBPMN.Element \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBeu\&.aniketos\&.srcm\&.SRS\&.Goal\fP\&.
+.PP
+Inherited by \fBeu\&.aniketos\&.SecureBPMN\&.Activity\fP, \fBeu\&.aniketos\&.SecureBPMN\&.Event\fP, and \fBeu\&.aniketos\&.SecureBPMN\&.Gateway\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBElement\fP ()"
+.br
+.ti -1c
+.RI "String \fBgetId\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetId\fP (String id)"
+.br
+.ti -1c
+.RI "HashMap< String, \fBElement\fP > \fBgetNextList\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddNext\fP (\fBElement\fP next)"
+.br
+.ti -1c
+.RI "void \fBremoveNext\fP (\fBElement\fP next)"
+.br
+.ti -1c
+.RI "HashMap< String, \fBElement\fP > \fBgetPreviousList\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddPrevious\fP (\fBElement\fP previous)"
+.br
+.ti -1c
+.RI "void \fBremovePrevious\fP (\fBElement\fP previous)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class which represents the general Business Process element\&. It extents Goal class because at the instantiation phase all goal elements will be transformed in Business Process elements 
+.PP
+\fBAuthor:\fP
+.RS 4
+Mattia Salnitri 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "eu\&.aniketos\&.SecureBPMN\&.Element\&.Element ()"
+Constructor of the Class 
+.SH "Member Function Documentation"
+.PP 
+.SS "void eu\&.aniketos\&.SecureBPMN\&.Element\&.addNext (\fBElement\fPnext)"
+This function adds a given \fBElement\fP to the list of next Elements 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInext\fP element that will be added to the next elements list 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.SecureBPMN\&.Element\&.addPrevious (\fBElement\fPprevious)"
+This function adds a given \fBElement\fP to the list of previous Elements 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIprevious\fP element that will be added to the previous elements list 
+.RE
+.PP
+
+.SS "String eu\&.aniketos\&.SecureBPMN\&.Element\&.getId ()"
+Getter of the goal ID 
+.PP
+\fBReturns:\fP
+.RS 4
+the goal ID 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBeu\&.aniketos\&.srcm\&.SRS\&.Goal\fP\&.
+.SS "HashMap<String,\fBElement\fP> eu\&.aniketos\&.SecureBPMN\&.Element\&.getNextList ()"
+Getter of the list of the next Business Process elements 
+.PP
+\fBReturns:\fP
+.RS 4
+next elements list 
+.RE
+.PP
+
+.SS "HashMap<String,\fBElement\fP> eu\&.aniketos\&.SecureBPMN\&.Element\&.getPreviousList ()"
+Getter of the list of the previous Business Process elements 
+.PP
+\fBReturns:\fP
+.RS 4
+previous elements list 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.SecureBPMN\&.Element\&.removeNext (\fBElement\fPnext)"
+This function removes a given \fBElement\fP from the list of next Elements 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInext\fP element that will be removed to the next elements list 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.SecureBPMN\&.Element\&.removePrevious (\fBElement\fPprevious)"
+This function removes a given \fBElement\fP from the list of previous Elements 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIprevious\fP element that will be removed to the previous elements list 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.SecureBPMN\&.Element\&.setId (Stringid)"
+Setter of the goal ID 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIid\fP of the goal 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBeu\&.aniketos\&.srcm\&.SRS\&.Goal\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SRCM from the source code\&.

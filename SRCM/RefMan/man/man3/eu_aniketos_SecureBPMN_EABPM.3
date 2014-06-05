@@ -1,0 +1,169 @@
+.TH "eu.aniketos.SecureBPMN.EABPM" 3 "Fri Oct 4 2013" "SRCM" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eu.aniketos.SecureBPMN.EABPM \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBeu\&.aniketos\&.srcm\&.functional\&.BPM\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBEABPM\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetParticipantsList\fP (Vector< \fBParticipant\fP > participants)"
+.br
+.ti -1c
+.RI "Vector< \fBParticipant\fP > \fBgetParticipantsList\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddParticipant\fP (\fBParticipant\fP participant)"
+.br
+.ti -1c
+.RI "void \fBremoveParticipant\fP (\fBParticipant\fP participant)"
+.br
+.ti -1c
+.RI "Vector< \fBElement\fP > \fBgetElementsList\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddElement\fP (\fBElement\fP element)"
+.br
+.ti -1c
+.RI "void \fBremoveElement\fP (\fBElement\fP element)"
+.br
+.ti -1c
+.RI "Vector< \fBVariable\fP > \fBgetVariablesList\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddVariables\fP (\fBVariable\fP variable)"
+.br
+.ti -1c
+.RI "void \fBremoveVariables\fP (\fBVariable\fP variable)"
+.br
+.ti -1c
+.RI "void \fBsetVariablesList\fP (Vector< \fBVariable\fP > variables)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This is the main class which represents the Business Process Model received in input by the SRCM\&. 
+.PP
+\fBAuthor:\fP
+.RS 4
+Mattia Salnitri 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "eu\&.aniketos\&.SecureBPMN\&.EABPM\&.EABPM ()"
+Constructuor of the class 
+.SH "Member Function Documentation"
+.PP 
+.SS "void eu\&.aniketos\&.SecureBPMN\&.EABPM\&.addElement (\fBElement\fPelement)"
+This function adds a given \fBElement\fP to the list of Elements 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIelement\fP that will be added 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.SecureBPMN\&.EABPM\&.addParticipant (\fBParticipant\fPparticipant)"
+This function adds a given \fBParticipant\fP element to the list of participants 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIparticipant\fP that will be added 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.SecureBPMN\&.EABPM\&.addVariables (\fBVariable\fPvariable)"
+This function add a given \fBVariable\fP element to the list of variables 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvariable\fP that will be added 
+.RE
+.PP
+
+.SS "Vector<\fBElement\fP> eu\&.aniketos\&.SecureBPMN\&.EABPM\&.getElementsList ()"
+Getter of the list of Elements 
+.PP
+\fBReturns:\fP
+.RS 4
+the element list 
+.RE
+.PP
+
+.SS "Vector<\fBParticipant\fP> eu\&.aniketos\&.SecureBPMN\&.EABPM\&.getParticipantsList ()"
+Getter of the list of participants 
+.PP
+\fBReturns:\fP
+.RS 4
+the participant list 
+.RE
+.PP
+
+.SS "Vector<\fBVariable\fP> eu\&.aniketos\&.SecureBPMN\&.EABPM\&.getVariablesList ()"
+Getter of the list of \fBVariable\fP 
+.PP
+\fBReturns:\fP
+.RS 4
+the variable list 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.SecureBPMN\&.EABPM\&.removeElement (\fBElement\fPelement)"
+This function removes a given \fBElement\fP from the list of elements 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIelement\fP that will be removed 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.SecureBPMN\&.EABPM\&.removeParticipant (\fBParticipant\fPparticipant)"
+This function removes a given \fBParticipant\fP element to the list of participants 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIparticipant\fP that will be removed 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.SecureBPMN\&.EABPM\&.removeVariables (\fBVariable\fPvariable)"
+This function removes a given \fBVariable\fP from the list of variables 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvariable\fP that will be removed 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.SecureBPMN\&.EABPM\&.setParticipantsList (Vector< \fBParticipant\fP >participants)"
+this function set the list of participant in the class 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIparticipants\fP 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.SecureBPMN\&.EABPM\&.setVariablesList (Vector< \fBVariable\fP >variables)"
+This function set the list of variables contained in the class 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvariables\fP 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SRCM from the source code\&.

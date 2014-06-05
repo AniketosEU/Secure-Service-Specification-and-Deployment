@@ -1,0 +1,212 @@
+.TH "eu.aniketos.SecureBPMN.Activity" 3 "Fri Oct 4 2013" "SRCM" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+eu.aniketos.SecureBPMN.Activity \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBeu\&.aniketos\&.SecureBPMN\&.Element\fP\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "enum \fBType\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBActivity\fP ()"
+.br
+.ti -1c
+.RI "\fBType\fP \fBgetType\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetType\fP (\fBType\fP type)"
+.br
+.ti -1c
+.RI "Vector< \fBVariable\fP > \fBgetInVariablesList\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddInVariable\fP (\fBVariable\fP inVariable)"
+.br
+.ti -1c
+.RI "void \fBremoveInVariable\fP (\fBVariable\fP inVariable)"
+.br
+.ti -1c
+.RI "Vector< \fBVariable\fP > \fBgetOutVariablesList\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddOutVariable\fP (\fBVariable\fP outVariable)"
+.br
+.ti -1c
+.RI "void \fBremoveOutVariable\fP (\fBVariable\fP outVariable)"
+.br
+.ti -1c
+.RI "\fBParticipant\fP \fBgetOwner\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetOwner\fP (\fBParticipant\fP owner)"
+.br
+.ti -1c
+.RI "String \fBgetName\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetName\fP (String name)"
+.br
+.ti -1c
+.RI "Integer \fBgetTrustworthiness\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetTrustworthiness\fP (Integer trustworthiness)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class contains all the information related to the \fBActivity\fP Business Process elements 
+.PP
+\fBAuthor:\fP
+.RS 4
+Mattia Salnitri 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "eu\&.aniketos\&.SecureBPMN\&.Activity\&.Activity ()"
+Constructor of the class 
+.SH "Member Function Documentation"
+.PP 
+.SS "void eu\&.aniketos\&.SecureBPMN\&.Activity\&.addInVariable (\fBVariable\fPinVariable)"
+This function adds a given input variable to the list of input variables 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinVariable\fP that will be added to the list 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.SecureBPMN\&.Activity\&.addOutVariable (\fBVariable\fPoutVariable)"
+This function adds a given output variable to the list of output variables 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIoutVariable\fP that will be added to the list 
+.RE
+.PP
+
+.SS "Vector<\fBVariable\fP> eu\&.aniketos\&.SecureBPMN\&.Activity\&.getInVariablesList ()"
+Getter of the list of variables received in input 
+.PP
+\fBReturns:\fP
+.RS 4
+input variable list 
+.RE
+.PP
+
+.SS "String eu\&.aniketos\&.SecureBPMN\&.Activity\&.getName ()"
+Getter of the goal name 
+.PP
+\fBReturns:\fP
+.RS 4
+the goal name 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBeu\&.aniketos\&.srcm\&.SRS\&.Goal\fP\&.
+.SS "Vector<\fBVariable\fP> eu\&.aniketos\&.SecureBPMN\&.Activity\&.getOutVariablesList ()"
+Getter of the list of variables sent as output 
+.PP
+\fBReturns:\fP
+.RS 4
+output variable list 
+.RE
+.PP
+
+.SS "\fBParticipant\fP eu\&.aniketos\&.SecureBPMN\&.Activity\&.getOwner ()"
+Getter of the owner of the activity 
+.PP
+\fBReturns:\fP
+.RS 4
+owner of the activity 
+.RE
+.PP
+
+.SS "Integer eu\&.aniketos\&.SecureBPMN\&.Activity\&.getTrustworthiness ()"
+\fBReturns:\fP
+.RS 4
+the trustworthiness 
+.RE
+.PP
+
+.SS "\fBType\fP eu\&.aniketos\&.SecureBPMN\&.Activity\&.getType ()"
+Getter of the activity type 
+.PP
+\fBReturns:\fP
+.RS 4
+activity type 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.SecureBPMN\&.Activity\&.removeInVariable (\fBVariable\fPinVariable)"
+This function removed a given input variable to the list of input variables 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinVariable\fP that will be removed to the list 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.SecureBPMN\&.Activity\&.removeOutVariable (\fBVariable\fPoutVariable)"
+This function adds a given output variable to the list of output variables 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIoutVariable\fP that will be removed to the list 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.SecureBPMN\&.Activity\&.setName (Stringname)"
+Setter of the goal name 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIname\fP of the goal 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBeu\&.aniketos\&.srcm\&.SRS\&.Goal\fP\&.
+.SS "void eu\&.aniketos\&.SecureBPMN\&.Activity\&.setOwner (\fBParticipant\fPowner)"
+Setter of the owner of the activity 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIowner\fP that will be set 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.SecureBPMN\&.Activity\&.setTrustworthiness (Integertrustworthiness)"
+\fBParameters:\fP
+.RS 4
+\fItrustworthiness\fP the trustworthiness to set 
+.RE
+.PP
+
+.SS "void eu\&.aniketos\&.SecureBPMN\&.Activity\&.setType (\fBType\fPtype)"
+Setter of the \fBActivity\fP type 
+.PP
+\fBParameters:\fP
+.RS 4
+\fItype\fP of the activity 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SRCM from the source code\&.
